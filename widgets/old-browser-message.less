@@ -1,0 +1,46 @@
+﻿.old-browser-message {
+
+	.generic-ribbon {
+		margin: 10px 0;
+		padding: @gridGutterWidth/2;
+		background-color: @warningBackground;
+		border-top: 2px solid @warningBorder;
+		border-bottom: 2px solid @warningBorder;
+	}
+
+	.admin-ribbon {
+		margin: 10px 0;
+		padding: @gridGutterWidth/2;
+		background-color: @errorBackground;
+		border-top: 2px solid @errorBorder;
+		border-bottom: 2px solid @errorBorder;
+	}
+
+
+	ul li {
+		float: left;
+		list-style-type: none;
+		margin-right: 20px;
+		vertical-align: middle;
+		
+		a {
+			display: block;
+			height: 50px;
+			padding: 3px;
+			width: 50px;
+
+			&.chrome {
+				background: url("../images/browser_sprite.png") no-repeat -8px 50%;
+			}
+			&.safari {
+				background: url("../images/browser_sprite.png") no-repeat -176px 50%;
+			}
+			&.firefox {
+				background: url("../images/browser_sprite.png") no-repeat -64px 50%;
+			}
+			&.explorer {
+				background: url("../images/browser_sprite.png") no-repeat -236px 50%;
+			}
+		}    
+	}
+}

@@ -1,0 +1,56 @@
+﻿.pages-list {
+	th.dateUpdated,
+	td.dateUpdated {
+		text-align: right;
+		width: 15%;
+	}
+	th.id {
+		width: 6%;
+	}
+	th.title {
+		width: 44%;
+	}
+	th.owner {
+		width: 13%;
+	}
+	th.type {
+		width: 9%;
+	}
+	th.fundsRaised {
+		width: 13%;
+	}				
+	
+	th {
+		font-weight: normal;
+		a {
+			text-decoration:none;
+		}
+	}	
+
+	.sort-ascend a:link, 
+	.sort-ascend a:visited, 
+	.sort-ascend a:active{
+		background: url("@{mainImagesPath}/arrowUp.png") no-repeat right 2px;
+		font-weight: bold;
+		&:after {
+			content:"\00a0\00a0\00a0\00a0"
+		}
+		
+	}
+	.sort-ascend a:hover{
+		background: url("@{mainImagesPath}/arrowDown.png") no-repeat right 2px;
+
+	}
+	.sort-descend a:link, 
+	.sort-descend a:visited, 
+	.sort-descend a:active{
+		background: url("@{mainImagesPath}/arrowDown.png") no-repeat right 2px;
+		font-weight: bold;
+		&:after {
+			content:"\00a0\00a0\00a0\00a0"
+		}
+	}
+	.sort-descend a:hover{
+		background: url("@{mainImagesPath}/arrowUp.png") no-repeat right 2px;
+	}
+}

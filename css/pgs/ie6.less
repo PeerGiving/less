@@ -1,0 +1,140 @@
+/* Unbranded IE6 specific styles
+1. structure 
+	+ major structure: ie stuff that organizes page layout like header, content, footer
+		+ also any components that alwasys go in these (ie mainNav in header)
+	+ lesser structure: ie components like accordion, tabs etc that go in major structure containers
+2. 3rd Party Stuff (ie thickbox, cluetip, jcrop etc)
+3. Client Specific
+*/
+
+
+/* Structure *****************/
+#header h1{ margin-left:0; } 
+
+#content{ padding:0 0 160px 0; } /* sticky footer misbehaves otherwise 160 */
+
+#sideCol{ width:25%; padding-bottom:140px; } /* width stops wrapping, padding another fix for footer */
+
+#footer{ margin:-120px auto 0 auto; }/* sticky footer adjustment */
+
+/* layout fix: "logged in as" section */
+.topShelf .loginStatus{ float:left; margin:0; }
+.searchBar{ }
+.clientDonate{ margin:0; }
+.clientDonate:link, .clientDonate:hover{ border-top:0; }
+
+/* Page Header */
+/* funds-raised section (champ/project/program) */
+#fundState{ height:40px; }
+
+
+/* Lesser Structural elements 
+   - components that go inside major elements (ie pageContent, mainCol, sideCol)
+*************************************************************************************/
+/* my-pages member-profile widget (promoting, contributing, owning */
+
+/* -- Manage Asset (asset-mgmt: settings, comments etc) -- */
+#manage-community .filters input{
+    display:none;
+}
+
+/* Asset pages */
+#accordion{ float:left; } /* ie6 needs this for some damn reason */
+#accordion .accordionContent{ width:908px; }
+
+.updateInfo, 
+.latestUpdate{ /* looks obsolete */
+    margin-left:57px; 
+    width:438px; 
+}
+
+.updateHdr{ padding-left:20px; }
+
+/* Take Action (aka fundraising) */
+.fundraising{ margin-top:20px; }
+
+/* FAQ */
+.faqQuery{ padding-bottom:5px; }
+
+/* Action Nav/Panel (program, project & fundraiser pages) */
+.actionNav a:link, 
+.actionNav a:visited, 
+.actionNav a:active{ width:230px; }
+
+/* Checklist */
+.asset-checklist{ width:97%; }
+
+/* problem report */
+.problemReport .formHint{ margin-left:87px; }
+
+/* Posts */
+.postCommentTotal{
+    clear:left; 
+    display:block; 
+    float:left; 
+    margin-left:10px; 
+    position:static; 
+}
+
+.post-page .pageHdr{
+	margin: 30px 0 0 10px;
+}
+
+/* Member Profile Page */
+ul.causes li{
+    padding: 5px 0 15px 0;
+}
+ul.causes li .imgBox{    
+    margin-left:0;
+}
+
+
+/* *** Text ************************************************************ */
+.subscript{ font-size:58%; }
+
+
+/* *** 3rd Party Stuff ************************************************* */
+/* From cluetip.css: "stupid IE6 HasLayout hack" */
+.cluetip-rounded #cluetip-title, .cluetip-rounded #cluetip-inner{ zoom:1; }
+
+
+/* jcrop (formerly used star hack) */
+.jcrop-handle{ width:9px; height:9px; }
+/* .jcrop-tracker{ background-color:gray; } */
+
+/* date picker background:#121212;  */
+.datepickerBorderT{ width:90%; overflow:hidden; }
+.datepickerBorderB{ width:90%; overflow:hidden; }
+.datepickerBorderL{ height:95%; overflow:hidden; }
+.datepickerBorderR{ height:95%; overflow:hidden; }
+.datepickerBorderTL{ overflow:hidden; }
+.datepickerBorderTR{ overflow:hidden; }
+.datepickerBorderBL{ overflow:hidden; }
+.datepickerBorderBR{ overflow:hidden; }
+
+
+/* from thickbox.css (note: expressions very EXPENSIVE!) */
+* html #TB_overlay{
+    position:absolute; 
+    /*height:expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px'); */
+}
+* html #TB_window{
+    position:absolute;
+    /*margin-top:expression(0 - parseInt(this.offsetHeight / 2) + (TBWindowMargin = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop) + 'px');*/
+}
+* html #TB_load{
+    position:absolute;
+    /*margin-top:expression(0 - parseInt(this.offsetHeight / 2) + (TBWindowMargin = document.documentElement && document.documentElement.scrollTop || document.body.scrollTop) + 'px');*/
+}
+* html #TB_HideSelect{
+    position:absolute; 
+    /*eight:expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px'); */
+}
+
+/* *** Client specific ********************************** */
+.hftnContent #sideCol{ float:left; padding:0 0 20px 15px; }
+.hftnContent #accordion .accordionContent{ width:775px; }
+
+/*#dfn #header #mainNav ul{
+    width: 750px;
+}*/

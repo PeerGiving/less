@@ -1,0 +1,45 @@
+﻿/* comments.ascx */
+	.comments {
+
+		.fakeTxtBox {
+			background-color: @gray-lighter;
+			border: solid @gridGutterWidth/6 @gray-lighter;
+			height: 100px;
+			margin: @gridGutterWidth 0;
+			padding: @gridGutterWidth/2;
+			width: 60%;
+		}
+		
+		ul.list-unstyled > li {
+			border-bottom: solid 1px @gray-lighter;
+			padding-bottom: @gridGutterWidth/2;
+			margin-bottom: @gridGutterWidth/2;
+		}
+		
+		.col-md-2 > a,
+		.col-md-2 > a > img,
+		.col-md-2 > img {
+			max-width: @span1DesktopWide;
+			width: 100%;
+		}
+		
+		.col-md-10 {
+			.date {
+				margin-left: @gridGutterWidth/2;
+				
+				.meta();
+			}
+			.btn {
+				margin-top: @gridGutterWidth/2;
+			}
+		}
+		
+		// Phone
+	    @media (max-width: @screen-xs-max) {
+			.comment-list li {
+				.thumb {
+					.heels-half();
+				}
+			}
+		}
+	}

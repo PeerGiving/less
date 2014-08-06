@@ -1,0 +1,66 @@
+﻿/* \widgets\activity\asset-activity-list\asset-activity-header */
+
+
+.asset-activity-header {
+	.btn-group > .btn.active {
+		z-index: 0; /*Fixes issue where Facebook like comment box is behind the active button.*/
+		vertical-align: text-bottom;
+	}
+	.header-wrapper {
+		margin-top: 5px;
+		float: left;
+	}
+
+	&.thin-style {		// Used on Home/Blog pages
+		margin-top: 18px;
+
+		.clearfix();
+
+		.add-post {
+			.indent-half();
+		}
+		.header-wrapper {
+			float: left;
+		}
+		.follow-and-filters {
+			float: left;
+		}
+	}
+	&.filter-style {	// Used on Project/Fundraising pages
+		.add-post {
+			float: right;
+			margin-top: -7px;
+		}
+		.follow-and-filters {
+			.follow-button {
+				margin: -2px 0 12px;
+			}
+			.filter-group {
+				text-align: center;
+			}
+		}
+	}
+	
+	// Phone
+	@media (max-width: @screen-xs-max) {
+	}
+	
+	// Desktop/Tablet
+	@media (min-width: @screen-sm-min) {
+		&.filter-style {
+			.header-wrapper {
+				float: none;
+			}
+			.follow-and-filters {
+				.clearfix();
+				
+				.follow-button {
+					.indent-none();
+				}
+				.filter-group {
+					float: right;
+				}
+			}
+		}
+	}
+}

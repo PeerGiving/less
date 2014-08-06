@@ -1,0 +1,22 @@
+﻿/* message.less */
+
+.message {
+	& p:last-child {
+		margin-bottom: 0px;
+	}
+	
+	h3 {
+		.pull-top();
+	}
+
+	ul {
+		margin-bottom:0px;	
+	}	
+	
+	.alert {
+		@media (max-width: @screen-xs-max) {
+			.heels-double;
+			.above10;
+		}
+	}
+}

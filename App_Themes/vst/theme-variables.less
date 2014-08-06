@@ -1,0 +1,111 @@
+﻿/* vst/theme-variables.less */
+
+
+//	1. Comment out variable definitions to inherit defaults
+//		* defaults iherited from \pgs\css\theme-variables.less
+//	2. New variables intended for use by all themes should be defined in \pgs\css\theme-variables.less 
+//  3. New variables intended for use by a specific theme should have names beginning with a theme-initialism bounded by underscores (example: @_pn_green)
+//	This file can be copied, and used as a starting point for new themes
+
+
+// Variable Global Style options
+	// Closed Layout options
+		//@isClosedLayout:
+		//@bodyBackgroundColor:
+		//@bodyBackgroundImage:	
+		//@bodyBackgroundRepeat:
+		//@bodyBackgroundPosition:
+	// Header options
+		//@headBackgroundColor: 
+		//@headBackgroundImage: 
+		//@headBackgroundRepeat: 
+		//@headBackgroundPosition: 
+		@headLogoImage: url("images/logo.jpg");
+		@headLogoWidth: 213px;
+		@headLogoHeight: 131px;
+		//@headTitleFontFamily: 
+		//@headTitleFontSize: 
+	// Typography options
+		@font-family-base: helvetica, arial, sans-serif;
+		@font-size-base: 13.5px;
+		@line-height-base: 1.33333333;
+		@headings-font-family: "News Cycle", sans-serif;
+		//@font-family-system:
+		//@font-size-system-base:
+		@font-size-h2: 36px;
+		@font-color-h2: @_vst_teal;
+		@font-weight-h2: 700;
+		@font-size-h3: 36px;
+		@font-color-h3: @_vst_green;
+		@font-weight-h3: 400;
+		@font-size-h4: 24px;
+		@font-color-h4: black;
+		@font-weight-h4: 400;
+	// Link and Button options
+		@brand-primary: @_vst_green;
+		@link-color: #5fc9c9;
+		@link-hover-color: #1b595e;
+		@btn-default-color: white;
+		@btn-default-bg: @_vst_teal;
+		@btn-default-border: darken(@_vst_teal,5);
+	// Hued Grays (for backgrounds, etc) options
+		//@huedGrayDarkest:											//	4% - 3% lum
+		//@huedGrayDarker:											//	13% - 3% lum
+		//@huedGrayDark:											//	20% - 3% lum
+		//@huedGray: darken(#8c6f1d,3);								//	33% - 3% lum
+		//@huedGrayLight:											//	60% - 3% lum
+		//@huedGrayLighter:											//	93% - 3% lum
+		//@huedGrayLightest:										//	96% - 3% lum
+	// Other Colors (use @_client_color scheme for variable names)
+		@_vst_teal: #007e90;	@_vst_teal_faded: #5fc9c9;
+		@_vst_green: #6cb33e;	@_vst_green_faded: #a9ce91;
+		@_vst_purple: #7f3f97;	@_vst_purple_faded: #aa84c1;
+		@_vst_red: #ec1c24;		@_vst_red_faded: #ed777f;
+		
+
+// Component Styles	
+	// Main Navbar (nav-main-list)
+		@navbar-border-color: white;
+		@navbar-default-bg: white;
+		@navbar-default-color: black;
+		@navbar-default-link-color: black;
+		@navbar-default-link-hover-color: black;
+		//@navbar-default-link-hover-bg:
+		//@navbar-default-link-active-color:
+		//@navbar-default-link-active-bg:
+	// Account Nav
+		//@nav-account-bg:
+		@nav-account-link-color: black;
+		@nav-account-link-hover-color: black;
+		@nav-account-link-hover-bg: @_vst_green_faded;
+		@nav-account-link-active-color: black;
+		@nav-account-link-active-bg: @_vst_green_faded;
+		@nav-account-border-color: @_vst_green;
+		@nav-account-border-hover-color: @_vst_green;
+	// Breadcrumb Nav
+		//@breadcrumb-color:
+		//@breadcrumb-link-color:
+		//@breadcrumb-link-hover-color:
+		//@breadcrumb-active-color"
+	// Home page carousel	
+		//@homePageCarouselHeight:	
+
+	
+// Viewport Styles
+	// Navbar
+		//@navbar-phone-bg: 
+		//@navbar-phone-color: 
+	// Footer 
+		@footer-phone-bg: black;
+		@footer-phone-color: white;
+
+
+// Outdated?										
+	// Action Nav
+		//@actionBackgroundColorDefault: 
+		//@manageBackgroundColor: 
+		//@donateBackgroundColor: 
+		//@inviteBackgroundColor:
+		//@subscribeBackgroundColor:
+	// Badge
+		//@badgeBackgroundColor: 

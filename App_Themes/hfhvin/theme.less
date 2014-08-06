@@ -1,0 +1,411 @@
+/* hfhvin\theme.less */
+
+
+// Global Styles
+	h2 {
+		margin-top: 0.15em;
+		margin-bottom: 0.15em;
+		line-height: 1.4;
+
+		&.pull-top {
+			margin-top: -0.2em !important;
+			margin-bottom: 0.15em;
+			line-height: 1.4;
+		}			
+	}
+	h3 {
+		margin-top: 0.6em;
+		margin-bottom: 0.6em;
+		line-height: 1.4;
+
+		&.pull-top {
+			margin-top: -0.2em !important;
+			margin-bottom: 0.6em;
+			line-height: 1.4;
+		}
+	}
+	h4 {
+		font-family: @sansFontFamily;
+		text-transform: uppercase;
+	}
+
+
+// Master Page Styles
+	.head-wrapper {
+		header {
+			position: relative;
+			display: table;
+			width: 100%;
+			margin: 0px;
+
+			h1 {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.header-right {
+				width: auto;
+				margin-right: -@gridGutterWidth;
+				float: right;
+				display: table;
+
+				.left {
+					width: 120px;
+					vertical-align: middle;
+
+					img {					 
+						margin-bottom: 3px;
+					}		
+				}
+				.right {
+					width: 150px;
+				}
+				
+				@media (min-width: @screen-md-min) {
+					.left {
+						display: table-cell;
+					}
+				}
+			}
+			.header-bottom {
+				position: absolute;
+				top: 114px;
+				left: 140px;
+			}
+		}
+	}	
+	.nav-main-list {	
+		// Phone
+		a.navbar-brand {
+			position: absolute;
+			width: 82%;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			font-size: 12px;
+		}	
+	}
+	.nav-footer {
+		// Hide 'Affiliate' row in the footer on phone
+		@media (max-width: @screen-xs-max) {
+			.nav-footer-inner .row.bottom .col-md-12 {
+				.list-divider-horizontal {
+					padding: 20px 5px;
+				}
+				.list-divider-horizontal:first-child {
+					display: none;
+				}
+			}
+			.nav-footer-inner .affiliate {
+				li:first-child {
+					display: none;
+				}
+			}
+		}
+		// Add heels on tablet below 'Affiliate' row
+		@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+			.affiliate {
+				.heels();
+			}
+		}
+	}
+
+
+// Shared/Component Styles
+	.section-ribbon-heading {
+		.tile;
+
+		padding: 20px;
+		overflow: visible;
+
+		h2,h3 {
+			.pull-top;
+			.tile;
+
+			margin: 0 -10px 18px -30px;
+			padding-left: 30px;
+			background-color: @_hfhvin_blue;
+			color: white;
+		}
+		h3 {
+			line-height: 2.5;
+		}
+	}
+	.section-ribbon-heading-vertical {
+		.tile;
+			
+		overflow: visible;
+		padding: 15px 0 15px 0;	
+							
+		@media (min-width: @screen-md-min) {
+			padding: @gridGutterWidth;
+		}
+
+		.heading-vertical {
+			.tile;
+
+			display: inline-block;
+			margin: -40px 30px 0 -35px;
+			padding: 30px 10px 30px 20px;
+			background-color: @_hfhvin_blue;
+
+			@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+				margin-top: -25px;
+				margin-left: -25px;
+			}
+
+			.image {
+				background: url("images/About Us/text_OurValues.png") no-repeat 0 0;
+				width: 47px;
+				height: 273px;
+			}
+		}	
+	}				
+
+
+// Custom Page/Zone Styles
+	.home {
+		.zone-home-below-slideshow a {
+			@media (max-width: @screen-xs-max) {
+				img {
+					margin: 10px auto;
+				}
+			}
+			@media (min-width: @screen-sm-min) {
+				img {
+					.opacity(0.9);
+				}
+				:hover {
+					.opacity(1);
+				}
+			}
+		}
+	}
+	.get-involved,
+	.about .about-content,
+	.contact-us {
+		// Shared Components
+		p {
+			margin-bottom: 14px;
+		}
+		.blockquote {
+			font-size: 18px;
+			font-family: @headings-font-family;
+			line-height: 1.2;
+		}
+		.cta {
+			.addthis_toolbox {
+				display: inline-block;
+				vertical-align: bottom;
+			}
+		}
+	}
+	.get-involved {
+		.banner {
+			background: url("images/Get Involved/banner.jpg") no-repeat 0 0;
+			height: 436px;
+			color: white;
+			width: auto;
+
+			@media (max-width: @screen-xs-max) {
+				max-width: 100%;
+			}
+
+			.row > div {
+				padding: @gridGutterWidth;
+
+				a {
+					font-size: 18px;
+					display: block;	
+				}
+			}
+		}
+		.section {
+			margin-left: -@gridGutterWidth;
+			padding-left: @gridGutterWidth;
+			margin-top: 1.5*@line-height-computed;
+			padding-top: 4*@line-height-computed;
+			background: url("images/Get Involved/bg_rowHeader.jpg") no-repeat 0 0;
+		}
+		.network {
+			min-height: 290px;
+
+			.monotype {
+				color: @gray-light;
+				font-family: ff-market-web, ff-tisa-web-pro, arvo, rockwell, georgia, serif;
+				font-size: 24px;
+				line-height: 32px;
+			}
+			.share-this-page {
+				margin-top: 20px;
+				padding-left: 90px;
+				padding-top: 25px;
+				height: 60px;
+				background: url("../../images/get-involved/share-this-page.png") no-repeat 0 0;
+				
+				.addthis_toolbox {
+					padding-top: 12px;
+				}
+			}
+		}
+		.volunteer {
+			background: url("images/Get Involved/volunteer.jpg") no-repeat 0 0;
+			height: 461px;
+			color: white;
+
+			.row > div {
+				padding: @gridGutterWidth;
+			}
+		}
+		#donate {
+			.btn-link-color {
+				.coloredButton(@link-color);
+			}
+		}
+		.fundraise {
+			background: url("images/Get Involved/fundraise.jpg") no-repeat 0 0;
+			min-height: 734px;
+			padding: @gridGutterWidth;
+
+			h3 {
+				.pull-top;
+				margin-top: 0;
+				margin-bottom: 0;
+				line-height: normal;
+			}
+			p {
+				margin-bottom: @line-height-computed;
+			}
+
+			@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+				.iframe-wrapper {
+					margin-left: -190px;
+				}
+			}
+			@media (max-width: @screen-xs-max) {
+				iframe {
+					width: 100%;
+				}
+			}			
+		}
+	}
+	.about {
+		&.about_1 {		// "About Us"
+			.about-content {				
+				p.vin {
+					font-size: 18px;
+					line-height: 1.4;
+					font-family: @headings-font-family;
+				}
+				.gray-italics {
+					font-style: italic;
+					color: @gray-light;
+				}
+			}
+			.our-values {
+				@media (min-width: @screen-sm-min) {
+					.section-ribbon-heading-vertical();
+				}
+				@media (max-width: @screen-xs-max) {
+					.section-ribbon-heading();
+				}
+			}
+		}
+		&.about_2 {		// "ReStores"
+			.about-content {
+				.section-ribbon-heading {
+					.heels;
+
+					margin-top: -@line-height-computed;
+					position: relative;	/* positions this on top of banner */
+					font-size: 12px;
+					line-height: 1.3;
+
+					.address {
+						vertical-align: top;
+					}
+					
+					@media (min-width: @screen-md-min) {
+						.address {
+							margin-left: -@gridGutterWidth;
+						}
+					}
+				}
+			}
+		}
+		&.about_3 {		// "Volunteer"	
+			.about-content {
+				.tiles {
+					& > div {
+						display: inline-block;
+						vertical-align: top;
+						margin-left: 50px;
+
+						&:first-child {
+							margin-left: 0;
+						}
+					}
+					.tile {
+						width: 260px;
+						height: 260px;
+						padding: 3*@gridGutterWidth/4;
+						.box-sizing(border-box);
+
+						h4 {
+							.pull-top;
+							word-wrap: normal;
+						}
+						&.last {
+							height: 214px;
+						}
+					}
+				}
+				.small-text {
+					font-size: 12px;
+					font-style: italic;
+				}
+			}
+		}
+		&.about_4 {		// "Donating Materials"
+			.about-content {
+				.section-ribbon-heading {
+					.heels;
+
+					margin-top: -@line-height-computed;
+
+					.blockquote {
+						color: @_hfhvin_green;
+					}
+					ul {
+						margin-left: -20px;
+					}
+				}
+			}
+			
+			@media (max-width: @screen-xs-max) {
+				.col-sm-7 {
+					.heels-double();
+				}
+			}
+		}
+		&.about_5 {		// "Ways to Give"
+			.about-content {
+				.pull-green {
+					color: @_hfhvin_green;
+					font-size: 24px;
+					line-height: 1.3;
+				}
+				.section-ribbon-heading {
+					.clearfix;
+
+					position: relative;
+					height: 254px;
+
+					.btn-primary {
+						position: absolute;
+						bottom: @gridGutterWidth;
+						right: @gridGutterWidth;
+					}
+				}
+			}
+		}
+	}

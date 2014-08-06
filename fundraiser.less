@@ -1,0 +1,51 @@
+﻿.fundraiser {
+	.fundraising-team-members {
+		padding-top: @line-height-computed;
+		border-top: 1px solid rgba(0,0,0,.075);
+		@shadow: 0 6px 3px -3px rgba(0,0,0,.075);
+		.box-shadow(@shadow);
+
+		.donate {
+			margin-top: 12px;
+		}
+		.fundraising-info-wrap {
+			height: 60px;
+
+			&.heels-60 {
+				margin-bottom: 60px;
+			}
+			.fundraising-info-inline {
+				display: inline-block;
+				margin-top: 8px;
+			}
+		}
+
+		margin-bottom: 1.5 * @line-height-computed;
+	}
+	
+	.fundraiser-description {
+		padding-bottom: 1.5 * @line-height-computed;
+		margin-bottom: 1.5 * @line-height-computed;
+		@shadow: 0 6px 3px -3px rgba(0,0,0,.075);
+		.box-shadow(@shadow);
+	}
+
+	// Phone
+	@media (max-width: @screen-xs-max) {
+		.team-member-list {
+			.clearfix();
+			.heels();
+
+			.avatar-list-wrap {
+				ul {
+					float: left;
+					margin-right: 15px;
+				}
+				& + .inline-widget-wrapper {
+					display: inline;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}

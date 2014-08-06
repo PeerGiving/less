@@ -1,0 +1,54 @@
+﻿/* ie8 overrides */
+
+
+// Generics
+	.dropdown-pgs {
+		.dropdown-menu {
+			// Override gradient, since ie8 doesn't support it
+			background: none;
+			filter: none;
+			background: lighten(#555, 15);	// @grey = #555 in /tbs/less/variables.less
+		}
+	}
+
+// Pages
+	// donate.aspx
+	.donate {
+		#loadCVVS {
+			img {
+				max-width: none;
+				width: 320px;
+				height: 650px;
+			}
+		}
+	}		
+				
+// Widgets
+	img.thumb {
+		@boxmodel: "content-box";
+		-webkit-box-sizing: @boxmodel;
+		-moz-box-sizing: @boxmodel;
+		-ms-box-sizing: @boxmodel;
+		box-sizing: @boxmodel;
+		width: 60px;
+	}
+
+	.nav-main-list {
+		.nav-main-list-inner {
+			height: auto !important;
+
+			& > .nav > li {
+				&.dropdown-pgs.active {
+					border-bottom: 1px solid #fff;
+				}
+			}
+		}
+	}
+
+	.category-list-item {
+		.col-md-4 {
+			.hover-tile {
+				filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#e5ffffff', endColorstr='#e5ffffff');
+			}
+		}
+	}

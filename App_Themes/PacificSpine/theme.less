@@ -1,0 +1,201 @@
+﻿// Imports
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Rosario:400italic);
+
+
+// General Styles
+	h4 {
+		text-transform: uppercase;
+	}
+	blockquote {
+		font-family: "Rosario", sans-serif;
+		font-size: 24px;
+		font-style: italic;
+		color: @_ps_gray;
+		margin: 0;
+		padding: 0;
+		border: none;
+
+		footer {
+			font-size: 14px;
+			color: inherit;
+
+			&:before {
+				content: normal;
+			}
+		}
+	}
+
+
+// Shared Styles
+	.ps-header-40 {
+		font-size: 40px;
+		line-height: 48px;
+		font-weight: normal;
+	}
+	.ps-top-border {
+		border-top: 1px @_ps_gray solid;
+		margin-top: 40px;
+		padding-top: 30px;
+	}
+	.ps-bottom-border {
+		border-bottom: 3px @_ps_gray solid;
+		padding-bottom: 30px;
+		margin-bottom: 20px;
+	}
+	.ps-top-bottom-borders {
+		.ps-top-border();
+		.ps-bottom-border();
+	}
+
+
+// Template Styles
+	.navbar-default {
+		border-color: @_ps_gray;
+		border-left-width: 0px;
+		border-right-width: 0px;
+		border-bottom-width: 3px;
+		padding-top: 3px;
+		padding-bottom: 3px;
+
+		.navbar-nav {
+			.color-nav-item-by-href("default.aspx",@_ps_gray,white); // Home
+			.color-nav-item-by-href("our-projects.aspx",@_ps_yellow,@_ps_gray);	// Our Projects
+			.color-nav-item-by-href("pageId=3",@_ps_blue,white); // Get Involved
+			.color-nav-item-by-href("widgets/navs/#",@_ps_blue_navy,white); // About
+			.color-nav-item-by-href("pageId=2",@_ps_green,white);				// Research
+		}
+	}
+
+
+// Page Styles
+	.home {
+		.zone-home-below-slideshow {
+			.ps-top-bottom-borders();
+
+			h3 {
+				.pull-top();
+				.ps-header-40();
+			
+				@media (max-width: @screen-xs-max) 
+				{
+					font-size: 20px;
+					line-height: 28px;
+				}
+			}
+			.col-sm-5 {
+				@media (min-width: @screen-sm-min) {
+					margin-left: 4.16666666666666%;
+				}
+
+				p {
+					margin-bottom: 30px;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+	.about-us {
+		.definition-box {
+			margin-top: 30px;
+			padding: 20px;
+			background-color: rgba(@_ps_orange_r, @_ps_orange_g, @_ps_orange_b, 0.2);
+
+			.word {
+				font-size: 18px;
+			}
+			.type {
+				font-style: italic;
+				font-weight: bold;
+			}
+			.phoenetics {
+				font-style: italic;
+
+				.overline {
+					text-decoration: overline;
+				}
+			}
+		}
+	}
+	.our-projects {
+		h2 {
+			.heels();
+		}
+	}
+	.get-involved {
+		h4 {
+			margin-top: 25px;
+			margin-bottom: 40px;
+		}
+	}
+	.spine-health {
+		h2 {
+			margin-top: 18px;
+		}
+		p > .small {
+			display: block;
+			font-size: 10px;
+			margin-top: 5px;
+		}
+		.top-right,
+		.top-left,
+		.middle-right,
+		.bottom-left,
+		.bottom-right {
+			position: relative;
+		}
+	
+		@media (min-width: @screen-sm-min) {
+			.top-right {
+				left: -125px;
+				width: 270px;
+			}
+			.top-left {
+				top: 45px;
+				width: 190px;
+			}
+			.middle-right {
+				top: 25px;
+			}
+			.bottom-left {
+				top: 60px;
+				width: 240px;
+			}
+			.bottom-right {
+				top: 50px;
+				left: -52px;
+				width: 200px;
+			}
+		}
+		@media (min-width: @screen-md-min) {
+			.top-right {
+				top: 20px;
+				left: -150px;
+				width: 300px;
+			}
+			.top-left {
+				top: 80px;
+				left: 20px;
+				width: 240px;
+			}
+			.middle-right {
+				top: 100px;
+				left: -50px;
+				width: 250px;
+			}
+			.bottom-left {
+				top: 130px;
+				left: 50px;
+				width: 240px;
+			}
+			.bottom-right {
+				top: 220px;
+				left: -75px;
+				width: 250px;
+			}
+		}
+
+		.btn-container {
+			margin-top: 30px;
+		}
+	}

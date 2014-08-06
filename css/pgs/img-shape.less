@@ -1,0 +1,49 @@
+﻿/* img-shape.cs */
+
+.img-shape {
+	overflow: hidden;
+    text-align: center;
+
+	img {
+		height: 100%;
+		/*width: auto;*/	/* gerb: removed for thumb shape when image is missing from disk */
+		/* width: auto\9;*/ /* untested IE 8 Fix */
+	}
+	&.square {
+		height: 60px;
+		width: 60px;
+
+		img {
+			margin-left: -9.5px;
+			max-width: none;
+		}
+	}
+	&.circle {
+		.border-radius(60px);
+		.box-shadow(0px 0px 3px rgba(0, 0, 0, .75));
+		height: 70px;	// = 2*border + 60px  (remember, using border-box)
+		width: 70px;	// = 2*border + 60px  (remember, using border-box)
+		border: 5px solid #FFF;
+
+		&.no-border {
+			height: 60px;
+			width: 60px;
+			.box-shadow(0px 0px 0px);
+			border: 0px;
+		}
+		img {
+			margin-left: -9.5px;
+			max-width: none;
+		}
+	}
+	&.small-circle {
+		.border-radius(28px);
+		height: 28px; 
+		width: 28px;
+
+		img {
+			margin-left: -4px;
+			max-width: none;
+		}
+	}
+}

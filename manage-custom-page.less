@@ -1,0 +1,42 @@
+﻿/* manage-custom-page.less */
+
+.manage-custom-page {
+	.title {
+		font-size:  @line-height-computed * 1.2;
+
+		/* height needs to be bigger than font-size so in FF letters do not get bottom cut-ff */
+		height: @line-height-computed * 2.6;
+
+		/* Since the height has increased, remove this increase from the padding so overall the LOOK of the vertical white spacing doesn't change */
+		padding-top:  @line-height-computed - @line-height-computed/2;
+		padding-bottom:  @line-height-computed - @line-height-computed/2;
+	}	
+
+	.cke_chrome {
+	  border: 0 !important;
+	  -moz-box-shadow: none !important;
+	  -webkit-box-shadow: none !important;
+	  box-shadow: none !important;
+	}
+
+	.cke_top, .cke_bottom {
+		border: 1px solid #b6b6b6 !important;
+		-moz-box-shadow: 0 0 3px rgba(0,0,0,.15) !important;
+		-webkit-box-shadow: 0 0 3px rgba(0,0,0,.15) !important;
+		box-shadow: 0 0 3px rgba(0,0,0,.15) !important;
+	}
+
+	.cke_wysiwyg_div {
+		padding: 20px 0 !important;
+		margin: 0 !important;
+	
+	}
+
+	.cke_wysiwyg_div {
+		min-height: 300px;
+	 }
+
+	.cke_button__templates_label {
+		display: inline !important;
+	}
+}

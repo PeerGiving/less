@@ -1,0 +1,64 @@
+﻿/* anthem.less */
+/*  This file corrects problems introduced by
+/*  the extra <span>s and <div>s that anthem renders. 
+*/
+
+
+/* Forms */
+	/* Fixes <asp/anthem:checkbox> Rendered Styles */
+	input[type="checkbox"] + label {
+		display: inline;
+		margin-left: 5px;
+	}
+	.inline-block-before-anthem + span {
+		display: inline-block;
+	}
+
+
+/* Navigation */
+/*  (see /twitter-bootstrap/navs.less) */
+
+	// Make links block level 
+	.nav > li > span > a {
+		display: block;
+	}
+	.nav > li > span > a:hover {
+		text-decoration: none;
+		border-color: @huedGrayLighter @huedGrayLighter darken(@huedGrayLighter,6);
+		background-color: @huedGrayLighter;
+	}
+
+	// Redeclare pull classes because of specifity
+	.nav > span > .pull-right {
+		float: right;
+	}
+
+	// Tabs and Pills
+	.nav-tabs > li > span > a,
+	.nav-pills > li > span > a {
+		padding-right: 12px;
+		padding-left: 12px;
+		margin-right: 2px;
+		line-height: 14px; // keeps the overall height an even number
+	}
+
+	// Actual tabs (as links)
+	.nav-tabs > li > span > a {
+		padding-top: 8px;
+		padding-bottom: 8px;
+		line-height: @line-height-computed;
+		border: 1px solid transparent;
+		.border-radius(4px 4px 0 0);
+		&:hover {
+			border-color: @huedGrayLighter @huedGrayLighter darken(@huedGrayLighter,6);
+		}
+	}
+	// Active state, and it's :hover to override normal :hover
+	.nav-tabs > .active > span > a,
+	.nav-tabs > .active > span > a:hover {
+		color: @gray;
+		background-color: white;
+		border: 1px solid #ddd;
+		border-bottom-color: transparent;
+		cursor: default;
+	}

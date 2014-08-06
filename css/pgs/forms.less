@@ -1,0 +1,166 @@
+﻿/* forms.less */
+
+
+    /* HM We can't use the form element, but we still need to style it the way twitter-bootstrap does */
+    /*.form {
+        margin: 0 0 @line-height-computed;
+	}
+	form {
+		margin: 0;
+	}*/
+	
+	/* input field validator '*'  */
+	.validator {
+		color: @red;
+	}
+
+	.required-text:after {
+		color: #f00;
+		content: ' (required)';
+	}
+
+	.required:after {
+		color: #f00;
+		content: ' *';
+	}
+	.optional:after {
+		color: @gray-light;
+		content: ' (optional)';
+	}
+
+	ul.form {  /* HM This class might become obsolete because of TBS forms */
+		list-style-type: none;
+
+		li {
+			margin-top: 20px;
+		}
+		
+		label {
+			font-weight: bold;
+		}
+		input[type="checkbox"] + label {
+			display: inline;
+		}
+		input,
+		textarea {
+			display: block;
+		}
+		input[type="checkbox"] {
+			display: inline;
+			margin: 0 5px;
+		}
+		input[type="text"],
+		textarea {
+			font-size: 14px;
+		}
+		input[type="text"].largeTxtBox {
+			font-size: 20px;
+			padding: 5px 3px !important;
+		}
+		.formHint,
+		.labelMeta,
+		li.formDesc {
+			display: block;
+			color: @gray-light;
+		}
+		
+
+		& + .btnCss3 {
+			margin-top: 20px;
+		}
+	}
+		
+    /*.col-md-4, .col-md-3, .col-md-2, .col-md-1 {
+    	.form {
+			input, textarea {
+				width: 100%;
+			}
+		}		
+	}*/
+
+	/*.form-horizontal {
+        .form-reset-horizontal  {
+            input,
+            textarea,
+            select,
+            .help-inline,
+            .uneditable-input,
+            .input-prepend,
+            .input-append {
+                margin-bottom: 9px;
+            }
+        }
+		.control-label {
+			.help-block {
+				margin-top: 0;
+			}
+		}
+		.single-label {
+			padding-top: 5px;
+		}
+    }*/
+
+	// Align links with buttons in form-actions tray
+	.form-actions {
+		a.btn + a:not(.btn) {
+			line-height: 18px;
+			padding: 4px 10px;
+			vertical-align: middle;
+		}
+	}
+
+	.help-block {
+		color: lighten(@gray,10);
+	}
+
+
+
+// Bootstrap 3
+
+
+
+	// Use as a wrapper to an asp:radiobuttonlist
+	//  in place of bootstrap 3 <div class="radio"> wrappers
+	.form-horizontal-left {
+		.form-horizontal();
+		
+		.control-label {
+			text-align: left;
+		}
+	}
+
+	.radio-button-list {
+		li {
+			margin-top: 10px;
+			margin-bottom: 10px;
+
+			& + li {
+				margin-top: -5px;
+			}
+		}
+		& + .radio {
+			margin-top: -5px;
+		}
+		input {
+			vertical-align: top;
+		}
+		label {
+			margin-left: 8px;
+			margin-bottom: 0;
+			font-weight: normal;
+			display: inline;
+		}
+	}
+
+	.input-prepend {
+		margin-top: 10px;
+
+		.add-on + .form-control {
+			display: inline;
+			width: auto;
+		}
+	}
+
+	.input-xlg {
+		.input-size(1.5 * @input-height-large; 1.4 * @padding-large-vertical; 1.4 * @padding-large-horizontal; 2 * @font-size-large; 1.25; @border-radius-large);
+	}

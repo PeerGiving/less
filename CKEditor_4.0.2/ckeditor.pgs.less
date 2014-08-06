@@ -1,0 +1,17 @@
+﻿/* ckeditor.pgs.less */
+
+.ckeditorContents {
+	background: none;
+	padding: @line-height-computed @gridGutterWidth;
+
+	img {
+		height: auto;
+
+		&[style*="float: left"] {
+			margin: 0 @gridGutterWidth @line-height-computed/2 0;
+		}
+		&[style*="float: right"] {
+			margin: 0 0 @line-height-computed/2 @gridGutterWidth;
+		}
+	}
+}

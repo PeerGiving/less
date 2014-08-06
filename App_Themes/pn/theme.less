@@ -1,0 +1,472 @@
+﻿/* pn\theme.less */
+
+
+// Master Styles
+	body > form .head-wrapper {
+		.nav-account > .container,
+		& > .container {
+			background-color: transparent;
+		}
+	}
+
+	// Header Zone
+	body.mailChimp {
+		form {
+			input[type=submit]  {
+				margin-top: -8px;
+			}
+		}
+	}
+	.head-wrapper header {
+		position: relative;
+		background: url("images/littleleaf-header.png") transparent right bottom no-repeat;
+		margin-bottom: 0;
+		padding-bottom: 18px;
+		margin-right: -@gridGutterWidth;
+
+		h1 {
+			display: inline-block;
+		}
+		.headerZone2 {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: auto;
+
+			.newsletter-box {
+				width: 280px;
+				padding-right: 80px;
+			
+				h3 {
+					color: @_pn_green;			 
+					line-height: 26px;
+				}
+			}
+		}
+	}
+	.nav-main-list {	
+		a.navbar-brand {
+			font-size: 12px;
+		}	
+	}
+
+
+
+// Page/Component Styles
+	.custom-page {
+		// Common
+		font-size: 14px;
+
+		h2, h3, h4, h5 {
+			.normal-weight();
+		}
+		h2 {
+			font-size: 36px;
+			//line-height: 3 * @line-height-computed;
+			line-height: 1.4;
+			margin-top: 0.25em;
+			margin-bottom: 0.25em;
+			
+			&.pull-top {
+				margin-top: -0.2em !important;
+				line-height: 1.4;
+				margin-bottom: 0.25em;
+			}
+			&.underline {
+				margin-bottom: @line-height-computed;
+			}
+		}
+		h3 {
+			font-size: 28px;
+			//line-height: 3 * @line-height-computed;
+			line-height: 1.4;
+			margin-top: 0.9em;
+			margin-bottom: 0.9em;
+
+			&.pull-top {
+				margin-top: -0.2em !important;
+				line-height: 1.4;
+				margin-bottom: 0.9em;
+			}
+			&.underline {
+				margin-bottom: @line-height-computed;
+			}
+		}
+		h4 {
+			font-size: 21px;
+		}
+		h5 {
+			font-size: 18px;
+		}
+		p {
+			.heels;
+			font-size: 14px;
+
+			&.cursive.green {
+				font-size: 30px;
+				line-height: 1;
+			}
+		}
+		span.strong {
+			font-size: 24px;
+		}
+		.underline {
+			border-bottom: 1px solid @gray-light;
+		}
+		.green {
+			color: @_pn_green;
+		}
+		.red {
+			color: @_pn_red;
+		}
+		.sans-serif {
+			font-family: @font-family-base;
+		}
+		.serif {
+			font-family: @headings-font-family;
+		}
+		.cursive {
+			font-family: "Allura", sans-serif;
+			font-weight: normal !important;
+		}
+		a.cursive {
+			font-size: 22px;
+		}
+		.btn-pn-xs {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		.btn-pn-green {
+			.button-variant(#fff; lighten(@_pn_green, 10); lighten(@_pn_green, 10));
+		}
+		.btn-pn-red {
+			.button-variant(#fff; lighten(@_pn_red, 10); lighten(@_pn_red, 10));	
+		}
+		.btn-pn-gray {
+			.button-variant(#fff; lighten(@_pn_gray, 10); lighten(@_pn_gray, 10));
+		}
+
+		// Pages
+		.planted {	// "Planted"
+		    @media (min-width: @screen-md-min) {
+				background: url("images/Greens_About_Crop-01.png") no-repeat right 800px;
+			}
+			
+			@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+				background: url("images/Greens_About_Crop-01.png") no-repeat right 980px;
+			}
+			
+			.main {
+				background: url("images/Roots_Cropped.png") no-repeat 0 0;
+				padding-top: 190px;
+				padding-bottom: 40px;
+			
+				ul {
+					margin-left: @gridGutterWidth;
+			
+					li {
+						line-height: 1.5 * @line-height-computed;
+					}
+				}
+				.space-sm {
+					@media (max-width: @screen-xs-max) {
+						height: 140px;
+					}
+					@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+						height: @gridGutterWidth*2;
+					}
+				}
+				.space {
+					height: 140px;
+
+					@media (max-width: @screen-xs-max) {
+						height: @gridGutterWidth;
+					}
+				}
+				.well-custom {
+					.heels();
+					padding: 20px;
+					background-color: @bodyBackgroundColor;
+				}
+				.headings {
+					padding-left: 140px;
+
+					@media (max-width: @screen-sm-max) {
+						padding-left: 0px;
+					}
+
+					h2, h3 {
+						line-height: 0.9;
+					}
+					h3 {
+						padding-bottom: @line-height-computed/2;
+					}
+				}
+				.pull-quote {
+					padding: 12px 0;
+					font-family: @headings-font-family;
+					font-size: 24px;
+					font-style: italic;
+					line-height: 1.2;
+					color: @_pn_green;
+				}
+				
+				
+			}
+		}
+		.partners {		// "Partners"
+			p.cursive {
+				font-size: 28px;
+				line-height: 1.4;
+			}
+			.space-triple {
+				height: 3 * @line-height-computed;
+			}
+			.space {
+				height: @line-height-computed;
+			}
+			h4 {
+				font-weight: bold;
+				color: @gray-dark;
+				margin-bottom: @line-height-computed;
+			}
+			.buttons {
+				text-align: right;
+
+				a {
+					.indent();
+				}
+				
+				@media (max-width: @screen-xs-max) {
+					a {
+						.indent-none();
+					}
+				}
+			}
+		}
+		.volunteer {		// "Volunteer"
+			.seedling {
+				@media (min-width: @screen-sm-min) {
+					background: url("images/Volunteer/sprout.png") no-repeat 60px -9px;
+				}
+				h4 {
+					.heels;
+					color: @_pn_green;
+				}
+				.row {
+					@media (min-width: @screen-sm-min) and (max-width: @screen-md-max) {
+						.heels-double;
+					}
+				}
+				p {
+					line-height: 1.2;
+				}
+			}
+		}
+		.resources {		// "Resources"
+			.two-line-heading {
+				margin-top: 5px;
+
+				h3 {
+					line-height: normal;
+					display: inline;
+
+					& + span {
+						font-size: 32px;
+					}
+				}
+			}
+			.sage {
+				@media (min-width: @screen-sm-min) { 
+					background: url("images/resources-sage.png") no-repeat 0 175px;
+					height: 346px + 175px - 20px; // image height + y-offset - adjustment
+				}
+			}
+			span.green {
+				font-size: 21px;
+				font-weight: bold;
+			}
+			.col-sm-12.responses {
+				@media (min-width: @screen-sm-min) {
+					background: transparent url("images/resources-herbs-25-top-left.png") no-repeat 0 70px;
+				}
+
+				div.responses {
+					@media (min-width: @screen-md-min) {
+						height: 660px;
+						padding-left: 47px;
+						background: transparent url("images/resources-herbs-45-bottom-right.png") no-repeat right bottom;
+						img {
+							margin-top: 50px;
+						}
+					}					
+					@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+						height: 460px;
+						padding-left: 47px;
+						background: transparent url("images/resources-herbs-45-bottom-right.png") no-repeat right bottom;
+						img {
+							margin-top: 50px;
+						}
+					}
+				}
+			}
+			ul ul {
+				margin-top: @line-height-computed/2;
+				margin-bottom: @line-height-computed/2;
+			}
+		}
+		.contact-us {
+			@media (min-width: @screen-sm-min) {
+				background: url("images/bg-contact.jpg") no-repeat right 40px;
+				height: 700px + 40px;
+			}
+			
+			p {
+				font-size: 14px;
+			}
+			p.cursive.red {
+				font-size: 28px;
+			}
+			.addthis_toolbox {
+				@media (min-width: @screen-xs-min) {
+					.indent-double();
+				}
+			}
+			.addthis_toolbox a {
+				margin-top: 7px;
+
+				span {
+					margin-top: -7px;
+					margin-right: @gridGutterWidth;
+				}
+			}
+		}
+		.get-involved {
+			h2, h3 {
+				font-family: Palatino Linotype, Palatino, serif;
+				font-weight: bold;
+			}
+			& > div {
+				padding-top: 1.5*@line-height-computed;
+				margin-top: 2.5*@line-height-computed;
+				border-top: @gray-lighter solid 1px;
+
+				&:first-child {
+					padding-top: 0;
+					margin-top: 0;
+					border-top: 0px;
+				}
+				&.collapse-top-margin {
+					margin-top: 0;
+				}
+			}
+			.jumper {
+				li {
+					line-height: 1.3;
+				}
+				a {
+					font-size: 18px;
+				}
+			}
+			.getinvolved {
+				@media (min-width: @screen-sm-min) {
+					background: url("images/Get Involved/carrot.jpg") no-repeat 0 0;
+					height: 360px;
+				}
+				@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+					background-size: 140px;
+				}
+			}
+			.volunteer {
+				color: white;
+
+				.row {
+					background: url("images/Get Involved/volunteer.jpg") no-repeat 0 0;
+					height: 526px;
+
+					@media (min-width: @screen-md-min) {
+						margin-left: 0px;
+					}
+
+					> div {
+						.box-sizing(border-box);
+						padding: @gridGutterWidth*2;
+						padding-right: @gridGutterWidth;
+					}
+				}
+
+				@media (max-width: @screen-xs-max) {
+					color: inherit;
+
+					.row {
+						background: none;
+						height: auto;
+
+						> div {
+							padding: 0 15px;
+						}
+					}
+				}
+			}
+			.fundraise {
+				h5 {
+					.heels;
+					font-family: @font-family-base;
+
+					@media (min-width: @screen-xs-max) {
+						font-weight: bold;
+					}
+				}
+				.row {
+					background: url("images/Get Involved/fundraise.jpg") no-repeat 0 0;
+
+					@media (min-width: @screen-md-min) {
+						margin-left: 0px;
+					}
+
+					> div {
+						.box-sizing(border-box);
+						padding: @gridGutterWidth;
+					}
+				}
+
+				@media (max-width: @screen-xs-max) {
+					color: inherit;
+
+					.row {
+						background: none;
+
+						> div {
+							padding: 0 15px;
+						}
+					}
+				}
+
+				ol {
+					@media (min-width: @screen-sm-max) {
+						/*.indent;*/
+						.heels;
+						width: 280px;
+						li {
+							.heels-half;
+						}						
+					}	
+				}
+				a.btn {
+					@media (min-width: @screen-sm-min) {
+						.indent-double;
+					}
+				}
+			}
+			.line {
+				margin-left: 5px;
+				background: url("images/share-this-video-line.png") no-repeat right 2px;
+				width: 80px;
+				height: 30px;
+				vertical-align: middle;
+			}
+			.addthis_toolbox {
+				vertical-align: middle;
+			}
+		}
+	}

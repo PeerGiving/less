@@ -1,0 +1,188 @@
+﻿// Imports
+	@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
+
+
+// Global Styles
+	// Headings
+	h4 {
+		text-transform: uppercase;
+	}
+	h5 {
+		font-family: Helvetica, Arial, sans-serif;
+	}
+
+	// Buttons
+	.btn-default {
+		.vst_button-variant(@_vst_teal_faded);
+	}
+	.btn-primary {
+		.vst_button-variant(@_vst_green_faded);
+	}
+	.btn-success {
+		.button-variant(@btn-success-color; @_vst_purple; darken(@_vst_purple,5));
+		.vst_button-variant(@_vst_purple_faded);
+	}
+	.btn-info {
+		.vst_button-variant(lighten(@btn-info-bg,20));
+	}
+	.btn-warning {
+		.button-variant(@btn-warning-color; @_vst_red; darken(@_vst_red,5));
+		.vst_button-variant(@_vst_red_faded);
+	}
+	.btn-danger {
+		.vst_button-variant(lighten(@btn-danger-bg,20));
+	}
+
+	// Colors
+	.vst_red { color: @_vst_red; }
+	.vst_green { color: @_vst_green; }
+	.vst_purple { color: @_vst_purple; }
+
+
+// Master Styles
+	// Header
+	body .head-wrapper {
+		#divHeaderContainer {
+			margin-top: 40px;	// Room for .nav-header
+		}
+		header {
+			margin-top: 20px; 
+
+			h1 a {
+				background-size: 213px 131px;
+			}
+		}
+	}
+	.words {
+		.pull-right;
+
+		margin-top: -70px;
+		font-size: 50px;
+		font-family: @headings-font-family;
+		font-weight: 700;
+
+		@media (max-width: @screen-sm-max) {
+			margin-top: -54px;
+			font-size: 30px;
+		}
+	}
+	.nav-header {
+		position: absolute;
+		width: 100%;
+		top: 43px;
+		background: black;
+		color: white;
+
+		ul {
+			padding: 10px 20px;
+			margin-bottom: 0;
+		}
+		a {
+			color: white;
+		}
+	}
+	// Navbar
+	.nav-main-list {
+		.navbar-collapse .navbar-nav {
+			> li > a {
+				padding-left: 40px;
+				padding-right: 40px;
+				font-family: @headings-font-family;
+				font-size: 16px;
+
+				i.icon-angle-down {
+					line-height: 0.5;
+				}
+			}
+			.home a,
+			.home a:hover {
+				max-height: 53px;
+
+				.icon-home-img {
+					background-position: -36px 0;
+				}
+			}
+			.vst_customize-nav-item-by-href("default",black,white);
+			.vst_customize-nav-item-by-href("widgets/navs/#",@_vst_teal,@_vst_teal_faded);
+			.vst_customize-nav-item-by-href("our-projects",@_vst_purple,@_vst_purple_faded);
+			.vst_customize-nav-item-by-href("pageId=3",@_vst_red,@_vst_red_faded);
+			.vst_customize-nav-item-by-href("donate",@_vst_green,@_vst_green_faded);
+		}
+		.navbar-form.search {
+			border-bottom: 1px dotted #999;
+			padding-bottom: 10px;
+		}
+		.search-box .form-search .input-group {
+			.input-group-btn,
+			.form-control {
+				.box-shadow(none);
+
+				border-color: transparent;
+			}
+		}
+	}
+	// Footer
+	.nav-footer .nav-footer-inner {
+		background-color: black;
+
+		.row.top .col-md-12,
+		.row.bottom .col-md-12{
+			.box-shadow(none);
+		}
+	}
+	.color-footer(white);
+	.light-powered-by();
+
+
+
+// Custom Styles
+	.home {
+		.welcome-message-home h3 {
+			color: @_vst_teal;
+		}
+		.asset-activity-header.thin-style .header-wrapper {
+			margin-top: 0;
+
+			h3 {
+				margin-bottom: 24px;
+			}
+		}
+		.asset-post-activity-list-item {
+			.box-shadow(none);
+
+			border: none;
+		}
+		.fundraising-tile-list-item {
+			.box-shadow(none);
+
+			border: 1px solid black;
+
+			h4 {
+				font-size: 24px;
+				line-height: @line-height-h4;
+			}
+			.meta-gray-upper {
+				color: @_vst_green;
+				font-size: 12px;
+			}
+		}
+	}
+
+
+// Custom Mixins
+	.vst_button-variant(@hoverbackground) {
+		&:hover,
+		&:focus,
+		&:active,
+		&.active,
+		.open .dropdown-toggle& {
+		    background-color: @hoverbackground;
+	        border-color: darken(@hoverbackground, 5);
+		}
+	}
+	.vst_customize-nav-item-by-href(@href,@border,@hoverbg) {
+		& > li > a[href*='@{href}'] {
+			border-bottom: 3px @border solid;
+		}
+		.color-nav-item-by-href(@href,@hoverbg,@navbar-default-link-hover-color);
+	}

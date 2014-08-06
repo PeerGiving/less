@@ -1,0 +1,94 @@
+﻿/* ismc/theme-variables.less */
+
+
+//	1. Comment out variable definitions to inherit defaults
+//		* defaults iherited from \pgs\css\theme-variables.less
+//	2. New variables intended for use by all themes should be defined in \pgs\css\theme-variables.less 
+//  3. New variables intended for use by a specific theme should have names beginning with a theme-initialism bounded by underscores (example: @_pn_green)
+//	This file can be copied, and used as a starting point for new themes
+
+
+// Variable Global Style options
+	// Closed Layout options
+		@isClosedLayout: true;
+		@bodyBackgroundColor: @ismc_blue-light;
+		//@bodyBackgroundImage:	
+		//@bodyBackgroundRepeat:
+		//@bodyBackgroundPosition:
+	// Header options
+		@headBackgroundColor: @ismc_blue-dark;
+		//@headBackgroundImage: 
+		//@headBackgroundRepeat: 
+		//@headBackgroundPosition: 
+		@headLogoImage: url("images/ISMC Logo update-01.png");
+		@headLogoWidth: 301px;
+		@headLogoHeight: 101px;
+		//@headTitleFontFamily: 
+		//@headTitleFontSize: 
+	// Typography options
+		@font-family-base: 'Rosario', sans-serif;
+		@headings-font-family: 'Rosario', sans-serif;
+		@font-size-h2: 36px;					// Bootstrap 3.1.1 ~ 30px
+		@font-color-h2: @ismc_blue-dark;
+		//@font-weight-h2:
+		//@font-size-h3:					// Bootstrap 3.1.1 ~ 24px
+		@font-color-h3: #808285;
+		//@font-weight-h3:
+		//@font-size-h4:					// Bootstrap 3.1.1 ~ 18px
+		//@font-color-h4:
+		//@font-weight-h4:
+	// Link and Button options
+		@link-color: #00B9F2;
+		//@link-hover-color: 
+		@btn-default-color: #fff;
+		@btn-default-bg: #D49E2A;
+		@btn-default-border: darken(@btn-default-bg, 5%);
+		@brand-primary: #263d70;
+	// Hued Grays (for backgrounds, etc) options
+		//@huedGrayDarkest:											//	4% - 3% lum
+		//@huedGrayDarker:											//	13% - 3% lum
+		//@huedGrayDark:											//	20% - 3% lum
+		//@huedGray: darken(#8c6f1d,3);								//	33% - 3% lum
+		//@huedGrayLight:											//	60% - 3% lum
+		//@huedGrayLighter:											//	93% - 3% lum
+		//@huedGrayLightest:										//	96% - 3% lum
+	// Other Colors
+		@ismc_blue-dark: #263D70;
+		@ismc_blue: #80a3d6;
+		@ismc_blue-light: #9DC0E5;
+
+// Component Styles	
+	// Account Nav
+		//@nav-account-bg:
+		//@nav-account-link-color:
+		//@nav-account-link-hover-color:
+		//@nav-account-link-hover-bg:
+		//@nav-account-link-active-bg:
+	// Main Navbar (nav-main-list)
+		//@navbar-default-bg: 
+		//@navbar-default-color:
+		//@navbar-default-link-color:
+		@navbar-default-link-hover-color: white;
+		@navbar-default-link-hover-bg: @ismc_blue;
+		//@navbar-default-link-active-color:
+		@navbar-default-link-active-bg: @ismc_blue-dark;
+	// Breadcrumb Nav
+		//@breadcrumb-color: 
+		//@breadcrumb-link-color: 
+		//@breadcrumb-link-hover-color: 
+		//@breadcrumb-active-color: 
+	// Home page carousel	
+		//@homePageCarouselHeight:									
+	// Action Nav
+		//@actionBackgroundColorDefault: 
+		//@manageBackgroundColor: 
+		//@donateBackgroundColor: 
+		//@inviteBackgroundColor:
+		//@subscribeBackgroundColor:
+	// Badge
+		//@badgeBackgroundColor: 
+
+// Viewport Styles
+	// Footer 
+		@footer-phone-bg: @ismc_blue-light;
+		@footer-phone-color: white;

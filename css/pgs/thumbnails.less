@@ -1,0 +1,34 @@
+﻿/* thumbnails.less */
+
+
+	.thumb {
+		display: inline-block;
+		border: solid 1px darken(@gray-lighter,13);
+		.box-sizing(border-box);
+		background-color: #fff;
+		.shadow-pgs;
+	}
+	img.thumb {
+		max-width: 60px;
+		padding: 3px;
+	}
+	img.thumb-large {
+		.thumb;
+		max-width: auto;
+		padding: 5px;
+	}
+	img.thumb-fat-frame {
+		.thumb;
+		max-width: auto;
+		padding: 10px;
+	}
+	a > .thumb,
+	a > .thumb-large {
+		border-color: darken(@gray-lighter,10);
+	}
+	a:hover > .thumb,
+	a:hover > .thumb-large {
+		border-color: darken(@gray-lighter,20);
+		.box-shadow(0 2px 2px darken(@gray-lighter,20));
+	}
+		

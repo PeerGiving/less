@@ -1,0 +1,202 @@
+﻿/* tyn/theme.less */
+
+
+// Global
+	a {
+		&:not(.btn) {
+			text-decoration: underline;
+		}
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	h2, h3 {
+		letter-spacing: -0.05em;
+
+		.manageActions,
+		.feature-item {
+			letter-spacing: normal;
+		}
+	}
+	h2 {
+		line-height: @line-height-computed * 2.5;
+
+		& + .meta-list {
+			margin: -@line-height-computed/2 0 @line-height-computed/2;
+		}
+		&.pull-top {
+			line-height: 45px;
+			margin-bottom: 9px + (62.5px - 45px);
+		}
+	}
+	h3 {
+		line-height: @line-height-computed * 2;
+
+		& + .meta-list {
+			margin: -@line-height-computed/2 0 @line-height-computed/2;
+		}
+		&.pull-top {
+			line-height: 37px;
+			margin-bottom: 9px + (50px - 37px);
+		}
+	}
+
+
+// Master Styles
+	.nav-account {
+		background: black;
+		font-family: Calibri, 'Century Gothic', verdana, sans-serif;
+		font-size: 13px;		
+
+		.box-shadow(0 4px 5px rgba(50,50,50,0.5));
+
+		.nav-account-inner {
+			& > li {
+				&:hover {
+					& > a,
+					& > a:hover,
+					& > a:active {
+						background-color: @_tyndale_green_dark;
+					}			
+				}
+				&.active {
+					& > a,
+					& > a:hover,
+					& > a:active {
+						background-color: @_tyndale_green_darkish;
+					}
+				}
+			}
+		}
+	}
+	header {
+		.top-links {
+			margin-top: -32px;
+			font-size: 13px;
+			font-family: Calibri, "Century Gothic", Verdana, sans-serif;
+
+			li {
+				display: inline;
+				margin-right: 10px;
+
+				a {
+					color: white;
+				}
+			}
+		}
+		h1 {
+			float: left;
+			
+			a {
+				margin-top: 25px;
+			}
+		}
+		.headerZone2 {
+			position: relative;
+			
+			a {
+				position: absolute;
+				right: 0px;
+				top: 0px;
+				margin-top: 18px;
+			}
+		}
+	}
+	.nav-main-list {
+		font-family: Calibri, 'Century Gothic', 'Trebuchet MS', Arial, sans-serif;
+		font-size: 16px;	// Could use a theme variable
+		
+		.navbar-default {
+			border: none;
+			background: linear-gradient(to bottom,@_tyndale_green 0%,@_tyndale_green_darkish 100%);
+		}
+		.dropdown-menu {
+			font-size: 16px;	// Could use a theme variable
+		}
+
+		// Phone
+		a.navbar-brand {
+			font-size: 18px;
+		}
+	}
+	.nav-breadcrumb {
+		border: none;
+	}
+	.nav-footer {
+		.nav-footer-inner {
+			#gradient > .vertical(@_tyndale_green, @_tyndale_green_darkish); 
+			
+			&, 
+			.list-divider-horizontal li,
+			p {
+				font-family: calibri, 'Century Gothic', verdana, sans-serif;
+				font-size: 14px;
+			}
+			.row.top .col-md-12,
+			.row.bottom .col-md-12{
+				.box-shadow(none);
+			}
+			/*.row.bottom .col-md-12 {
+				a.powered-by {
+					opacity: 0.9;
+
+					span {
+						display: inline-block;
+						padding-top: 20px;
+					}
+				}
+			}*/
+		}
+	}
+	.color-footer(white);
+	.light-powered-by();
+
+
+// Components
+	.nav-account,
+	.nav-main-list,
+	.fundraising-tile-list,
+	.tile-clickable,
+	.project-updates {
+		a {
+			text-decoration: none;
+		}
+	}
+	.progress-success .bar {
+		background-color: @brand-primary;
+	}
+	.search-box {
+		 .add-on {
+			height: 18px;
+			line-height: 18px;
+		}
+	}
+	.category-list-item {
+		.hover-tile {
+			h3.pull-top {
+				font-size: 24px;
+				line-height: 24px;
+				margin-bottom: 17px;
+			}
+			p, ul, ol {
+				font-size: 14px;
+				line-height: 19px;
+			}
+		}
+	}
+	.updates-editor #providersArea .postType input[type=radio] + label {
+		font-size: 14px;
+	}
+
+	
+// Page Styles
+	.custom-page {
+		.about-page {
+			@media (max-width: @screen-sm-max) {
+				h2, h3 {
+					margin-top: 0px;
+					margin-bottom: 0px;
+				}
+			}
+		}
+	}

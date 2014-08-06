@@ -1,0 +1,71 @@
+﻿.asset-activity-list-item {
+	padding: @line-height-computed 0;
+	background-color: @huedGrayLightest;	// post will override this
+
+	.brief {
+		color: @gray-light;
+
+		.activity {
+			a {
+				.gray-link;
+				font-weight: bold;
+			}
+		}
+		.date {
+			abbr {
+				border-style: none;
+			}
+		}
+	}
+	.asset-activity-action-list {
+		color: @gray-light;
+
+		a {
+			.gray-light-link;
+		}
+	}
+
+	// Phone
+	@media (max-width: @screen-xs-max) {
+		padding: 0;	// Give padding to inner item below
+
+		.asset-activity-list-item-inner {
+			margin-left: -15px;
+			margin-right: -15px;
+			padding: @line-height-computed 15px;
+			background-color: @huedGrayLightest;
+
+			.display-table-cell:first-child {
+				width: 100%;
+			}
+		}
+	}
+
+	// Tablet/Desktop
+	@media (min-width: @screen-sm-min) {
+		.tile();
+
+		overflow: visible;
+		padding: @line-height-computed;
+		padding-right: 70px;
+		padding-left: 30px;		
+
+		.brief {
+			width: 100%;
+			border-collapse: separate;
+
+			.avatar {
+				width: 40px;
+			}
+			.date {
+				text-align: right;
+				white-space: nowrap;
+
+				abbr {
+					margin-left: 20px;
+				}
+			}
+		}
+
+	}
+}

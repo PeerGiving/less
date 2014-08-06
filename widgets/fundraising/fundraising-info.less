@@ -1,0 +1,24 @@
+﻿.fundraising-info {
+	.funds-raised-active {
+		.asset-funds-raised {
+			font-size: 24px;
+
+			.raised {
+				.pull-left();
+			}
+			.verb:before {
+				content: '\0000a0';
+			}
+			.goal {
+				.pull-right();
+			}
+		}
+		& + .progress-bar-pgs {
+			margin-top: @line-height-computed/2;
+		}
+	}
+	
+	.asset-fundraisers {
+		font-size: 14px;
+	}
+}

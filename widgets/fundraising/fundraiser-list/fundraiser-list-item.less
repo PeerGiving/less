@@ -1,0 +1,19 @@
+﻿.fundraiser-list-item {
+	a {
+		display: block;
+		padding-top: @line-height-computed/2;
+		padding-bottom: @line-height-computed/2;
+
+		&:hover {
+			background-color: @grayLightest;
+			text-decoration: none;
+		}
+		.img-shape-container {
+			margin-right: @gridGutterWidth/2;
+		}
+		.amount-raised {
+			color: @grayDarkest;
+			.indent();
+		}
+	}
+}

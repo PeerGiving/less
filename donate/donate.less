@@ -1,0 +1,72 @@
+/* donate.less */
+
+	.donate {
+
+		.donate-description {
+			vertical-align: top;
+			display: inline-block;
+
+			.current {
+				font-weight: bold;
+				font-size: @font-size-base + 2;
+			}
+		}
+
+		.paymentMethodItem {
+			display: inline-block;
+			text-align: center;
+
+			span {
+				display: block;
+
+				&.text {
+					margin-top: 5px;					
+				}
+			}
+		}
+
+		.thumb-large {
+			.pull-left;
+			margin-right: @gridGutterWidth;
+		}
+
+		.trustBox {
+			float: right;
+		}
+
+		.billing {
+			.cc-radio {
+				display: inline-block;
+				vertical-align: bottom;
+				margin-top: 0;
+
+				.cc-label {
+					margin-right: @gridGutterWidth;	
+					width: 200px; /* IE8 needs the width set */
+			
+					input {
+						margin-right: 5px;
+					}
+					img {				
+						height: 20px;
+						width: 37px;
+					}				
+				}
+			}
+			.cc-label-wide {
+				padding-top: 5px;
+			
+				img {				
+					height: 20px;
+					width: 37px;
+				}						
+			}
+			.cheque-label {
+				img {				
+					height: 20px;
+					width: 22px;
+				}
+			}		
+		}
+
+	}

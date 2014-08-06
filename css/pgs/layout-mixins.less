@@ -1,0 +1,74 @@
+﻿/* \css\pgs\layout-mixins.less */
+
+	// Hide <h1> content and use Logo instead, if one is provided
+	.setHeader() {
+		.head-wrapper {
+			background-color: @headBackgroundColor;
+			background-image: @headBackgroundImage;
+			background-repeat: @headBackgroundRepeat;
+			background-position: @headBackgroundPosition;
+		}
+	}
+	.setHeader() when (@headLogoWidth > 0) {
+		.head-wrapper {
+			header h1 a {
+				display: inline-block;
+				height: @headLogoHeight;
+				width: @headLogoWidth;
+				background: @headLogoImage no-repeat left top;
+				text-indent: -9999px;
+				font-size: @headLogoHeight;
+			}
+		}
+	}
+	
+	// Set navs, content areas to be horizontally restricted in closed layouts
+	.setLayout() {
+		// Background in Open Layout
+		background-color: @bodyBackgroundColor;
+		background-image: @bodyBackgroundImage;
+		background-repeat: @bodyBackgroundRepeat;
+		background-position: @bodyBackgroundPosition;
+	}
+	.setLayout() when (@isClosedLayout) {
+		// White backgrounds in Closed Layout
+		& > form {
+			.head-wrapper .nav-account > .container,
+			.head-wrapper > .container,
+			& > .container,
+			.sticky-footer-push > .container,
+			.nav-jump {
+				background-color: white;
+			}
+		}
+
+		// Responsive Widths in Closed Layout
+		.nav-main-list .navbar,
+		.nav-breadcrumb,
+		.secondary-content,
+		.nav-footer,
+		.nav-jump {
+			margin-left: auto;
+			margin-right: auto;
+
+			@media (min-width: @screen-sm-min) {
+				width: @container-sm;
+			}
+			@media (min-width: @screen-md-min) {
+				width: @container-md;
+			}
+		}
+
+		// Pull Home in Navbar to left edge
+		// and Breadcrumb to match
+		& > form { 
+			@media (min-width: @screen-sm) {
+				.nav-main-list .navbar > .container {
+					padding-left: 0 !important;
+				}
+				.nav-breadcrumb > .container {
+					padding-left: 15px !important;
+				}
+			}
+		}
+	}

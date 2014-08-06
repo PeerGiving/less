@@ -1,0 +1,29 @@
+﻿/* asp.net.less */
+/*  This file adds styling for .net (built-in) controls  */
+
+	// Radio Button List 
+	// Styled as tabs (use RepeatLayout="Flow")
+	.radio.tabs-left > span {
+		& > .active > input,
+		& > input {
+			margin: 7px 0 0;
+		}
+		& > input + label,
+		& > .active > input + label {
+			background-color: transparent;
+			padding: 5px 0 5px 40px;
+			margin: 0 -20px 5px;
+			border-radius: 4px 0 0 4px;
+			cursor: pointer;
+		}
+		& > input + label:hover {
+			background-color: @huedGrayLightest;
+		}
+		& > .active > input + label {
+			background-color: @huedGrayLighter;
+		}
+		& > input + label + br,
+		& > .active + br {
+			display: none;
+		}
+	}

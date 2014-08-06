@@ -1,0 +1,30 @@
+/* feature-item-list.ascx */
+
+
+	.feature-item {
+		display: inline-block;
+		white-space: nowrap; /*HM prevent IE8 from wrapping text*/
+
+		a {
+			vertical-align: top;
+
+			&.featured {
+				.btn-info;
+
+				&:hover {
+					.btn-danger;
+				}
+			}
+		}
+		
+		
+	}
+	.feature-item-parent {
+		.feature-item {
+			a.hidden {
+				display: none;
+			}
+		}
+	}
+
+	

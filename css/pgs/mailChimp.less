@@ -1,0 +1,36 @@
+﻿/* mailChimp.less */
+	/* this file is used by all form_mailChimp.htm files which may reside
+		in App_Themes\[theme]\ */
+
+
+	body.mailChimp {
+		padding: 0;
+		margin: 0;
+		background-color: transparent;
+		background-image: none;
+		text-align: left;
+
+		.form-horizontal {
+			.control-group .form-group {
+				margin-bottom: @line-height-computed/2;
+			}
+			.control-label {
+				width: auto;
+				text-align: left;
+			}
+			.controls {
+				margin-left: 40px + @gridGutterWidth/2;
+
+				input[type=text],
+				input[type=email] {
+					width: 184px - 40px - @gridGutterWidth/2 - 10px;
+				}
+			}
+			input[type=submit] {
+				margin-left: 40px + @gridGutterWidth/2;
+			}
+			input[type="checkbox"] {
+				margin-top: -2px;
+			}
+		}
+	}

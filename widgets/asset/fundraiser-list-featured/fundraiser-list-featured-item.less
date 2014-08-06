@@ -1,0 +1,36 @@
+﻿/* fundraiser-list-featureditem.less */
+
+	.fundraiser-list-featured-item {
+
+		img {
+			height: @gridColumnWidth * .75;
+			width: @gridColumnWidth;
+			max-width: @gridColumnWidth;
+			margin-right: @gridGutterWidth/2;
+
+			&.thumb {
+				.box-sizing(border-box);
+			}
+		}
+
+		h4,
+		h4.pull-top {
+			/*max-height:	(14px * 3) + 1; /* The line-height is 14px from .pull-top h4 */
+			margin-bottom: 0px;
+			overflow: hidden;
+			padding-bottom: 1px /* prevents cutting off of letters caused by the overflow */
+		}
+
+		&:hover h4 {
+			color: @link-color;
+		}
+
+		.funds-raised {
+			margin-left: @gridColumnWidth + @gridGutterWidth/2;
+			font-size: @font-size-base - 1;
+		}
+		& > .callout {
+			margin-top: @line-height-computed * 1.25;
+		}
+	}
+

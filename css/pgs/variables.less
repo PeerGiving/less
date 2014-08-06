@@ -1,0 +1,71 @@
+﻿// Variables.less
+// Variables to customize the look and feel of PGS Bootstrap
+// -----------------------------------------------------
+
+// Media Queries Breakpoints
+// -------------------------
+@screen-xs: 480px;
+@screen-sm: 768px;	// 18px larger than @container-tablet (for vertical scrollbar)
+@screen-md: 1018px;	// 18px larger than @container-desktop (for vertical scrollbar)
+@screen-lg: 999999px;
+
+// Container Sizes
+// -------------------------
+@container-tablet:					(690px + (2 * @grid-gutter-width));
+@container-desktop:					(940px + (2 * @grid-gutter-width));
+@container-large-desktop:			(1140px + (2 * @grid-gutter-width));
+
+// Typography
+// -------------------------
+@baseSmallFontSize:				@font-size-base - 2px;
+@font-size-h1-phone:			24px;
+@font-size-h2-phone:			22px;
+@font-size-h3-phone:			18px;
+@font-size-h4-phone:			16px;
+
+// Buttons
+// -------------------------
+@btnRedBackground:                     @red;
+@btnRedBackgroundHighlight:            darken(@red, 10%);
+
+// Responsive
+// -------------------------
+@maxWidthMobilePortrait:		480px;		// Mobile Portrait  END
+@minWidthMobileLandscape:		481px;		// Mobile Landscape  START
+@maxWidthMobileLandscape:		767px;		// Mobile Landscape  END
+@minWidthTablet:				768px;		// Tablet  START
+@maxWidthTablet:				979px;		// Tablet  END
+@minWidthDesktop:				980px;		// Desktop  START
+@maxWidthDesktopWide:			1199px;		// Desktop  END
+@minWidthDesktopWide:			1200px;		// Desktop Wide  START
+/* Note: Full range of viewports can be covered using the following media queries:
+@media (max-width: @maxWidthMobilePortrait) {}
+@media (max-width: @maxWidthMobileLandscape) {}
+@media (min-width: @minWidthTablet) and (max-width: @maxWidthTablet) {}
+@media (min-width: @minWidthDesktopWide) {}
+*/
+
+@span1DesktopWide:				70px;
+@span2DesktopWide:				180px;
+@span3DesktopWide:				270px;	// Useful when you want to use Desktop-viewport widths in Tablet/Phone-viewports
+
+/* form > body > container top padding */
+@container-padding-top: 2*@line-height-computed;
+
+//CSS3
+@transition:					all 0.3s ease-out;
+
+// Image Folders are relative to each less file
+@mainImagesPath:		"../../images";
+@cssImagesPath:			"../../css/images";
+
+// Make font folder relative to styles.less (in App_Themes\xxx\ folder)
+@icon-font-path:		"../../bootstrap-3.1.1/fonts/";		// Gerb: This doesn't work properly in debug mode, but it's right for release mode
+
+// Bootstrap 3 overrides
+//
+@gridGutterWidth:			@grid-gutter-width;
+@line-height-computed:		@line-height-computed;
+@font-size-base:			@font-size-base;
+
+@gray:						#555; // TBS 2.x gray

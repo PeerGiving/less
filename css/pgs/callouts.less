@@ -1,0 +1,22 @@
+﻿/* callouts.less */
+
+	.callout {
+		position: relative;
+		padding-left: @gridGutterWidth/2;
+		padding-right: @gridGutterWidth/2;
+		padding-top: @line-height-computed;
+		padding-bottom: @line-height-computed;
+		border: 1px  solid @gray-light;
+		background-color:white;
+
+		& > div {
+			overflow: hidden;
+		}
+	}
+
+	.callout-top:before {
+		content: url('@{cssImagesPath}/callout-top.png');
+	    position: absolute;
+		top: -18px;												 // callout-top.png height is 18px
+		left: @gridColumnWidth/4;
+	}

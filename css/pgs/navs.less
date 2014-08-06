@@ -1,0 +1,82 @@
+﻿/* navs.less */
+
+	// Base Class
+	.nav > li > a:hover {
+		background-color: darken(@huedGrayLighter,6);
+	}
+
+	// Tabs and Pills
+	.nav-tabs {
+		& > li > a:hover {
+			border-color: @huedGrayLighter @huedGrayLighter darken(@huedGrayLighter,6);
+		}
+		a {
+			outline: 0;
+		}
+	}
+
+/* For any .nav directly following a previous .nav, */
+/*  modify the colors slightly */
+    .nav + .nav {
+    	li.active a,
+    	li.active a:hover {
+    		background-color: purple;
+    		color: White;
+		}
+		a {
+			color: purple;
+		}
+		a:hover {
+			color: darken(purple,10);
+		}
+	}
+
+
+/* Breadcrumbs */
+    .stepsLeft {
+        div {
+	        background: darken(@huedGrayLighter,6) url("@{cssImagesPath}/mask_arrowRight.gif") no-repeat right top;
+	        color: @gray-light;
+	        float: left;
+	        font-size: 18px;
+	        height: 35px;
+	        margin: 5px 0 20px 0;
+	        padding: 10px;
+	        width: 245px;
+	    
+	        span {
+	            display: block;
+	            font-size: 14px;
+	        }
+        }
+ 
+        .current{
+	        background-color: @huedGrayLighter;
+	        color: @gray-dark;
+        }
+    }
+
+	.steps-crumb {
+		.step {
+			background: @huedGrayLighter url("@{cssImagesPath}/mask_arrowRight.gif") no-repeat right top;
+			color: @gray-light;
+			font-size: 18px;
+			height: 55px;
+			padding: 10px;
+
+			&.active {
+				background-color: @link-color;
+				color: white;
+			}
+			li {
+				line-height: 18px;
+			}
+		}
+	}	
+
+/* Secondary Nav */
+	.container #content .nav-secondary,
+	.container #content .nav-secondary + .nav-secondary {
+		margin-top: -20px;	// Assume that this will eat into the main .container 's top padding of 40px
+		margin-bottom: 40px;
+	}
