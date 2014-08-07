@@ -1,4 +1,3 @@
 themes
 ======
-
-Theme realted files
+These are Peer Giving Solutions theme related files.
