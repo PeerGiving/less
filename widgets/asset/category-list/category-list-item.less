@@ -1,0 +1,52 @@
+﻿/* category-list-item.less (\widgets\asset\category-list\) */
+
+@category-list-item-padding: 10px;
+
+.category-list-item {
+	.col-md-4 {
+		margin-bottom: @gridGutterWidth;
+		height: 331px;
+
+		.category-list-item-inner {
+			position: relative;
+			z-index: 1;
+			height: 331px - 5px;	// so that the hover-tile doesn't overlap the tile's glow
+			overflow: hidden;
+
+			.thumb-tile {
+				height: 100%;
+				display: block;
+				padding: @category-list-item-padding;
+
+				img {
+					width: 100%;
+					margin-bottom: 20px;
+				}
+			}
+			.hover-tile {
+				display:			block;
+				position:			absolute;
+				z-index:			2;
+				top:				324px;									// starts out-of-view - jquery will pull it in
+				padding:			2 * @category-list-item-padding;
+				height:				324px;
+				width:				100%;
+				background-color:	rgba(255,255,255,0.9);					// See ie8.less
+
+				div {
+					// height and margin adjusted to match bottom edge 
+					//  with bottom edge of .thumb-tile > img					
+					height: 207px - @gridGutterWidth/2;
+					margin-bottom: @gridGutterWidth/2;
+					overflow: hidden;	// in case the truncation was not soon enough
+
+					p {
+						// About variable line-height (themes):
+						// Specify height in here as a function of line-height
+						// See 60mkc > theme.less
+					}
+				}
+			}
+		}
+	}
+}

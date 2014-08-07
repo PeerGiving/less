@@ -1,0 +1,92 @@
+/* 60mkc/theme-variables.less  MOD*/
+
+
+//	1. Comment out variable definitions to inherit defaults
+//		* defaults iherited from \pgs\css\theme-variables.less
+//	2. New variables intended for use by all themes should be defined in \pgs\css\theme-variables.less 
+//  3. New variables intended for use by a specific theme should have names beginning with a theme-initialism bounded by underscores (example: @_pn_green)
+//	This file can be copied, and used as a starting point for new themes
+
+
+// Variable Global Style options
+	// Closed Layout options
+		//@isClosedLayout: 
+		//@bodyBackgroundColor: 
+		//@bodyBackgroundImage:	
+		//@bodyBackgroundRepeat: 
+		//@bodyBackgroundPosition: 
+	// Header options
+		//@headBackgroundColor: 
+		//@headBackgroundImage: 
+		//@headBackgroundRepeat: 
+		//@headBackgroundPosition: 
+		@headLogoImage: url("images/60MKC_logo.png");
+		@headLogoWidth: 215px;
+		@headLogoHeight: 161px;
+		//@headTitleFontFamily: 
+		//@headTitleFontSize: 
+	// Typography options
+		@_60mkc_fontFamily: 'Quicksand', sans-serif;
+		@_60mkc_headingLineHeight: 1.25;
+		@font-family-base: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		@font-size-base: 16px;
+		@line-height-base: 1.5;		// 16px * 1.5 = 24px;
+		//@headings-font-family:
+		//@headings-line-height:
+		@headings-font-weight: 700;
+	// Link and Button options
+		@link-color:  @_60mkc_darkish-blue;
+		@link-hover-color: @_60mkc_navy;
+		@brand-primary: @_60mkc_darkish-blue;
+	// Hued Grays (for backgrounds, etc) options
+		//@huedGrayDarkest:											//	4% - 3% lum
+		//@huedGrayDarker:											//	13% - 3% lum
+		//@huedGrayDark:											//	20% - 3% lum
+		//@huedGray: darken(#8c6f1d,3);								//	33% - 3% lum
+		//@huedGrayLight:											//	60% - 3% lum
+		//@huedGrayLighter:											//	93% - 3% lum
+		//@huedGrayLightest:										//	96% - 3% lum
+	// Other Colors
+		@_60mkc_yellow: #febc11;
+		@_60mkc_navy: #074872;
+		@_60mkc_dark-blue: #126bb0;
+		@_60mkc_darkish-blue: #0088cc;
+		@_60mkc_blue: #27aae1;
+
+// Component Styles	
+	// Main Navbar (nav-main-list)
+		@navbar-default-bg: @_60mkc_dark-blue;
+		//@navbar-default-color:
+		@navbar-default-link-color: red;
+		@navbar-default-link-hover-color: white;
+		@navbar-default-link-hover-bg: @_60mkc_darkish-blue;
+		//@navbar-default-link-active-color:
+		@navbar-default-link-active-bg: @_60mkc_darkish-blue;
+	// Account Nav
+		//@nav-account-bg:
+		//@nav-account-link-color:
+		//@nav-account-link-hover-color:
+		//@nav-account-link-hover-bg:
+		//@nav-account-link-active-bg: 
+	// Breadcrumb Nav
+		@breadcrumb-link-hover-color: white;
+		@breadcrumb-active-color: @_60mkc_yellow;
+	// Action Nav
+		//@actionBackgroundColorDefault: 
+		//@manageBackgroundColor: 
+		//@donateBackgroundColor: 
+		//@inviteBackgroundColor:
+		//@subscribeBackgroundColor:
+	// Badge
+		//@badgeBackgroundColor: 
+	// Home page carousel	
+		//@homePageCarouselHeight: 
+
+
+// Viewport Styles
+	// Navbar
+		@navbar-phone-bg: @_60mkc_dark-blue;
+		@navbar-phone-color: white;
+	// Footer 
+		@footer-phone-bg: @_60mkc_yellow;
+		@footer-phone-color: white;

@@ -1,0 +1,28 @@
+﻿/* css\pgs\pgs.fileupload.less */
+/* Styles the file upload button, works with scripts\pgs.fileupload.js */
+
+.pgs-fileupload {
+	.btn-file {
+		position: relative;
+		overflow: hidden;
+		vertical-align: top;
+
+		input[type=file] {
+			position: absolute;
+			top: 0;
+			right: 0;
+			min-width: 100%;
+			min-height: 100%;
+			font-size: 999px;
+			text-align: right;
+			filter: alpha(opacity=0);
+			opacity: 0;
+			background: red;
+			cursor: inherit;
+			display: block;
+		}
+	}
+	input.filename {
+		display: inline-block;
+	}
+}

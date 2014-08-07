@@ -1,0 +1,2031 @@
+/* TABLE OF CONTENTS
+	1. RESET & (SOME) GLOBAL
+	2. STRUCTURAL AND COMPONENTS
+		2A. MAJOR STRUCTURE: 
+			Rules for major page layout (header, content, footer)
+            Or rules for components (mainNav) that always belong in header/footer regions
+		2B. CONTENT COMPONENTS: 
+			Rules for components (like accordions, tabs etc) which belong in the content section
+	3. TABLES & LISTS
+	4. LINKS/BUTTONS/FORM-INPUTS
+	5. TEXTUAL
+		+ headers
+		+ messages/popups
+		+ etc
+	6. 3RD PARTY
+		- i.e. thickbox, cluetip etc
+	7. UTILITY
+	8. PAGE SPECIFIC: 
+		stylerules for components that are page-specific
+		* rules that _become_ should move up to 2B
+	9. TEMPORARY
+		- For work that is "experimental"
+		- Don't move existing stuff into here
+ **********************************************/
+
+
+/* 1. RESET & (some related) GLOBAL 
+   credit: http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
+ ************************************************************************/
+ul.bulleted{ margin-left: 30px; } /* not a 'global' rule, shouldn't live here */
+
+/* 2. STRUCTURAL AND COMPONENTS
+	  2A. MAJOR STRUCTURE: 
+		  Rules that define major page layout (header, content, footer)
+          Or define components (mainNav) that always belong in header/footer regions 
+ *************************************************************************************/
+
+
+/* Primary Page Level Layout Containers 
+ ****************************************/
+/* PGS-1433: ESTODO - remove  once the rest of pages that are using this are scaffolded 
+   NOTE: Still used for blog.aspx , invite-contributors.ascx, browsernotsupported.aspx 
+   and some test  pages that we could probably ignore (remove)
+*/
+    #mainCol{
+	    float: left;
+	    margin: 10px 0;
+	    overflow: hidden;
+	    padding: 0 0 35px 0; /* fb-like hidden comment button fix */
+    }
+
+/* PGS-1433: ESTODO - remove  once the rest of pages that are using this are scaffolded
+   NOTE: Still used for blog.aspx , browsernotsupported.aspx
+	and some test  pages that we could probably ignore (remove)
+*/
+    #sideCol{
+	    float: right;
+    }
+    
+    #sidebar{
+	    display: none;/* only for hftn; remove? */
+    }
+	    
+/* Footer
+   Sticky footer, thanks to http://www.themaninblue.com/writing/perspective/2005/08/29/
+   CAUTION:
+   - relies on bottom padding in #content and negative margin in #footer
+   - sticky footer equation: footer height + vertical-padding + top-bottom-border <= content bottom-padding 
+ ************************************************************************************************************/
+
+/* 2. STRUCTURAL AND COMPONENTS
+      2B. CONTENT COMPONENTS: 
+		  Rules for components (like accordion, tabs etc) that go in the content section 
+ *****************************************************************************************/
+
+/* Sub Navigation 
+ ******************/
+.aboutSubnav{
+	border-top: solid 5px transparent;
+	margin-top: 0;
+	min-height: 41px; /* min-height for IE7 */
+	padding-bottom: 3px;
+}
+    .aboutSubnav .current{
+	    background: #ccccff !important;
+	    color: white !important;
+    }
+    .aboutSubnav a:link, 
+    .aboutSubnav a:visited, 
+    .aboutSubnav a:active{
+	    background: @gray-lighter;
+	    color: @gray-light;
+	    display: block;
+	    float: left;
+	    font-weight: bold;
+	    height: 30px;
+	    margin: 1px 1px 0 0;
+	    padding: 10px 16px 10px 10px;
+	    width: 65px;
+    }
+ 
+    .aboutSubnav a:hover{
+	    background: #e6e6e6;
+	    color: @gray-light;
+	    text-decoration: none;
+    }
+    
+
+/* Tabbed Navigation 
+   inspiration: http://alistapart.com/articles/slidingdoors/
+ *************************************************************/
+ /* PGS-892 - remove when no longer used
+    NOTE: It is still in use by: my-account\settings\setting-menu.ascx, media-widget\media-widget.aspx (?)
+	and some test pages
+*/
+.tabNav li.active{
+	background: url("@{cssImagesPath}/leftTabOn.gif") no-repeat left top;
+	border-width: 0;
+	padding: 0 0 0 5px;
+}
+    .tabNav li.active a:link, 
+    .tabNav li.active a:visited, 
+    .tabNav li.active a:active{
+	    background: url("@{cssImagesPath}/rightTabOn.gif") no-repeat right top;
+	    color: @gray-darker;
+	    font-weight: bold;
+	    padding-bottom: 5px;
+    }
+    .tabNav li.active a:hover{ /* ? */ }
+.tabNav{
+	background: url("@{cssImagesPath}/tabBG.png") repeat-x bottom;
+	clear: left;
+	float: left;
+	margin-bottom: 15px;
+	padding: 0; /* ? */
+	width: 100%;
+}
+    .tabNav li.first{ }
+    .tabNav li{
+	    display: inline; /* ? */
+	    float: left; /* ? */
+	    list-style-type: none;
+	    background: url("@{cssImagesPath}/leftTabOff.gif") no-repeat left top;
+	    margin: 0 -5px 0 10px !important;
+	    padding: 0 0 0 5px; /* left? */
+    }
+    .tabNav li a:link, 
+    .tabNav li a:visited, 
+    .tabNav li a:active{
+	    float: left;
+	    display: block;
+	    background: url("@{cssImagesPath}/rightTabOff.gif") no-repeat right top;
+	    padding: 5px 17px 4px 10px;
+	    text-decoration: none;
+	    color: @gray;
+	    outline: none;
+	    text-decoration: none;
+    }
+    .tabNav li a:hover{
+	    color: @black;
+    }
+
+
+/* Tabbed Page Content 
+   credit/inpspiration: http://alistapart.com/articles/slidingdoors/ 
+ *********************************************************************/
+#tabs{ /* ie6 needs container */
+	background: url("@{cssImagesPath}/tabBG.png") repeat-x bottom;
+	width: 100%;
+}
+    #tabs ul{
+	    padding: 0px 0px 0;
+	    list-style: none;
+	    text-transform:capitalize;
+    }
+    #tabs li{
+	    float: left;
+	    background: url("@{cssImagesPath}/leftTabOff.gif") no-repeat left top;
+	    margin-right: 5px;
+	    padding: 0 0 0 5px; /* left? */
+    }
+    #tabs a{
+	    display: block;
+	    background: url("@{cssImagesPath}/rightTabOff.gif") no-repeat right top;
+	    padding: 5px 15px 4px 6px;
+	    text-decoration: none;
+	    color: @gray-light;
+    }
+    #tabs a:hover{
+	    color: @gray-dark;
+    }
+    #tabs .current{
+	    background-image: url("@{cssImagesPath}/leftTabOn.gif");
+    }
+    #tabs .current a{
+	    background-image: url("@{cssImagesPath}/rightTabOn.gif");
+	    color: @gray-dark;
+	    font-weight: bold;
+	    padding-bottom: 5px;
+    }
+
+
+/* Tabbed Sub-Navigation 
+ *************************/
+.tabSubNav{
+	background: #eee;
+	float: left;
+	list-style-type: none;
+	margin: 5px 0 0 0; /* top? */
+	padding: 0; /* ? */
+	width: 100%;
+}
+    .tabSubNav li{
+	    float: left;
+    }
+    .tabSubNav a:link.active, 
+    .tabSubNav a:visited.active, 
+    .tabSubNav a:active.active{
+	    background: #ccccff;
+	    color: @black;
+    }
+    .tabSubNav a:link, 
+    .tabSubNav a:visited, 
+    .tabSubNav a:active{
+	    background: #bbb;
+	    color: white;
+	    float: left;
+	    font-weight: bold;
+	    margin: 0 1px 1px 0;
+	    padding: 10px 16px 10px 10px;
+    }
+    .tabSubNav a:hover{
+	    background: @gray-light;
+	    text-decoration: none;
+    }
+    
+/* FB-like section (3rd party?)
+ ********************************/
+
+.fb-like iframe {
+	height: 35px;	/* IE Fix */
+	}
+
+#sideCol .fb-like{
+    margin: 10px 0 0 10px;
+}
+    
+/* FB like box functionality  
+ *****************************/
+#fb-like-box{
+    clear:left;
+    float:left; /* ie8 */
+	}
+    #fb-like-box td{ white-space:nowrap; }
+    #fb-like-box span{ display:block; margin-right:10px; }
+    #fb-like-box input[type=text]{ width:400px; }
+    #fb-like-box input[type=submit]{ height:30px; cursor: pointer; }    
+
+
+/* Action Links List
+   Displays small list of links (view, edit etc)
+   Used in my-pages, my-posts, dashboards 
+ ******************************************/
+ul.action-links{
+	.list-unstyled;
+
+    list-style-type:none;
+    width:100%;
+    margin-left: 0px;
+}
+    ul.action-links li{
+        float:left;
+        font-size: @baseSmallFontSize;
+        text-transform:uppercase;
+    }
+
+.table ul.action-links {
+     margin-left: 0;
+     }
+  
+/* 2. STRUCTURAL AND COMPONENTS
+      2C. PAGE SPECIFIC: 
+          - rules for components that are page-specific
+          - rules that "become" general should move up to 2B 
+ *************************************************************/
+
+/* Homepage
+   If a lot of the following only exists in client zones and is not used by all clients,
+   move into relevant client style-sheets? 
+ *******************************************/
+/* Home page intro panel (uses jquery innerfade: http://medienfreunde.com/lab/innerfade/) */
+
+/* Dubious items!
+ ******************/
+.followMe a:link, 
+.followMe a:active, 
+.followMe a:visited{ /* Unused? Used in client zones? */	
+	background: url("@{cssImagesPath}/btn_twitterFollow.gif") no-repeat left top;
+	float: left; /* ? */
+	height: 70px;
+	width: 250px;
+}
+.followMe a:hover{
+	background: url("@{cssImagesPath}/btn_twitterFollow.gif") no-repeat left -70px;
+	text-decoration: none;
+}
+
+/* Doesn't seem to be used anywhere (client zones? about pages? take-action?) */
+.actionList{
+	background: white;
+	list-style-type: none;
+	margin: 0 0 10px 0;
+	overflow: hidden;
+	width: 670px;
+}
+    .actionList li{
+	    background: white;
+	    float: left;
+	    height: 150px;
+	    margin: 0px 11px 0 0;
+	    padding: 10px;
+	    width: 197px;
+    }
+    .actionList li.last{
+	    width: 194px;
+    }
+    .actionList li:hover{
+	    background: #f0f0f0;
+    }
+    .actionList li:hover a{
+	    color: white !important;
+    }
+    .actionList p a{
+	    height: 115px;
+    }
+    .actionList a:link, 
+    .actionList a:active,
+    .actionList a:visited{
+	    color: @black;
+	    display: block;
+	    width: 100%;
+    }
+    .actionList a:hover{
+	    color: @black;
+	    text-decoration: none;
+    }
+    .actionList li.donate:hover{
+	    background: #9c0000;
+    }
+    /* border-top property assigned in fundraising (landing page) section, for general li.donate etc panels */
+    .actionList li.champion:hover{
+	    background: #66cc33;
+    }
+    .actionList li.share:hover{
+	    background: #6666ff;
+    }
+
+	/* Section Box
+	**************/
+	.sectionBox {
+		clear: both;
+		display:block;
+		margin: 30px 0 0;
+		padding: 1px 0;
+		}
+		.sectionBox.top { /* PGS-957/1451 to be removed but this is also used in lg theme */
+			margin-top: 0;
+			}
+		.sectionBox .sectionHdr {	/* if .sectionHdr is in a .sectionBox, let the box do vertical spacing */
+			margin-top: 0;
+			}
+
+	/* Section Heading
+	******************/
+	#sideCol .sectionHdr {
+		margin: 30px 0 10px 10px;
+		}
+	#sideCol .sectionBox .sectionHdr {
+		margin-top: 0;	/* if .sectionHdr is in .sectionBox, let the latter do vertical spacing */
+		}
+	#sideCol .sectionBox .sectionHdr.boxed {
+		background:#f0f0f0;
+		margin-left:-20px;
+		padding: 10px;
+	}
+
+
+/* Recent Activity 
+   - home, asset & member-profiles
+ ***********************************/
+.recentActivity {
+	list-style-type: none;
+	margin-left: 0;
+}
+    .recentActivity li {
+	    border-top: solid 1px @gray-lighter;
+	    color: @gray-light;
+	    padding: @gridGutterWidth/2;
+    }
+    .recentActivity li:last-child {
+    	border-bottom: solid 1px @gray-lighter;
+    }
+	.recentActivity p {
+		margin-bottom: 0;
+	}
+
+/* Asset Page Specific
+   - Program, Project, Fundraiser, Member
+ ******************************************/
+	
+/* Feb/2012/gerb: not used: */
+.asset-summary { /* actually for asset parent summary (accordion header) */    
+	float: left;
+	width: 70%;
+	}			
+/* Feb/2012/gerb: not used: */
+.summary-sidebar{
+	float: right;
+	width: 222px;
+	}
+
+/* Story Asset Page Specific
+   - Program, Project, Campaign
+   - Also see: #fundState
+ ******************************************/
+	
+/* 
+=================================
+Sortable Column Headers
+================================= 
+*/
+.sortable-results-header a:link, 
+.sortable-results-header a:visited, 
+.sortable-results-header a:active{	
+	padding-right: 12px;
+}
+
+.sortable-results-header a:hover{
+    background: url("@{mainImagesPath}/images/arrowDown.png") no-repeat right 2px;
+}    
+
+
+/* 
+=================================
+General Sortable Column Styles
+================================= 
+*/
+.sort-ascend a:link, 
+.sort-ascend a:visited, 
+.sort-ascend a:active{
+	background: url("@{mainImagesPath}/arrowUp.png") no-repeat right 2px;
+	font-weight: bold;
+}
+.sort-ascend a:hover{
+	background: url("@{mainImagesPath}/arrowDown.png") no-repeat right 2px;
+}
+.sort-descend a:link, 
+.sort-descend a:visited, 
+.sort-descend a:active{
+	background: url("@{mainImagesPath}/arrowDown.png") no-repeat right 2px;
+	font-weight: bold;
+}
+.sort-descend a:hover{
+	background: url("@{mainImagesPath}/arrowUp.png") no-repeat right 2px;
+}
+
+/* Admin Assets Page
+ **********************/
+.assets-report{ /* customizes info-summary table rules, multiple classes technique */    
+	float: right;
+	margin: 18px 0 0 25px;
+	width: 200px;
+}
+/* Column customizations for query-results table, ID technique */
+#admin-assets .id{ width:1%; }
+#admin-assets .title{ width:24%; }
+#admin-assets .founder-info{ width:15%; }
+#admin-assets .date{ width:10%; }
+#admin-assets .funds-raised{ padding-right:3px; width:20%; }
+#admin-assets .type-info{ width:20%; }
+#admin-assets .views{ width:10%; }
+
+
+/* Admin Users / Members Page
+ ************************/
+/* Column customizations for query-results table, ID technique */
+#admin-members .id{ width:1%; }
+#admin-members .name{ width:34%; }
+#admin-members .email{ width:15; }
+#admin-members .rights{ width:15%; }
+#admin-members .date{ width:15%; }
+#admin-members .status{ width:10%; }
+#admin-members .mail-list{ width:10%; }
+#admin-members img { width: 60px; max-width:60px} 
+
+
+/* Admin Orders page
+ *********************/
+/* Column customizations for query-results table, ID technique */
+#admin-orders .id{ width:10%; }
+#admin-orders .donor-info{ width:20%; }
+#admin-orders .billing-info{ width:20%; }
+#admin-orders .tr-info{ width:20%; }
+#admin-orders .payment-info{ width:10%; }
+#admin-orders .money-info{ width:10%; }
+
+
+/* Admin Receipts Page
+ ***********************/
+/* Column customizations for query-results table, ID technique */
+#admin-receipts .tr-number{ width:20%; }
+#admin-receipts .status{ width:1%; }
+#admin-receipts .date{ width:15%; }
+#admin-receipts .donor{ width:20%; }
+#admin-receipts .donee{ width:25%; }
+#admin-receipts .bank-info{ width:24%; }
+
+
+/* Admin Recurring Page
+ ************************/
+/* Column customizations for query-results table, ID technique  */
+#admin-recurring .id{ width:10%; }
+#admin-recurring .donor{ width:27%; }
+#admin-recurring .donee{ width:32%; }
+#admin-recurring .date{ width:15%; }
+#admin-recurring .amount{ width:15%; }
+#admin-recurring .status{ width:2%; }
+
+
+/* Admin Bank Account Summary page
+ ***********************************/
+/* Column customization for query-results table, ID technique    */
+#bank-account-summary #currency{ width:80px; }
+
+/* Admin Analytics Page
+ ***************************/
+#admin-analytics .export-table {
+	float: right;
+	font-size: 10px;
+	}
+
+/* Social Bookmarks
+   - by Tydlinka: http://tydlinka.deviantart.com/art/Set-of-social-icons-109435724 
+   - Creative Commons Attribution-No Derivative Works 3.0 License: http://creativecommons.org/licenses/by-nd/3.0/  
+ ******************************************************************************************************************/
+	#socialBookmarks a img {
+		border-bottom: solid 2px transparent;
+		margin: 0 0 0 7px;
+		}
+	#socialBookmarks a:hover img {
+		border-bottom: solid 2px @gray-lighter;
+		}			
+
+
+/* Asset Draft Checklist
+ *************************/
+.asset-checklist{
+	background:#b9cce5;
+	margin-bottom:20px;
+	padding-top:10px;
+}
+    .asset-checklist h3{
+	    background: url("@{cssImagesPath}/info.png") no-repeat 10px 35%;
+	    color:@black;
+	    padding:0 10px 5px 30px;
+    }
+    .asset-checklist p{	    
+	    padding:0 10px;
+    }
+    .asset-checklist ul{
+	    border-bottom:solid 2px #e1f9e4;
+	    list-style-type:none;
+    }
+        .asset-checklist ul li.incomplete{
+	        background: url("@{cssImagesPath}/cancel.png") no-repeat 94% 55%;
+        }
+        .asset-checklist ul li{
+	        background: url("@{cssImagesPath}/tick.png") no-repeat 94% 55%;
+	        border-top: solid 2px #e1f9e4;
+	        padding: 5px 0 5px 10px;
+        }
+        .asset-checklist ul li a{
+	        display:block;
+        }
+    .asset-checklist div a{
+	    background:#6666ff;
+	    color:white;
+	    display:block;
+	    padding: 5px 0 5px 10px;
+	    text-transform:uppercase;
+	    text-decoration:none;
+    }
+    .asset-checklist div a:hover{
+	    background:#0033ff;
+    }    
+
+/* Search Filters 
+   - mainly for search and query-results tables (eg. date picker) 
+ ******************************************************************/
+.filters {
+	float: left;
+}
+/* PGS-969 eva: margin between individual div's */
+.filters div{
+	float: left;
+	margin-right: @gridGutterWidth/2;
+}
+
+/* Used to control the appearence of the datepicker control when inside a .filters table.
+	Both options below wrap the "(yyyy/mm/dd)" text under the input field: */
+/*.filters .date { 
+	width: 110px;
+}*/
+.filters .date label + input + span:after {
+	display: block;
+	content: ".";
+	visibility:	hidden;
+	height: 0;
+	}
+
+
+/* Take-Action (AKA Fundraising) page
+   - page is all "zone"
+   -- so rules should be in theme sheet
+ ****************************************/
+.fundraising {
+	.takeActionIntro {
+		background: white url("@{mainImagesPath}/bg_takeActionIntro.gif") no-repeat 125% top;
+		/*margin-left: 4px;
+		padding: 0 10px 20px 0;
+		overflow: hidden;*/
+	}
+	/*.takeActionIntro p {
+		margin: 10px 0 0 0;
+	}*/
+	/*.takeActionIntro h2 {
+		margin: 15px 0 0 0;
+	}*/
+	/*.donateChampionShare {
+		display: inline;
+		float: left;
+		list-style-type: none;
+		margin: 0;
+	}*/
+	/*.donateChampionShare li {
+		float: left;
+		margin: 20px 20px 0 0;
+		width: 210px;
+	}*/
+	/*.donateChampionShare li h3 {
+		margin: 10px 0;
+	}*/
+	.donate {
+		border-top: solid 6px #9c0000;
+	}
+	.champion {
+		border-top: solid 6px #66cc33;
+	}
+	.share {
+		border-top: solid 6px #6666ff;
+	}
+}
+
+/* Invite Friends, Invite Contributors Pages
+   - Note: should use general 'steps left' styling rules 
+ *********************************************************/
+.plaxo {
+	display: block;
+	float: left;
+	}
+.invite-step2 table {
+    margin: 0;
+	}
+.invite-step2 #our-message {
+    border:none 1px @gray-light;
+    color:@gray-light;
+    padding:5px;
+    width:518px; 
+	}
+
+
+/* Log in / Sign up Page
+ *************************/
+.confirmation-field {
+    display: none; /* also for comments, feedback? */
+}
+
+.loginBox,
+.signupBox{
+    color:@black;
+    float:left;
+    padding:20px;
+}    
+.loginBox{
+	background:#ccffff;
+	width:420px;
+}
+.signupBox{
+	background:@gray-lighter;
+	margin-left:20px;
+	width:415px;
+}
+    .signupBox .sectionHdr, 
+    .loginBox .sectionHdr{
+	    margin:0 0 20px 0;
+    }
+    .loginBox input, 
+    .loginBox select{
+	    display:block;
+	    margin-bottom:15px;
+	    width: 220px;
+    }
+    .signupBox .contact{
+	    margin-bottom:25px !important;
+    }
+        /* over-ride for "contacting me is ok" checkbox input */
+        .signupBox .contact input{            
+	        display:inline !important;
+	        margin: 0 !important;
+	        width: auto !important;
+        }
+        .signupBox .contact label{
+	        margin-left: 5px !important;
+        }
+    .signupBox input, 
+    .signupBox select{
+	    display:block;
+	    margin-bottom:15px;
+	    width:220px;
+    }
+
+
+/* Page Header
+   - Only used in home and asset-management pages 
+ **************************************************/
+.pageHdr_wMetaInfo {
+	margin: 20px 0 0; 
+	}
+	.pageHdr_wMetaInfo .pageHdr {
+		margin: 0;
+		}
+	.pageHdr_wMetaInfo .metaInfo {
+		color: @gray-light;
+		margin: 5px 0 20px;
+		}
+
+
+/* Asset Manage: Community Page
+ ********************************/
+#manage-community{
+    clear:left;
+    margin-top:15px;
+}
+
+    #manage-community .filters input[type=submit]{
+        display:none;
+    }
+    #manage-community th a{
+        padding-right:15px;
+    }
+    #manage-community th.date{
+        width:55px;    
+    }
+
+
+/* Asset Manage: Images and Video Pages 
+ ****************************************/
+.mediaItem{
+	border: 1px solid @gray-light;
+	display: inline;
+	float: left;
+	margin: 0 30px 30px 0;
+	width: 200px;
+}
+    .mediaItem .infoPanel{
+	    background: white;
+	    float: left;
+	    height: 150px;
+	    width: 100%;
+    }
+    .mediaItem .infoPanel div{
+	    clear: left;
+	    font-size: @baseSmallFontSize;
+	    margin: 5px 4px;
+    }
+    .mediaItem .delete{
+	    display: inline-block;
+	    float: right;
+	    margin: 5px 5px 0 0;
+	    padding: 5px 10px;
+    }
+    .mediaItem .save{
+	    display: inline-block;
+	    float: left;
+	    height: 14px;
+	    margin: 5px 0 5px 5px;
+	    padding: 5px 10px 5px 30px;
+    }
+    .mediaItem img{
+	    background: @gray-lighter;
+    }
+    .mediaItem .editIconBttn, 
+    .mediaItem .deleteIconBttn{
+	    float: right;
+	    margin: 5px 5px 0 0;
+    }
+.defaultMedia .infoPanel{
+	background: @gray-light;
+	color: white;
+}
+.defaultMedia .delete{
+	display: inline-block;
+	float: right;
+	margin: 5px 5px 5px 0;
+}
+.defaultMedia .current{
+	display: inline-block;
+	font-weight: bold;
+	float: left;
+	margin: 10px 0 5px 7px;
+}
+
+
+/* Asset Page Media Section (photo, video) 
+ *******************************************/
+.mediaBox{
+	margin: 0 10px 0 0; /* right? */
+	width: 235px;
+}
+.sidebarMedia{
+	float: right;
+	margin: 0; /* ? */
+	padding: 0; /* ? */
+	width: 245px;
+}
+.sidebarMedia .multimedia{
+	background: url("@{cssImagesPath}/bg_header.jpg") 50% bottom;
+	border-bottom: solid 1px @gray;
+	color: @gray-dark;
+	padding: 0 0 10px 0; /* bottom? */
+}
+	#sideCol .sidebarMedia .multimedia {
+		}
+.sidebarMedia .multimedia h3{
+	color: @black;
+	margin-left: 10px;
+	padding: 10px 0 0 0; /* top? */
+}
+.sidebarMedia .multimedia span{
+	margin-left: 2px;
+}
+    .sidebarMedia .multimedia span span {
+	    margin-left: 0;
+    }
+    .sidebarMedia .multimedia span span a {
+	    padding: 0 10px 0 10px;
+	    }
+.sidebarMedia .multimedia a:link, 
+.sidebarMedia .multimedia a:visited, 
+.sidebarMedia .multimedia a:active{
+	color: @gray-dark;
+}
+.sidebarMedia .multimedia a:hover{ }
+
+.smMediaBox{ /* note: visibility false */
+	margin-bottom: 0;
+	width: 245px;
+}
+.smMediaScroll{
+	background-color: @gray-light;
+	display: none; /* Remove styling rules + relevant markup etc? */
+	margin: 0; /* ? */
+	padding: 0; /* ? */
+}
+.smMediaScroll img{
+	width: 120px;
+}
+
+/* Thick-Box Pop-up Media 
+ **************************/
+.vidBox{
+	float: left;
+	width: 100%;
+	height: 345px;
+	}
+.imgCanvas{
+	float: left;
+	margin: 0; /* ? */
+	overflow: hidden;
+	text-align: center;
+	width: 100%;
+	height: 345px;
+}
+.forcedHeight{
+	height: 325px;
+}
+
+.mediaScroll{
+	background: #eee;
+	float: left;
+	height: 80px;
+	overflow: hidden;
+	padding-top: 0;
+	margin-top: 0;
+	width: 100%;
+}
+.mediaScroll input.buttons{
+	height: 40px;
+	width: 20px;
+}
+.mediaScroll img{
+	height: 78px;
+	margin-left: 2px;
+	width: 104px;
+}
+.mediaScroll a:link{
+	display: block;
+	float: left;
+	margin: 0; /* ? */
+}
+.mediaScroll .buttonPanel{
+	float: left;
+	margin-right: 6px;
+	width: 20px;
+}
+
+
+/* My Account Settings Address Page
+ ************************************/
+
+
+
+
+/* Dashboard
+   - Account and Asset?
+ ************************/
+#dashboardSideCol{
+    clear:left;
+    float:left; 
+    width:210px;
+}
+#dashboardMainCol{
+    float:right; 
+    width:74%;
+	}
+	
+	/* Gerb/June/2012: Instead of using .manageActions, please pull all markup content of 
+		<x class="manageActions"> out from inside heading tags, and wrap it AND the heading 
+		with <div class="inline-heading-container"> */
+	span.manageActions {
+		font-weight: normal;
+		margin-left: 5px;
+		}
+	span.manageActions a {
+	    padding-left: 5px;
+	    padding-right: 5px;
+	    font-size:14px;
+	}
+	span.manageActions span {
+		font-size: 16px;
+		color: @gray-light;
+		margin: 0;
+		}
+
+#myAcct_dashboard caption,
+#myAcct_posts caption,
+#myAcct_donations caption,
+#manage-posts caption {
+	margin-bottom: 2px;
+}
+#manage-posts #divData{
+    margin-top:5px;
+}
+
+/*
+=========================================
+Styles being used by HTML Tables
+=========================================
+*/
+.tabularData-caption { font-size: 20px !important; margin-top:0px; margin-bottom:10px; padding: 0px 0px 0px 0px;  }
+.tabularData-action-links { margin-left: 0px }
+
+.caption-container {
+    border-bottom-width:1px; 
+    border-bottom-color: @gray-light; 
+    border-bottom-style: solid; 
+    padding-bottom:0px;
+}
+
+.privacy-settings-data
+{
+    padding-top: 10px;
+}
+
+.items-list
+{
+    list-style-type: none;
+}
+
+
+/* Public Member Profile Page
+ ******************************/
+/* View All Activities widget customization */
+#allActivity{ /* Note: ID based mod for .recentActivity; also used by user-profile */
+	margin-top: 20px;
+	padding: 0;
+}
+
+/* Following-thumblist */	
+	.member-basic_profile  
+	{
+		h2 
+		{
+		    margin-top:0px;
+		}
+		
+		.badge
+		{
+		    vertical-align:top;
+		    display: inline-block;
+		}
+		
+		.feature-item 
+		{
+		    width:auto;
+		}
+    }
+
+/* Admin Reissue Receipts Page 
+   - Section? 
+ **************/
+.receiptAddress{
+	display: block;
+	margin-bottom: 5px;
+}
+.reissueRegionDropDown
+{
+	width: 230px;
+}
+
+
+/* Posts 
+   - In a list in a page, dedicated post page, manage post page
+ ****************************************************************/
+.postTypeContainer{
+	position: relative;
+	min-height: 100px;
+	height: auto !important;
+	height: 100px;
+}
+
+#uploaderContentsArea img{
+	float: left;
+	margin: 0 0 10px 0;
+}
+
+
+
+
+.updateList{
+	list-style-type: none;
+}
+
+/* Breadcrumb 
+   - Dedicate Post page specific
+   - should apply in general case 
+   - move to links/buttons section? 
+ ************************************/
+.post-page .breadcrumb {
+    margin: 8px 0 20px 0;
+}
+    .post-page .breadcrumb a:link, 
+    .post-page .breadcrumb a:visited, 
+    .post-page .breadcrumb a:active {
+	    background: #bbb url("@{cssImagesPath}/breadcrumbDividerRight.png") no-repeat right top;
+	    color: white;
+	    display: block;
+	    float: left;
+	    height: 27px;
+	    margin-bottom: 8px;
+	    padding: 0 20px 0 0;
+	    text-decoration: underline;
+	    white-space: nowrap;
+    }
+    .post-page .breadcrumb a:hover{
+	    background-color: @gray-light;
+	    text-decoration: none;
+    }
+    .post-page .breadcrumb a span{
+	    cursor: pointer; /* IE7 */
+    }
+    .post-page .breadcrumb span{
+	    background: url("@{cssImagesPath}/breadcrumbDividerLeft.png") no-repeat left top;
+	    display: block;
+	    float: left;
+	    height: 27px;
+	    padding-left: 20px;
+    }
+    .post-page .breadcrumb h4.breadcrumbCurrent{
+	    background: #eee url("@{cssImagesPath}/breadcrumbDividerRight.png") no-repeat right top;
+	    color: @gray;
+	    float: left;
+	    padding: 0;
+	    white-space: nowrap;
+    }
+    .post-page .breadcrumb h4.breadcrumbCurrent span{
+	    font-weight: bold;
+	    padding: 0 20px;
+    }
+
+.postCommentTotal_wrapper {
+	margin-top: 30px;
+	}
+
+#media-uploader{
+	margin: 10px 40px;
+}
+    #media-uploader span{
+	    display: block;
+	    margin-top: 10px;
+    }
+    #media-uploader input{
+	    width: 400px;
+    }
+
+#update-preview{ /* currently unused */	
+	background: white;
+	padding: 0 0 0 10px;
+	text-align: left;
+}
+
+#previewSection{
+	margin: 15px 0;
+}
+
+    
+/* no vertical spacing caption when beneath header (My Acct > Posts) */
+#add-edit-post {
+    margin-top: 0px;
+    width:100%;
+	}
+/* vertically space caption for table beneath tabs (My Acct > My Pages > Posts) */
+#manage-posts {
+	margin-top: 15px;
+	}
+
+/* End Posts */
+
+/* Steps Left Section
+ **********************/
+ol.stepsLeft{
+	list-style-type: none;
+}
+ol.stepsLeft li{
+	background: @gray-lighter url("@{cssImagesPath}/mask_arrowRight.gif") no-repeat right top;
+	color: @gray-light;
+	float: left;
+	font-size: 18px;
+	height: 35px;
+	margin: 5px 0 20px 0;
+	padding: 10px;
+	width: 290px;
+}
+ol.stepsLeft li.current{
+	background-color: #ccccff;
+	color: @gray-dark;
+}
+ol.stepsLeft li span{
+	display: block;
+	font-size: 14px;
+}
+
+
+/* Create Asset Page 
+   - Program, Project, Campaign 
+ ********************************/
+/* HM TO REMOVE PGS-1651 .createWizHdr{
+	margin: 0;
+} */
+
+.createWizStep h3.programAsset, 
+.createWizStep h3.projectAsset, 
+.createWizStep h3.fundraiserAsset{
+	padding: 10px;
+}
+.createWizStep .main{ /* use 2-col */	
+	float: left;
+	width: 60%;
+}
+    
+.createWizStep .main .formHint{
+	display: block;
+}
+
+.createWizStep .secondary{ /* use 2-col */	
+	float: left;
+	width: 30%;
+	background-color: @gray-light;
+	padding: 10px;
+	margin-left: 5px;
+}
+    .createWizStep .secondary ul{
+	    margin: 5px 0 15px 30px;
+    }
+.createTitleInput{
+	margin: 2px 0;
+	width: 420px;
+}
+
+
+/* Exists for Take-Action zone?
+   - belongs with take-action page rules?
+   - belongs with skin css file? 
+ *********************************/
+.programAsset{
+	background: url(   '@{cssImagesPath}/fundWizProgramBG.jpg' ) top left repeat-y;
+}
+.projectAsset{
+	background: url(   '@{cssImagesPath}/fundWizProjectBG.jpg' ) top left repeat-y;
+	margin-left: 0px;
+}
+.fundraiserAsset{
+	background: url(   '@{cssImagesPath}/fundWizChampBG.jpg' ) top left repeat-y;
+	margin-left: 0px;
+}
+
+
+/* Privacy / Subscription Settings Page 
+ ****************************************/
+/* GERBTODO: This is just a modal window, all of 
+	these styles are probably redundant */
+#privacy-subscription-settings .pageHdr{
+}    
+#privacy-subscription-settings .metaInfo{
+}
+#privacy-subscription-settings p{
+}
+#privacy-subscription-settings textarea{
+}
+#privacy-subscription-settings label{
+}
+
+/* TABLES & LISTS 
+   - generic as possible? also see: global table styles
+   - Note: section rather skimpy; number of tables & lists moved into page specific sections 
+ *********************************************************************************************/
+.nobull{ /* no bullet lists */
+	list-style-type: none;
+}
+
+/* Scrollable CheckBoxLists */
+	.scrollable-input-container {
+		overflow: auto;
+		border: 1px solid #d3d3d3;	/* color to match textarea */
+		background: white;
+		padding: 3px 5px;
+		border-radius: 5px;			/* to match textarea */
+		/*width: 550px;*/
+		max-height: 104px;
+		}
+	.scrollable-input-container input {
+		margin-left: 0;
+		}
+	.scrollable-input-container span.sectionTop {
+		display: inline-block;
+		clear: left;
+		border-top: 1px solid #d3d3d3;
+		padding-top: 6px;
+		margin-top: 6px;
+		}
+
+/* quasi-generic table cell styles */
+.addressCol{
+	margin-left: 10px;
+	margin-right: 10px;
+	overflow: hidden;
+	width: 300px;
+}
+.paymentInfoCol{
+	margin-left: 5px;
+	margin-right: 5px;
+	max-width: 300px !important;
+}
+.actionCol{
+	padding-left: 2px;
+	padding-right: 2px !important;
+	width: 50px;
+}
+.transactionDate{
+	width: 85px;
+}
+
+/* Contrast Row 
+   - zebra stripe table row
+ ****************************/
+// Moved to tables.less
+
+.profileRow {
+	background: #e8e8ff;
+}
+
+    
+/* Search Options Table
+   - Semi-generic table for vertically laying out search criteria and their inputs 
+ ***********************************************************************************/
+.search-options{ /* Used by Assets and Users */
+	float: left;
+	margin: 12px 0 20px 0;
+	width: 400px;
+}
+    .search-options .caption{ /* note: runat="server" makes caption tag disappear??? */        
+        border-bottom:solid 1px @gray-light;
+        color:@black;
+        font-size:18px;
+	    font-weight: normal;	    
+	    padding-bottom:0;
+    }     
+    .search-options th{ /* over-rides base table defaults */
+        border-bottom: none;
+        font-size: 100%;
+        padding: 6px 0;
+    }
+    .search-options td{
+	    padding: 6px 0; /* over-ride base table defaults */
+    }
+    .search-options input{
+	    float:left;
+	    width: 200px;
+    }
+    .search-options .checkbox input {
+		float: left;
+		width: auto;
+		margin-left: 0;
+		}
+    .search-options select{
+	    float: left;
+	    width: 206px; /* makes width same as input */
+    }
+    .search-options .date-choice input,
+    .search-options .date-choice span,
+    .search-options .date-choice span a{
+        float:left;        
+    }
+    .search-options .date-choice span a{
+        margin:0 5px;
+    } 
+
+    
+/* Information Summary Table
+   - Semi-generic table for laying out info in columns 
+ *******************************************************/
+.info-summary{
+	/* Customize via ID or additional class */
+}
+    .info-summary tr.header th{
+	    border-bottom: 1px solid @gray-light; /* preserves defaults */
+	    font-size: 14px;
+	    padding: 10px 0;
+    }
+    .info-summary td{
+    }    
+    .info-summary th{ /* over-ride defaults */
+        border-bottom: none;
+        font-size: 100%;
+        padding: 6px 0;
+    }
+    .info-summary caption{ /* these rules must come last */
+        border-bottom:solid 1px @gray-light;
+        color:@black;
+        font-size:18px;
+	    font-weight: normal;
+    }     
+    
+
+/* 3RD PARTY 
+ *************/
+
+/* Westwind/Localization */
+#westwind #mainPageTable td{
+}
+
+/* double grave for eyecon and kelvin luck date-picker add-ons */
+.editIconBttn:link, 
+.editIconBttn:visited, 
+.editIconBttn:active{
+	background: url("@{cssImagesPath}/pencil.png") no-repeat 50% 50%;
+	display: block;
+	height: 16px;
+	width: 16px;
+}
+.editIconBttn:hover{
+	text-decoration: none;
+}
+
+.deleteIconBttn:link, 
+.deleteIconBttn:visited, 
+.deleteIconBttn:active{
+	background: url("@{cssImagesPath}/cancel.png") no-repeat 50% 50%;
+	display: block;
+	height: 16px;
+	width: 16px;
+}
+.deleteIconBttn:hover{
+	text-decoration: none;
+}
+
+.addBttn:link, 
+.addBttn:visited, 
+.addBttn:active{
+	/* unused */
+	background: url("@{cssImagesPath}/add.png") no-repeat 50% 50%;
+	display: block;
+	height: 20px;
+	padding: 5px 10px 5px 20px;
+}
+.addBttn:hover{
+	text-decoration: none;
+}
+
+h4.sub-head{
+    color:@black; font-size:18px; 
+}
+
+.pageHdr { /* PGS-895 > 1516 */
+	/* reserve h2? */
+	color: @black;
+	margin: 0 0 10px 0;
+}
+    .pageHdr span {
+	    color: @black;
+	    text-transform: none;
+    }
+    .pageHdr .secondColor{
+	    color: @gray-light;
+    }
+    .pageHdr .go{ /* HM I cannot find a hook for this */
+    }
+    
+/* button/link over-ride? */
+.subPageHdr {
+	color: @gray-light;
+	margin-bottom: 15px;
+	}
+
+.sectionHdr {
+	color: @black;
+	margin: @gridGutterWidth 0 0 0;
+	word-wrap: break-word;
+	}
+
+.subBox {
+	margin: 10px 10px 20px 0;
+	padding: 0 0 30px;
+	}
+.subHdr { /* PGS-895 > 1516 */
+	color: @black;
+	text-transform: uppercase;
+	margin: 20px 0 15px 0;
+}
+
+.subHdrNoCaps {
+	/* repetitive */
+	color: @black;
+	margin: 20px 0 15px 0;
+}
+.nb{
+	color: @gray; /* unused? */
+}
+
+.uppercase{ /* too specialized? */
+	text-transform: uppercase;
+}
+
+.formHint{
+	font-size: @baseSmallFontSize;
+	font-weight: normal;
+}
+
+.moneySymbol
+{
+	font-size: 20px;
+	margin-right: 3px;
+}
+
+	/* dec/2011/Gerb: Make lists and paragraphs consistent */
+	.msg p,
+	#comments .msg p	/* jan/2012/gerb: overwrite #comments p { margin-left: 80px; } */
+	{
+		margin: 0;
+		}
+
+	.subscript{
+		/* discard? or use to replace hint text? neither? */
+		font-size: 60%;
+		text-transform: uppercase;
+	}
+	.normalCaseAndSize{
+		/* Wasteful over-ride? */
+		font-size: 100%;
+		text-transform: none;
+	}
+	.greyTxt{
+		color: @gray-light;
+	}
+
+	/* Wrapper for cheque mailing address info - overkill? */
+	.chequeMailingAddress{
+		margin: 5px 0 5px 50px !important;
+	}
+
+
+
+/* UTILITY 
+   - non-semantic, primitive helper classes
+   - note: keep this section at bottom of stylesheet 
+     - rules won't work if contradicting rules appear later in the sheet (FF)
+   - use of !important can block these rules
+------------------------------------------------------------------------- */
+
+.bgFFF{ background: white !important; }
+.rowF5{ background: #f5f5f5; }
+.box{
+	background: #eee;
+	margin: 10px 0 0 10px;
+	padding: 20px;
+}
+.boxPadding{ padding: 20px 0; }
+.boxPadding p, 
+.boxPadding label, 
+.boxPadding a{
+	margin: 0 20px 0 20px;
+}
+.clear0{ clear: none; }
+.clearL{ clear: left !important; }
+.clearL0{
+	font-size: 0;
+	clear: left;
+}
+.clearL10{
+	clear: left;
+	display: block;
+	margin-top: 10px;
+}
+.clearL15{
+	clear: left;
+	display: block;
+	margin-top: 15px;
+}
+.clearL20{
+	clear: left;
+	display: block;
+	margin-top: 20px;
+}
+.clearL50{
+	clear: left;
+	display: block;
+	margin-top: 50px; 
+}
+.clearLR{ clear: both; }
+.clearLR0{ clear: both; font-size: 0; }
+.floatL{ float: left; }
+.floatR{ float: right; }
+.clearR{ clear: right; }
+.last{ margin-right: 0 !important; }
+
+/* CHROME/SAFARI:	line-height: 0; doesn't collapse a <br /> like in other browsers. */
+/* CHROME/SAFARI:	line-height: 0; doesn't collapse a <br /> like in other browsers. */
+
+.width50{ width:50%; }
+.width70{ width:70%; }			
+.width100{ width:100%; }
+.width20px{ width:20px; }
+.width100px{ width:100px; }
+.width150px{ width:150px; }
+.width200px{ width:200px; }
+
+.margin0{ margin: 0; }
+.marginT0{ margin-top: 0; }
+.marginR20{ margin-right: 20px; }
+.marginL50{ margin-left: 50px; }
+.marginL100{ margin-left: 100px; }
+.paddingR30{ padding-right: 30px; }
+.paddingR50{ padding-right: 50px; }
+.vMargin10{ margin: 10px 0; }
+
+.indent10 { margin-left: 10px; }
+.indent15 { margin-left: 15px; }
+.indent20 { margin-left: 20px; } 
+
+
+.noUnderline { text-decoration: none !important; }
+
+.renderTime {
+	text-align: right;
+	background-color: @black;
+	color: white;
+	font-family: monospace;
+	margin: 0;
+	}
+.renderTime.red {
+	color: @red;
+	font-weight: bold;
+}
+
+/* Temporary
+***************************************************************************** */
+
+/* DONATION / CHECKOUT Redesign Prototype 
+   - re-todo: clean up, re-organize, re-factor
+ ************************************************/
+
+/* customized breadcrumb
+   - "global" to donate process pages             
+   - source of confusion? 
+     - i.e. looks like something else but doesn't work like it */
+
+/* Sidebar content
+   - Same on all donate process pages */
+#donee-info{
+    background-color:@gray-lighter;
+    margin-top:33px; /* causes mis-alignment in success step */           
+}
+    #donee-info h3{
+        padding:0 5px;
+    }
+    #donee-info h3 span{
+        color:@gray;
+        display:block;
+    }
+    #donee-info p{
+        color:@gray;
+        padding:0 5px 10px 5px;
+    }
+
+/* generic (or close to it) content section handling
+   margin separates content areas 
+   - don't apply to "bottom" content areas? */    
+#eligibility,
+#donation, 
+#payment-method,
+#billing-details,
+#email-confirmation,
+#privacy-config{
+    margin-bottom:50px; 
+}
+
+/* 2 columns content areas */
+#progress-options div,
+#billing-details div,
+#email-confirmation div,
+#tax-receipt-details div,
+#what-next div{
+    float:left; 
+    width:50%; 
+}
+
+/* Heading handling 
+   currently, primarily for easily switching styling options */
+#eligibility h3,
+#donation h3, 
+#payment-method h3,
+#billing-details h3,
+#email-confirmation h3,
+#privacy-config h3,
+#progress-options h3,
+#tax-receipt-details h3,
+.donation-review div h3,
+#what-next h3,
+#success-summary h3{
+    border-bottom: dotted 1px @gray-light;
+	margin: 2px 0 5px 0; 
+	padding-top: 2px;
+}
+
+/* Input specific */
+#what-next div input,
+#tax-receipt-details div input,
+#billing-details input,
+#billing-details select,
+#tax-receipt-details div select{
+    display:block; 
+    margin-bottom:20px; 
+    width:250px; 
+}
+/* equalizes height of select and single line textbox inputs */
+#donation select,
+#billing-details select,
+#tax-receipt-details div select{ padding:2px; width:254px; }
+#donation ul li{ margin-bottom:5px; }
+#donation ul li#other{ margin-top:10px; }
+/* some inputs look ridiculous if they are too wide */
+#donation select.mini,
+#billing-details input.mini,
+#tax-receipt-details input.mini{ width:80px; }
+
+
+/* Step 1 specific */
+#donation ul{ margin-top:15px; }
+    #donation ul li input{ margin-left:0; }
+#eligibility p#claim-receipt{ margin-top:15px; }
+#eligibility p#claim-receipt input{ margin-left:0; }
+#progress-options input{ display:block; margin-bottom:20px; }
+#progress-options p + p { margin-bottom:17px; } /* progressive enhancement */
+#progress-options #logged-in{
+    clear:left;
+    float:left; 
+    margin-top:50px; 
+    width:90%;
+}
+#progress-options div .subHdrNoCaps{ color:@gray-light; }
+
+/* Banner
+ **********/
+.banner {
+	width: 936px;
+	}
+	.banner h4 {}
+	.banner span {}
+#mainCol .banner {
+	width: 670px;
+	}
+		
+/***************/
+/* My Account */
+/*************/
+
+#dashboardMainCol .pager {
+	margin-left: 0;				/* CG: inherited from .pager? */
+	}
+#myAcct_dashboard,
+#myAcct_posts,
+#myAcct_donations {
+	margin-top: 29px;
+	}
+#myAcct_profile .tabNav {
+	margin-top: 2px;
+	}
+	
+/* Images in MyPages management */
+#ctl00_cpMain_rptImages td {
+	padding-left: 0;
+	}
+
+/* CSS Organization Initiative - Gerbus, August 2011 */
+/*  Here we go. Let's have 3 main sections:	*/
+/*		1. Reset/Global/Site-wide
+/*		2. Library/Component/Control
+/*		3. Page-specific
+/*
+
+
+/*************************************************/
+/*	RESET/GLOBAL/SITE-WIDE
+/*************************************************/
+
+/* Gerb: Wow, I have no idea why this wasn't present right from day 1. */
+/*************************************************/
+/*	LIBRARY
+/*************************************************/
+
+/* Controls */
+.overlay {
+	display: none;
+	background: white;
+	border: 1px @black solid;
+	-moz-border-radius: 0.35em;
+	-webkit-border-radius: 0.35em;
+	border-radius: 0.35em;
+	min-height: 200px;
+	max-height: 500px;
+	min-width: 300px;
+	max-width: 680px;
+	padding: 15px;
+	}
+	.overlay .close {
+		background-image: url("@{mainImagesPath}/btnClose.png");
+		position: absolute;
+		right: -15px;
+		top: -15px;
+		cursor: pointer;
+		height: 35px;
+		width: 35px;
+		}
+	
+/********/
+/* Text */
+/*
+
+/* Headings, Subheadings & Meta */
+.tabBox .sectionHdr {
+	margin: 0 0 20px;
+	}
+.metaInfo {
+	color: @gray-light;
+	margin-right: 10px;
+	}
+	.metaInfo .floatR {
+		margin-top: -5px;
+		}
+
+/* Centered Text */
+.centered:link,
+.centered:visited,
+.centered:hover,
+.centered:active {
+	text-align: center;
+	}
+
+
+/* Images */
+.thumb img {
+	border: solid 1px @gray-lighter;
+	padding: 3px;
+	margin: 0 5px 5px 0;
+	}
+
+/*************/
+/* Links
+/*/
+
+/************/
+/* Buttons
+/*/
+
+
+
+
+		.export{
+			background: @blue url("@{cssImagesPath}/mask_arrowRight.gif") no-repeat right 50%;
+			color: white !important;
+			float: right;
+			font-size: 12px;
+			font-weight: bold;
+			height: 10px;
+			margin: 0;
+			padding: 6px 12px 6px 6px;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+		.export:visited{}
+		.export:hover{
+			background-color: @blue;
+			color: white !important;
+			text-decoration: none;
+		}
+		.export:active{}
+        .exportToExcelButton
+        {
+			float: right;
+        }
+
+		.filter{
+			background: @blue url("@{mainImagesPath}/bgButton_magnify.png") no-repeat left top;
+			color: white !important;
+			padding: 5px 10px 5px 30px;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+		.filter:visited{ }
+		.filter:hover{
+			background-color: @blue;
+			color: white !important;
+			text-decoration: none;
+		}
+		.filter:active{ }
+		.add{
+			background: @blue url("@{mainImagesPath}/bgButton_plus.png") no-repeat left top;
+			color: white !important;
+			padding: 5px 10px 5px 30px;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+		.add:visited{ }
+		.add:hover{
+			background-color: @blue;
+			color: white !important;
+			text-decoration: none;
+		}
+		.add:active{ }
+
+/**						*/
+/* END Buttons & Links	*/
+/**						*/
+
+		
+/* Function Links (don't leave the page) */
+
+/* Modal Windows:	*/
+	#tBox{
+		height: auto;
+		background: white;
+		text-align: left;
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-top: 0px;  
+	    }
+	#tBox h2.pageHdr {
+		margin-bottom: 20px;
+		}
+		#tBox .pageHdr-metaInfo {
+			margin-top: -15px;
+			margin-bottom:20px;
+			}
+	#tBox .metaInfo {		
+		color:@gray-light;
+		}
+	#tBox p.pageDesc {
+		font-size: 16px;
+		margin-top: -10px;
+		margin-bottom: 30px;
+		}
+		#tBox p.pageDesc+ul.bulleted {
+			list-style-type:disc;
+			margin-top: -10px;
+			margin-bottom: 20px;
+			}
+			#tBox p.pageDesc+ul.bulleted li {
+				padding-left: 10px;
+				}
+	#tBox .subSection {
+		font-size: 15px;
+		margin-bottom: 20px;
+		}
+		/* Gerb: Use ".last" to help prevent scrollbar in modal: */
+		#tBox .subSection.last {
+			margin-bottom: 0;
+			}
+		#tBox .subHdr {
+			text-transform: none;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			}
+			#tBox p.subDesc {
+				margin-top: -5px;
+				margin-bottom: 10px;
+				}
+		#tBox .subSection .metaBelowBtn {
+			margin-top: 3px;
+			font-size: @baseSmallFontSize;
+			color: @gray-light;
+			}
+		#tBox .subSection .msg {
+			margin: 0 0 10px;
+			}
+
+	#tBox ul{
+		list-style-type: none;
+		}
+		#tBox .tightList li {
+			margin: 0;
+			}
+	#tBox .chkboxWrap {
+		padding: 5px 0 8px;
+		vertical-align: text-bottom;
+		}
+	#tBox .btnWrap {
+		display: inline-block;
+		}
+		#tBox /* .btnWrap .btnBox */ {
+			display: inline-block;
+			vertical-align: top;
+			}
+			
+	/* PGS-4563 - ul in the refund-order modal dialog must have bullets */
+	#tBox .refund-order .bulleted-list {
+		ul {
+			list-style-type: disc;
+		}
+	}
+		
+
+	/* Gerb: These utility classes need to go at the bottom of this .css file,
+	/*  so that they can be added ON TOP of existing styles which may have
+	/*  other rules. */
+	#tBox .above10 { margin-top: 10px; }	/* Generic vertical spacing */
+	#tBox .above20 { margin-top: 20px; }	/* Sub-page-level vertical spacing */
+	#tBox .above30 { margin-top: 30px; }	/* Page-level vertical spacing */
+
+/*************************************************/
+/*	PAGE-SPECIFIC
+/*************************************************/
+
+/* Admin > Settings > Email */
+	#admin-settings #indentedTextbox {
+		margin: 5px 0 0 22px;
+		}
+
+/*
+**********************
+* PGS-1627: Image cropping tool is not selecting correctly
+* We need the following class to fix JCrop cropping tool - DO NOT DELETE
+**********************
+*/
+.jcrop img {max-width: none;}
+
+/*
+**********************
+* TRASH
+**********************
+*/
+	.nogo{
+		background: @blue url("@{mainImagesPath}/bgButton_arrowForward.png") no-repeat left top;
+		color: white !important;
+		display: inline-block;
+		filter: alpha(opacity=50) !important;
+		-moz-opacity: 0.5;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+		-khtml-opacity: 0.5;
+		opacity: 0.5 !important;
+		height: 14px;
+		padding: 5px 10px 5px 30px;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	.nogo:visited{ }
+	.nogo:hover{
+		background-color: @blue;
+		color: white !important;
+		text-decoration: none;
+	}
+	.nogo:active{ }
+	
+	
+	/* Used to test versign logo layout */
+	.verisign-test {
+		background: @blue url("@{mainImagesPath}/verisign.jpg") no-repeat left top;
+		height: 72px;
+		width: 135px;
+	}
+	
+	

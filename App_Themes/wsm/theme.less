@@ -1,0 +1,120 @@
+/* wsm\theme.less */
+
+
+// Global Styles		
+
+
+// Template Styles
+	body .head-wrapper header {
+		margin-bottom: 0px;
+
+		h1 a {
+			@media (max-width: @screen-sm-max) {
+				background-size: 690px 104px;
+				width: 690px;
+			}
+		}
+	}
+	.headerZone2 {
+		a {
+			margin-top: -56px;
+			float: right;
+			color: @gray-lighter;
+			font-size: 14px;
+			text-shadow: 1px 1px #97896C;
+			text-decoration: underline;
+
+			@media (max-width: @screen-sm-max) {
+				margin-top: -34px;
+			}
+
+			&:hover,
+			&:active {
+				color: white;
+			}
+		}
+		
+	}
+	.nav-main-list {
+		.navbar {
+			border-top-width: 0px;
+			border-bottom-color: @huedGrayLighter;
+
+			.navbar-collapse > .nav > li > a {
+				&[href*="donate.aspx?asset=1"] {
+					background-color: #ffb01b;
+
+					&:hover {
+						background-color: darker(#ffb01b,10);
+					}
+				}
+			}
+		}
+	}
+	
+
+// Component Styles
+
+
+// Page-specific Styles
+	.custom-page {
+
+		// Common
+		.wsm_box {
+			border: solid darken(@huedGrayLighter,8);
+			border-width: 15px;
+			padding-bottom: @line-height-computed/2;
+			background: darken(@huedGrayLighter,8);
+			.box-shadow(0 5px 10px @gray-light);
+		}
+		.wsm_insetBox {
+			padding: @line-height-computed @gridGutterWidth;
+			background-color: white;
+			position: relative;
+
+			& + .wsm_insetBox {
+				margin-top: @line-height-computed;
+			}
+			.wsm_insetBottom {
+				position: absolute;
+				bottom: 0px;
+				border-top: 2px solid #ffe6b6;
+				margin-left: -@gridGutterWidth;
+				padding: @line-height-computed*3/4 @gridGutterWidth;
+				background-color: #fef6d0;
+				width: 100%;
+				.box-sizing(border-box);
+			}
+		}
+
+		// Pages
+		.get-involved {
+			.col-sm-8 img {
+				width: 100%;
+			}
+			.quadrants {
+				.wrap {
+					background-color: darken(@huedGrayLighter,8);
+					.box-shadow(0 5px 10px @gray-light);
+					padding-bottom: 15px;
+
+					.col-sm-6 {
+						.outer-box {
+							padding: 15px;
+						}
+						@media (min-width: @screen-sm-min) {
+							.outer-box {
+								padding: 15px 15px 15px 0;
+							}
+							&:first-child .outer-box {
+								padding: 15px 0 15px 15px;
+							}
+						}
+						.wsm_insetBox {
+							padding-bottom: 4*@line-height-computed;
+						}
+					}
+				}
+			}
+		}
+	}

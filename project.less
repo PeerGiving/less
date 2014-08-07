@@ -1,0 +1,35 @@
+﻿/* \project.aspx */
+
+.project {
+
+	.media-description-share {
+		padding-bottom: 1.5 * @line-height-computed;
+		margin-bottom: 1.5 * @line-height-computed;
+		@shadow: 0 6px 3px -3px rgba(0,0,0,.075);
+		.box-shadow(@shadow);
+
+		.project-description {
+			img {
+				&[style*="float: left"] {
+					margin: 0 @gridGutterWidth @line-height-computed/2 0;
+				}
+				&[style*="float: right"] {
+					margin: 0 0 @line-height-computed/2 @gridGutterWidth;
+				}
+			}
+		}
+	    
+	}
+
+	.charity-content-well {
+		.well();
+		background-color: @infoBackground;
+	}
+	
+	// Phone
+	@media (max-width: @screen-sm-max) {
+		.btn.donate {
+	    	.heels-quarter();
+	    }
+	}
+}

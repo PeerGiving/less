@@ -1,0 +1,28 @@
+﻿/* tables.less */
+
+
+	// contrast-row
+	.contrast-row{
+		background: @huedGrayLighter;
+		padding: 5px 0;
+	}
+
+	th.col-narrowest { width: 5%; }
+	th.col-narrower { width: 10%; }
+	th.col-narrow { width: 20%; }
+	th.col-wide { width: 50%; }
+	th.col-wider { width: 60%; }
+	th.col-widest { width: 80%; }
+
+	td.td-fill-width {
+		width: 100%;
+	}
+
+	// This is meant to style tables that are formatted roughly like horizontal-forms
+	//  (first column is labels)
+	.like-form-horizontal {
+		td:first-child {
+			font-weight: bold;
+			padding-right: 30px;
+		}
+	}

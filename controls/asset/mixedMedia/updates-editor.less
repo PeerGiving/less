@@ -1,0 +1,83 @@
+﻿/* controls/asset/mixedMedia/updates-editor.ascx */
+
+	.updates-editor {
+		.shareOn input[type="checkbox"] {
+			margin-bottom: 0;
+		}
+		.imgFacebook {
+			margin-left: 2px;
+		}
+
+		#providersArea {
+			//height: 260px;
+			position: relative;
+
+			img {
+				width: 104px;
+				height: 81px;
+				vertical-align: middle;
+				cursor: pointer;
+			}
+			span {
+				display: block;
+				margin-top: 5px;
+			}
+			.formHint {
+				display: block;
+				margin-bottom: 10px;
+			}
+			.postType {
+				position: absolute;
+				top: 0;
+				width: 100px;
+				text-align: center;
+
+				&.StaticImage {
+					left: 100px;
+				}
+				&.YouTubeVideo {
+					left: 200px;
+				}
+				&.VimeoVideo {
+					left: 300px;
+				}
+				input[type=radio] + label {
+					cursor: pointer;
+				}
+				&.StaticImage,
+				&.YouTubeVideo,
+				&.VimeoVideo {
+					input[type=radio] + label {
+						margin-left: 5px;
+					}
+				}
+			}
+
+			#dvTextOnly ul {
+				margin-bottom: 0;
+			}
+			#dvTextOnly,
+			#dvStaticImage, 
+			#dvYouTubeVideo, 
+			#dvVimeoVideo {
+				.well-subtle;
+
+				padding-top: 133px;
+				margin: 0;
+
+				/*span, 
+				input,
+				li,
+				h4 {
+					color: @gray;
+				}*/
+
+				#dvStaticImage > div > #cpMain_ucPostManage_ucPostsEditor_rptMediaProviders_ctlMediaProvider_0_ucUpload_0 {
+					width: 340px;
+				}
+				#dvStaticImage > div {
+					visibility: visible;
+				}
+			}
+		}
+	}

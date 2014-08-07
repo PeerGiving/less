@@ -1,0 +1,26 @@
+﻿/* webkit(safari) overrides */
+
+
+/* Generics */
+
+/* Pages */
+
+/* Widgets */
+	.nav-main-list .nav-main-list-inner  > .nav > li {
+		&.dropdown-pgs {
+			.dropdown-menu {
+				margin-top: -1px;	// Move dropdown-menu up to cover thin gap
+			}
+			&:hover > a:after {
+				bottom: 1px;		// Move triangle up with dropdown-menu adjustment above
+			}
+		}
+		&.active {
+			& > a:after {
+				bottom: -1px;	// Drop triangle down to cover thin grey border
+				border-left-width: 9px;		// Adjust triangle size to account for drop
+				border-right-width: 9px;
+				border-bottom-width: 9px;
+			}
+		}
+	}

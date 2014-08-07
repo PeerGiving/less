@@ -1,0 +1,337 @@
+﻿/* utilities.less */
+
+
+// Type
+	.all-caps {
+		text-transform: uppercase;
+	}
+	.normal-weight {
+		font-weight: normal;
+	}
+
+	// Curly quotes - standard and easy!
+	q {
+		&:before {
+			content: "\201C";
+		}
+		&:after {
+			content: "\201D";
+		}
+	}
+
+	// Bullet Positions
+	ul.outside {
+		list-style-position: outside;
+	}
+	ul.inside {
+		list-style-position: inside;
+	}
+
+// Micro-Clearfix (2011)
+	.clearFix:before,
+	.clearFix:after {
+		content: "";
+		display: table;
+	}
+	.clearFix:after {
+		clear: both;
+	}
+	.clearFix {
+		zoom: 1;
+	}
+
+
+// Vertical spacing/alignment
+	.pull-top {
+		margin-top: 0 !important;
+	}
+	.pull-top-md {	// for md and larger
+		@media (min-width: @screen-md-min) {
+			.pull-top;
+		}
+	}
+	.pull-top-sm {	// for sm AND LARGER
+		@media (min-width: @screen-sm-min) {
+			.pull-top;
+		}
+	}
+	.pull-top-xs {	// for xs ONLY
+		@media (max-width: @screen-xs-max) {
+			.pull-top;
+		}
+	}
+
+	.heels-quarter {
+		margin-bottom: @line-height-computed/4 !important;
+	}
+	.heels-half {
+		margin-bottom: @line-height-computed/2 !important;
+	}
+	.heels {
+		margin-bottom: @line-height-computed !important;
+	}
+	.heels-md {
+		@media (min-width: @screen-md-min) {
+			.heels();
+		}
+	}
+	.heels-sm {
+		@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+			.heels();
+		}
+	}
+	.heels-xs {
+		@media (max-width: @screen-xs-max) {
+			.heels();
+		}
+	}
+	.heels-double {
+		margin-bottom: 2*@line-height-computed !important;
+	}
+	.heels-double-md {
+		@media (min-width: @screen-md-min) {
+			.heels-double;
+		}
+	}
+	.heels-double-sm {
+		@media (min-width: @screen-sm-min) {
+			.heels-double;
+		}
+	}
+	.heels-triple {
+		margin-bottom: 3*@line-height-computed !important;
+	}
+	.heels-triple-md {
+		@media (min-width: @screen-md-min) {
+			.heels-triple;
+		}
+	}
+	.heels-triple-sm {
+		@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+			.heels-triple;
+		}
+	}
+	.heels-quadruple {
+		margin-bottom: 4*@line-height-computed !important;
+	}
+	.heels-15px {
+		margin-bottom: 15px;	// Use to match the vertical spacing between form-groups
+	}
+	.heels-line-height {
+		margin-bottom: @line-height-computed;
+	}
+	.collapse-margin-bottom {
+		margin-bottom: 0 !important;
+	}
+
+	.valign-bottom {
+		vertical-align: bottom;
+	}
+	.valign-text-bottom {
+		vertical-align: text-bottom;
+	}
+
+	// Gerb/July/2012: Please use "heels" classes instead of these
+	// The use of the below will quickly throw vertical-spacing 
+	// consistency out the window (if you find a hook somewhere, 
+	// replace it immediately).
+		.above5 { 
+			margin-top: 5px; 
+			}
+		.above10 { 
+			margin-top: 10px; 
+			}
+		.above15 { 
+			margin-top: 15px; 
+			}
+		.above20 { 
+			margin-top: 20px; 
+			}
+		.above30 {
+			margin-top: 30px;
+			}
+		.above50 { 
+			margin-top: 50px; 
+			}
+		.below10 { 
+			margin-bottom: 10px; 
+			}
+		.below15 { 
+			margin-bottom: 15px; 
+			}
+		.below20 { 
+			margin-bottom: 20px; 
+			}
+		.below30 { 
+			margin-bottom: 30px; 
+			}
+
+
+// Horizontal spacing
+	.pull-left { 
+		.indent-right {
+			margin-right: @gridGutterWidth;
+		}
+	}
+	.indent-none {
+		margin-left: 0 !important;
+	}
+	.outdent-none {
+		margin-right: 0 !important;
+	}
+	.indent-quarter { 
+		margin-left: @gridGutterWidth/4 !important;
+	}
+	.indent-half {
+		margin-left: @gridGutterWidth/2 !important;
+	}
+	.indent {
+		margin-left: @gridGutterWidth !important;
+	}
+	.outdent {
+		margin-right: @gridGutterWidth !important;
+	}
+	.indent-double {
+		margin-left: 2*@gridGutterWidth !important;
+	}
+	.indent-25 {	// Use for matching checkbox labels
+		margin-left: 25px;
+	}
+
+
+// Dividers
+	.barDivider:before {
+		content: "|";
+		display: inline-block;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+
+// Display, Positioning, Layout
+	.block {
+		display: block;
+	}
+	.inline-block {
+		display: inline-block;
+	}
+	.inline {
+		display: inline;
+	}
+	.display-table,
+	.table {
+		display: table;
+	}
+	.display-table-row,
+	.table-row,
+	.pgsrow {	// Eva: .row is used by TBS
+		display: table-row;
+	}
+	.display-table-cell,
+	.table-cell,
+	.cell {
+		display: table-cell;
+	}
+	.col-sm-table-cell {	// This is for use on elements WITH .col-sm-# classes
+		@media (min-width: @screen-sm-min) {
+			display: table-cell;
+			vertical-align: top;
+			float: none;
+		}
+	}
+	.col-md-table-cell {	// This is for use on elements WITH .col-md-# classes
+		@media (min-width: @screen-md-min) {
+			display: table-cell;
+			vertical-align: top;
+			float: none;
+		}
+	}
+	.hidden {
+		display: none;
+	}
+	.visibility-hidden {
+		visibility: hidden; 
+	}
+	.position-relative {
+		position: relative;
+	}
+	.position-absolute {
+		position: absolute;
+	}
+
+
+// Color
+	.blackLink,
+	.blackLink:link,
+	.blackLink:visited,
+	.blackLink:hover,
+	.blackLink:active {
+		color: @black;
+	}
+	.linkColor {
+		color: @link-color;
+	}
+	.failRed {
+		color: @red;
+	}
+	.green {
+		color: @green;
+	}
+	.warningColor {
+		color: @btnWarningBackgroundHighlight;
+	}
+	.infoColor {
+		color: @btnInfoBackgroundHighlight;
+	}
+	.grayLinks a,
+	a.grayLink {
+		&,
+		&:link,
+		&:visited {
+			color: @gray-light;
+		}
+		&:hover,
+		&:active {
+			color: @link-hover-color;
+		}
+	}
+	.iconLinks a,
+	a.iconLink {
+		&,
+		&:link,
+		&:visited,
+		&:hover,
+		&:active {
+			text-decoration: none;
+		}
+	}
+	.gray {
+		color: @gray;
+	}
+	.gray-light {
+		color: @gray-light;
+	}
+
+// Shadow
+	.shadow-pgs {
+		.box-shadow(-1px 1px 2px hsla(0,0,0,0.15));
+	}
+	.shadow-deeper-pgs {
+		.box-shadow(0 0 10px hsla(0,0,0,0.5));
+	}
+
+// Simple Read More
+	.simpleReadMore-gradient {
+		width: 100%;
+		height: 35px;
+		background: url("@{cssImagesPath}/transparent-to-white-vertical-gradient.png") repeat-x;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+	
+	.simpleReadMore-wrap {
+		position: relative;
+		overflow: hidden;
+	}
+	

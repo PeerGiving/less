@@ -1,0 +1,79 @@
+﻿/* tiles.less */
+
+
+.tile {
+	border: solid 1px darken(@gray-lighter,13);
+	.border-radius(4px);
+	.box-sizing(border-box);
+	overflow: hidden;
+	.shadow-pgs;
+}
+
+
+.tile-clickable {
+	.tile();
+
+	&:hover {
+		border-color: @link-color;
+		@spunLinkColor: spin(@link-color,-20);
+		@alphaSpunLinkColor: hsla(hue(@spunLinkColor),saturation(@spunLinkColor),lightness(@spunLinkColor),0.5);
+		@shadow: -1px 1px 2px hsla(0,0,0,0.15), inset 0px 0px 2px @alphaSpunLinkColor;
+		.box-shadow(@shadow);
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		color: @black;
+	}
+}
+
+
+.asset-fundraising-tile {
+	.tile-clickable;
+	.heels;
+
+	&:hover h4 {
+		color: @link-color;
+	}
+	.tile-top,
+	.tile-bottom {
+		.clearfix;
+		padding: 10px;
+	}
+	.tile-top {
+		position: relative;
+
+		img,
+		.center-cropped-img {
+			.pull-left;
+			margin-right: 10px;
+		}
+		h4 {
+			.pull-top;
+		}
+		.ribbon-complete {
+			position: absolute;
+		}
+		& > div {
+			height: inherit;
+			overflow: hidden;
+		}
+	}
+	.tile-bottom {
+		background-color: @huedGrayLighter;
+		border-top: solid 1px darken(@gray-lighter,13);
+		.border-radius(0 0 4px 4px);
+
+		.progress-bar-pgs {
+			margin-right: 10px;
+		}
+		.asset-funds-raised {
+			margin-right: 10px;
+
+			.raised,
+			.goal {
+				font-weight: bold;
+			}
+		}
+	}
+}

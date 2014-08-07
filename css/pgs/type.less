@@ -1,0 +1,282 @@
+﻿/* type.less */
+
+
+// Headings
+	h2 {
+		margin-top: 1.5 * @line-height-h2;
+		margin-bottom: @line-height-h2 / 2;
+		color: @font-color-h2; 
+		font-weight: @font-weight-h2; 
+		line-height: @line-height-h2;
+	}
+	h3 {
+		color: @font-color-h3; 
+		font-weight: @font-weight-h3; 
+		line-height: @line-height-h3; 
+		margin-top: @line-height-h3;
+		margin-bottom: @line-height-h3 / 2;
+
+		&.all-caps > small {
+			font-size: inherit;
+			text-transform: none;
+			font-style: italic;
+
+			&:before {
+				content: '\0000a0';
+			}
+		}
+	}
+	h4 {
+		color: @font-color-h4; 
+		font-weight: @font-weight-h4; 
+		line-height: @line-height-h4; 
+		margin-top: @line-height-h4 / 2;
+		margin-bottom: @line-height-h4 / 2;
+	}
+
+	@media (max-width: @screen-xs-max) {
+		h1 { font-size: @font-size-h1-phone; }
+		h2 { font-size: @font-size-h2-phone; }
+		h3 { font-size: @font-size-h3-phone; }
+		h4 { font-size: @font-size-h4-phone; }
+	}
+	
+	// Pull top of the text in headings right to the top
+	//  (in addition to removing the top margin, reverse the impact of line-height so that text moves snuggly to the top)
+	h2.pull-top-hard {
+		margin-top: -(@line-height-h2 - 1) * @font-size-h2 !important;
+	}
+	h3.pull-top-hard {
+		margin-top: -(@line-height-h3 - 1) * @font-size-h3 !important;
+	}
+	h4.pull-top-hard {
+		margin-top: -(@line-height-h4 - 1) * @font-size-h4 !important;
+	}
+
+
+	li {
+	  h1, h2, h3, h4, h5 { 
+		.pull-top;      /* HM This adjustment is needed so that headings in lists do not have a top-margin */
+	  }
+	}
+	/* Use this around a heading when you want to put 
+		other things on the same line next to it */
+	.inline-heading-container {
+		h1, h2, h3, h4, h5 {
+			padding-right: 1.0em;
+		}
+		h1, h2, h3, h4, h5,
+		span, a {
+			.inline-block;
+			vertical-align: baseline;
+		}
+	}
+	h3.legend {
+		font-size: 19.5px;
+		line-height: 36px;
+		font-weight: normal;
+		border-bottom: 1px solid @gray-lighter;
+		margin-bottom: 18px;
+	}
+
+	// Gerb/June/2012: Generic solution for meta lists/info under headings
+	h2 + .meta-list { 
+		margin-top: -10px;
+		margin-bottom: 10px;
+		margin-left: 0;
+	}
+	h3 + .meta-list {
+		margin: -(@line-height-h3 / 2) 0 (@line-height-h3 / 2);
+	}
+	h4 + .meta-list {
+		margin: -7px 0 7px;	
+	}
+	
+	// Gerb/July/2012: Don't use .sectionHeading please
+		.sectionHeading {
+			margin-bottom: @gridGutterWidth/2;
+			word-wrap: break-word;
+		
+			.top {
+				margin-top: 0;
+			}
+		}
+		.sectionHeading + .meta-list {
+			margin: -@gridGutterWidth/2 0 @gridGutterWidth/2;
+		}
+		h3.sectionHeading {
+			margin-top: 30px;
+		}
+		h4.sectionHeading {
+			margin-top: 20px;
+		}
+	
+// Monochrome links
+	.black-link {
+		color: black;
+	}
+	.gray-link {
+		color: @gray;
+	}
+	.gray-light-link {
+		color: @gray-light;
+	}
+	.monochrome-link,
+	.black-link,
+	.gray-link,
+	.gray-light-link {
+		&:hover,
+		&:active {
+			color: @link-color;
+			text-decoration: none;
+		}
+	}
+		
+// Disabled Anchors
+	a.disabled {
+		color: @gray-light;
+		text-decoration: none;
+
+		&.hint {
+			cursor: pointer;
+		}
+	}
+
+
+// Meta
+	.meta {
+		color: @gray-light;
+		font-size: @baseSmallFontSize;
+	}
+	.meta-gray-upper {
+		color: @gray-light;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 12px;
+	}
+
+// Lists
+	.dl-datalist {
+		.clearfix();
+
+		dt {
+			float: left;
+			clear: left;
+		}
+		dd {
+			float: left;
+			margin-left: 0.5em;
+		}
+	}
+
+	.unbulletted,
+	.unbulletted li {
+		list-style-type: none;
+	}
+	
+	// Horizontal List
+	.list-horizontal {
+		.list-unstyled();
+
+		li {
+			display: inline;
+			list-style-type: none;
+			margin-left: @gridGutterWidth/2;
+			
+			&:first-child {
+				margin-left: inherit;
+			}
+
+		}
+		&:after {
+			content: ".";
+			display: inline-block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+		&.tight {
+			margin-bottom: 0;
+		}
+	}
+
+	// Horizontal (Divided) List (Items appear horizontally, are divided by '|'s)
+	.list-divider-horizontal {
+		.list-horizontal();
+
+		font-size: 0;
+		
+		li {
+			font-size: @font-size-base;
+			margin-left: inherit;
+
+			&:before {
+				content: '|';
+				margin-left: @gridGutterWidth/2;
+				margin-right: @gridGutterWidth/2;
+			}
+			&:first-child:before {
+				display: none;
+			}
+		}
+		&.tight {
+
+			li:before {
+				margin-left: 0;
+				margin-right: 0;
+				content: '\00a0|\00a0';
+			}
+		}			
+	}
+
+	// Meta-list
+	.meta-list {
+		.list-divider-horizontal();
+		
+		li {
+			.meta();
+		}
+	}
+
+	// Asset Tree List
+	.assetTree {
+		float: left;
+		width: 100%;
+			
+		ul {
+			margin-left: 0;
+			color: @gray-dark;
+			list-style-type: disc;
+		}
+		.assetTreeProgram {
+			border-bottom: solid 1px @gray-lighter;
+			border-top: solid 1px white;
+			list-style-type: none;
+			margin: 0;
+			padding: 15px 10px 15px 20px;
+
+			&:hover {
+				background: #f8f8f8;
+				border-bottom: solid 1px @black;
+				border-top: solid 1px @black;
+			}
+		}
+		.assetTreeProject,
+		.assetTreeChampion {
+			margin: 0 0 0 50px;
+		}
+	}
+	.assetTreeMembers {
+		color: @gray-dark;
+		list-style-type: disc;
+		float: left;
+		margin-left: 15px;
+		width: 295px;
+	}
+
+	// Asset Description Text
+	.project-description,
+	.project-description p {
+		font-size: 16px;
+		line-height: 1.9;
+	}

@@ -1,0 +1,134 @@
+﻿/* pgs\css\theme-variables.less */
+// 
+// Many of these are definitions for the "base" PGS theme
+// A subset of these are commonly overwritten in a specific theme
+	
+//	1. Comment out variable definitions to inherit defaults
+//		* some defaults inherited from \twitter-bootstrap\less\variables.less
+//		* some defaults are defined in this file
+
+
+// Variable Global Style options
+	// Closed Layout options
+		@isClosedLayout: false;
+		@bodyBackgroundColor: @bodyBackground;
+		@bodyBackgroundImage: none;
+		@bodyBackgroundRepeat: no-repeat;
+		@bodyBackgroundPosition: 0 0;
+	// Header options
+		@headBackgroundColor: none;
+		@headBackgroundImage: none;
+		@headBackgroundRepeat: no-repeat;
+		@headBackgroundPosition: 0 0;
+		@headLogoImage: none;
+		@headLogoWidth: 0;
+		@headLogoHeight: 0;
+		@headTitleFontFamily: @font-family-base;
+		@headTitleFontSize: 30px;
+	// Typography options
+		//@font-family-base: default = "Helvetica Neue", Helvetica, Arial, sans-serif;
+		//@font-size-base: default = 14px;
+		//@headings-font-family: default = inherit;
+		@font-family-system: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		@font-size-system-base: 14px;
+		//@font-size-h1:					// Bootstrap 3.1.1 ~ 36px
+		@font-color-h1: @headings-color;
+		@font-weight-h1: @headings-font-weight;
+		@line-height-h1: floor((@headings-line-height * @font-size-h1));
+		//@font-size-h2:					// Bootstrap 3.1.1 ~ 30px
+		@font-color-h2: @headings-color;
+		@font-weight-h2: @headings-font-weight;
+		@line-height-h2: floor((@headings-line-height * @font-size-h2));
+		//@font-size-h3:					// Bootstrap 3.1.1 ~ 24px
+		@font-color-h3: @headings-color;
+		@font-weight-h3: @headings-font-weight;
+		@line-height-h3: floor((@headings-line-height * @font-size-h3));
+		//@font-size-h4:					// Bootstrap 3.1.1 ~ 18px
+		@font-color-h4: @headings-color;
+		@font-weight-h4: @headings-font-weight;
+		@line-height-h4: floor((@headings-line-height * @font-size-h4));
+	// Link and Button options
+		//@brand-primary:
+			// brand primary is where to specify the primary button color
+		//@link-color: default = #08c;
+		//@link-hover-color: default = darken(@link-color, 15);
+		//@btn-default-color: 
+		//@btn-default-bg:
+		//@btn-default-border:
+	// Hued Grays (for backgrounds, etc) options
+		@huedGrayDarkest: darken(@huedGray,29);						//	4% lum
+		@huedGrayDarker: darken(@huedGray,20);						//	13% lum
+		@huedGrayDark: darken(@huedGray,13);						//	20% lum
+		@huedGray: @gray;											//	33% lum
+		@huedGrayLight: lighten(@huedGray,27);						//	60% lum
+		@huedGrayLighter: lighten(@huedGray,60);					//	93% lum
+		@huedGrayLightest: lighten(@huedGray,63);					//	96% lum
+
+
+// Static Global Style options (not to be overwritten by theme)
+	// Grays (for text, box-shadows, etc)
+		@grayDarkest: darken(@gray,29);								//	4% lum
+		@gray-darker: darken(@gray,20);								//	13% lum
+		@gray-dark: darken(@gray,13);								//	20% lum
+		//@gray:													//	33% lum
+		@gray-light:	lighten(@gray,27);								//	60% lum
+		@gray-lighter: lighten(@gray,60);							//	93% lum
+		@grayLightest: lighten(@gray,63);							//	96% lum
+	// Tables
+		//@table-bg: 
+		@table-bg-accent: lighten(@table-bg-hover,2);
+		@table-bg-hover: @huedGrayLightest;
+		@table-border-color: darken(@huedGrayLighter,6);
+
+
+// Component Styles
+	// Account Nav
+		@nav-account-bg: @navbar-default-bg;
+		@nav-account-link-color: @navbar-default-link-color;
+		@nav-account-link-hover-color: @navbar-default-link-hover-color;
+		@nav-account-link-hover-bg: @navbar-default-link-hover-bg;
+		@nav-account-link-active-color: @navbar-default-link-active-color;
+		@nav-account-link-active-bg: @navbar-default-link-active-bg;
+		@nav-account-border-color: @link-hover-color;
+		@nav-account-border-hover-color: @link-color;
+	// Main Navbar (nav-main-list)
+		@navbar-border-color: @navbar-default-border;
+		//@navbar-default-bg: 
+		//@navbar-default-color:
+		@navbar-border-radius: 0;
+		//@navbar-default-link-color:
+		//@navbar-default-link-hover-color: white;				// PGS 1.x default = white
+		@navbar-default-link-hover-bg: darken(@navbar-default-bg, 6.5%);				// PGS 1.x default = @gray
+		@navbar-default-link-active-color: white;				// PGS 1.x default = white
+		@navbar-default-link-active-bg: @gray;			// PGS 1.x default = @link-color
+	// Breadcrumb Nav
+		//@breadcrumb-color: 
+		@breadcrumb-link-color: @navbar-default-link-color;
+		@breadcrumb-link-hover-color: @link-color;
+		//@breadcrumb-active-color: 
+	// Action Nav 
+		@actionBackgroundColorDefault: @gray;
+		@manageBackgroundColor: #339933;
+		@donateBackgroundColor: #cc0000;
+		//@inviteBackgroundColor:
+		//@subscribeBackgroundColor:
+	// Badge
+		@badgeBackgroundColor: @gray-light;
+	// Home page carousel height
+		@homePageCarouselHeight: 540px;
+
+
+// Viewport Styles
+	// Navbar
+		@navbar-phone-bg: @gray-lighter;
+		@navbar-phone-color: @gray;
+	// Footer 
+		@footer-phone-bg: darken(@huedGrayLighter,6);
+		@footer-phone-color: black;
+
+
+// Call Layout and Theme Mixins
+	body {
+		.setHeader();
+		.setLayout();
+	}

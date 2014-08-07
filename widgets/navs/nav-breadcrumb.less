@@ -1,0 +1,31 @@
+﻿/* nav-breadcrumb.less */
+
+.nav-breadcrumb {
+	#gradient > .vertical(lighten(@navbar-default-bg,10), @navbar-default-bg);
+	border: 1px solid @navbar-default-border;
+	border-top: 0px;
+
+	.container {
+		.breadcrumb {
+			// Undo stuff from TBS' .breadcrumb
+			.border-radius(0px);
+			.remove-gradient();
+			background-color: transparent;
+			border: none;
+			margin: 0;
+
+			// PGS style
+			padding: 7px @gridGutterWidth 7px 2px;
+			font-size: 14px;
+			line-height: 24px;
+
+			> li > a {
+				color: @breadcrumb-link-color;
+
+				&:hover {
+					color: @breadcrumb-link-hover-color;
+				}
+			}
+		}
+	}
+}

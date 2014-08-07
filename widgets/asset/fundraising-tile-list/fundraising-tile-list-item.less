@@ -1,0 +1,59 @@
+﻿/* \widgets\asset\fundraising-tile-list\fundraising-tile-list-item.less */
+
+.fundraising-tile-list-item {
+	.asset-fundraising-tile;	// inherit general look
+	position: relative;
+
+	h4 {
+		font-size: 16px;
+		line-height: 20px;
+		margin-bottom: 2px;
+	}
+	.center-cropped-img {
+		width: 139px;
+		height: 139px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.ribbon-complete {
+		top: -6px;
+		left: -6px;
+		height: 122px;
+		width: 122px;
+	}
+	.asset-funds-raised {
+		.goal {
+			.pull-right;
+		}
+		& + .progress-bar-pgs {
+			margin-top: @line-height-computed/4;
+		}
+	}
+	.feature-item-wrapper {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+
+		.feature-item {		// is only visible when logged in as admin
+			display: inline-block;
+			width: 139px;
+			height: 139px;
+		}
+	}
+	&:hover {
+		.feature-item {		// is only visible when logged in as admin
+			background-color: rgba(0,0,0,0.5);
+			text-align: center;
+
+			a {
+				margin-top: 59.5px;
+				display: inline-block;
+
+				&.hidden {
+					display: none;
+				}
+			}			
+		}
+	}
+}

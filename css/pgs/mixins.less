@@ -1,0 +1,133 @@
+﻿/* \css\pgs\mixins.less */
+
+
+// Focus
+	.tab-focus() {
+		// Default
+		outline: thin dotted #333;
+		// Webkit
+		outline: 5px auto lighten(@link-color,10);
+		outline-offset: -2px;
+	}
+
+
+// Buttons
+	.coloredButton(@backgroundColor, @textColor:white) {
+		&,
+		&:hover {
+			.btn-primary;
+			.buttonBackground(@backgroundColor, darken(@backgroundColor, 10%));
+			color: @textColor;
+		}
+		&.active {
+			.btn-primary.active;
+		}
+	}
+
+	.placeholder-color(@color) {
+		&:focus::-webkit-input-placeholder {
+			color: @color;
+		}
+
+		&:focus:-moz-placeholder {
+			color: @color;
+		}
+
+		&:focus:-ms-input-placeholder {
+			color: @color;
+		}
+	}
+
+	.placeholder-transition(@placeholder-transition:@transition) {
+		&::-webkit-input-placeholder {
+			.transition(@placeholder-transition);
+		}
+			
+		&:-moz-placeholder {
+			.transition(@placeholder-transition);
+		}
+			
+		&:-ms-input-placeholder {
+			.transition(@placeholder-transition);
+		}
+	}
+
+	// Use this to reverse #gradient
+	.remove-gradient(@background-color: transparent) {
+		background-color: @background-color; 
+		background-image: none;
+		background-image: none;
+		background-image: none;
+		background-image: none;
+		background-image: none;
+		background-image: none;
+		background-repeat: no-repeat;
+		filter: none;
+	}
+
+
+// Navs
+	.triangle-point-up(@size: 12px, @color: white){
+		position: absolute;
+		bottom: 0;
+		left: -1 * @size;
+		display: inline-block;
+		content: '';
+		border-left:   @size solid transparent;
+		border-right:  @size solid transparent;
+		border-bottom: @size solid  @color;
+		margin-left: 50%;
+	}
+	.color-nav-item-by-href(@href,@bg,@color) {		// Must be called from .navbar-nav context
+		& > li > a[href*='@{href}']:hover,
+		& > .open > a[href*='@{href}']:hover,
+		& > .open > a[href*='@{href}'],
+		& > .active > a[href*='@{href}'],
+		& > .active > a[href*='@{href}']:hover,
+		& > .active > a[href*='@{href}']:focus {
+			background-color: @bg;
+			color: @color;
+		}
+	}
+	.color-footer(@color) {
+		.nav-footer .nav-footer-inner {
+			color: @color;
+			
+			h3,
+			.clear-indent ul,
+			a,
+			a:hover,
+			.row.bottom .custom,
+			.row.bottom .custom a,
+			.row.bottom .custom a:hover {
+				color: @color;
+			}
+		}
+	}
+	.light-powered-by() {
+		.nav-footer .nav-footer-inner .row.bottom .col-md-12 a.powered-by {
+			span:first-child:after {
+				content: "";
+				position: absolute;
+				display: inline-block;
+				background: url("../../images/logo-penguin-150x100_white.png") no-repeat 0 0;
+				background-size: 100px 67px;
+				width: 100px;
+				height: 67px;
+				margin-top: -33px;
+
+				@media (min-width: @screen-sm-min) {
+					background-size: 60px 40px;
+					width: 60px;
+					height: 40px;
+					margin-top: -9px;
+				}
+			}
+			img {
+				visibility: hidden;
+			}
+		}
+		.powered-by:hover {
+			opacity: 1;
+		}
+	}

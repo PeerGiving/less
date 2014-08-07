@@ -1,0 +1,75 @@
+﻿/* hftn_new/theme-variables.less */
+
+
+//	1. Comment out variable definitions to inherit defaults
+//		* defaults iherited from \pgs\css\theme-variables.less
+//	2. New variables intended for use by all themes should be defined in \pgs\css\theme-variables.less 
+//  3. New variables intended for use by a specific theme should have names beginning with a theme-initialism bounded by underscores (example: @_pn_green)
+//	This file can be copied, and used as a starting point for new themes
+
+
+// Variable Global Style options
+	// Closed Layout options
+		@isClosedLayout: true;
+		//@bodyBackgroundColor:
+		@bodyBackgroundImage: url("images/debut_light.png");
+		@bodyBackgroundRepeat: repeat;
+		//@bodyBackgroundPosition: 
+	// Header options
+		//@headBackgroundColor: 
+		//@headBackgroundImage: 
+		//@headBackgroundRepeat: 
+		//@headBackgroundPosition: 
+		@headLogoImage: url("images/logo.png");
+		@headLogoWidth: 380px;
+		@headLogoHeight: 167px;
+		//@headTitleFontFamily: 
+		//@headTitleFontSize: 
+	// Typography options
+		@font-family-base: 'PT Sans', sans-serif;
+		@headings-font-family: 'PT Sans', sans-serif;
+		//@font-size-base:
+		@line-height-base: 1.25;	// floor(14px * 1.25) ~ 17px
+	// Link and Button options
+		@link-color: @hftn_blue;
+		//@link-hover-color: 
+		@brand-primary: @hftn_pink;
+	// Hued Grays (for backgrounds, etc) options
+		//@huedGrayDarkest:											//	4% lum
+		//@huedGrayDarker:											//	13% lum
+		//@huedGrayDark:											//	20% lum
+		@huedGray: #535455;											//	33% lum
+		//@huedGrayLight:											//	60% lum
+		//@huedGrayLighter:											//	93% lum
+		//@huedGrayLightest:										//	96% lum
+	// Other Colors
+		@hftn_blue: #00adef;
+		@hftn_pink: #e40e8c;
+		@hftn_green: #bed62f;
+
+// Component Styles	
+	// Main Navbar (nav-main-list)
+		//@navbar-default-bg: 
+		//@navbar-default-color:
+		//@navbar-default-link-color:
+		//@navbar-default-link-hover-color:
+		//@navbar-default-link-hover-bg:
+		@navbar-default-link-active-color: white;
+		@navbar-default-link-active-bg: @hftn_blue;
+	// Account Nav
+		//@nav-account-bg:
+		//@nav-account-link-color:
+		//@nav-account-link-hover-color:
+		//@nav-account-link-hover-bg:
+		//@nav-account-link-active-bg:
+	// Action Nav
+		//@actionBackgroundColorDefault: 
+		//@manageBackgroundColor: 
+		//@donateBackgroundColor: 
+		//@inviteBackgroundColor:
+		//@subscribeBackgroundColor:
+	// Badge
+		//@badgeBackgroundColor: 
+		
+	// Home page carousel	
+		//@homePageCarouselHeight:

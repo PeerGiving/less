@@ -1,0 +1,234 @@
+/*  Core color summary:
+	block background: #003399
+    block alternate: #0066cc
+    light alternate: #b5c7d6
+    grey: #eeeeee
+    Warning colors: Cornsilk, #8b0000 (DarkRed)
+*/
+
+
+/* Added stuff (eliminating inline rules) */
+#mainPageTable{ width:820px; }/* see default.css 3rd Party section for more */
+#mainPageBox{ background:#eee; width:820px; text-align:left; border:solid 2px #00008b; }
+
+/* Note:
+    Prepended #westwind (body tag id for localization Default.aspx) to all global style rules
+    Some refactoring
+*/
+#westwind, #westwind table, #westwind td, #westwind th, #westwind input, #westwind textarea, #westwind select{ font-family:Verdana,sans-serif; font-size:10pt; }
+#westwind pre{ background:LightGray; color:#00008b; font-family:Courier New; font-size:10pt; font-weight:normal; }
+#westwind h1{ background-color:#eee; color:navy; font-size:16pt; height:25pt; font-weight:bold; padding-top:3pt; text-align:center }
+#westwind h2{ color:maroon; font-size:14pt; font-weight:bold; }
+#westwind h3{ color:navy; font-size:10pt; font-weight:bold; }
+#westwind form{ }/* was all zeroed margin & padding (already done by reset) */
+#westwind table{ border-collapse:collapse; }
+
+table.blackborder, div.blackborder{ border-style:solid; border-width:2px; border-color:#00008b; }
+
+#westwind td{ border-collapse:collapse; border-color:#d3d3d3; }
+
+table.blackborder td{ border-width:1px; border-color:#d3d3d3; }
+
+#westwind th{ border-collapse:collapse; font-weight:bold; text-align:center; }
+#westwind a{ color:#00008b; }
+#westwind a:visited{ color:#8b0000; }
+#westwind a:hover{ color:Red;}
+#westwind hr{ color:#00008b; background:#00008b; border:0; height:1px; }	
+#westwind ul{ margin-top:2pt; padding-bottom:2pt; padding-top:2pt; }
+#westwind li{ padding-top:2pt; }
+
+/* 
+   used on the main page left table column 
+   the default contains the wave background
+*/
+.categorylistbackground{ width:170px; background-image:url(../images/newwave.jpg); /* background: #fff8ad; */ vertical-align:top; /*padding-left:4pt;*/ padding-left:4px; }
+.smallbody{ font-size:8pt; font-weight:normal; }
+
+#westwind small{ font-size:8pt; font-weight:normal; }
+
+/* Block backgrounds for headers etc. */
+.menuband, .gridheader, .gridheaderbig, .buttonlinks, .blockheader, .roundedcorner_center{ color:#fff8dc; background-color:#003399; }
+/* Alternate background color Color to offset the background
+   used for the category list and banner strips for color
+   variety. Should be a companion color to the block background
+   colors (previous tag
+*/
+.alternatebackground{ color:#fff; background-color:#0066cc; }
+
+/* used for any block tags like headers on tables etc. */
+.blockheader{ font-weight:bold; }
+
+.webstoretitletext{ color:#003399; font-size:20pt; font-family:Arial Narrow; font-weight:bold; padding:3px; }
+.webstorebanner{ font-weight:bold; padding-top:5px; color:#fff8dc; background: #003399 url(../images/floralbackground_sm.gif); height:20px; white-space:nowrap; }
+.webstorebannertext{ color:#fff; font-weight:bold; text-decoration:none; padding:2px; }
+.webstorebannertext:visited{ color:#fff; }
+.webstorebannertext:hover{ color:#003399; background:#fff url(../images/MenuHighlight.png) repeat; }
+
+/* Used on the category list as a standard link */
+.menucolumn{ padding:5px; border-bottom:solid 1px #fff; }
+.menulink{ color:#00008b; font-size:8pt; font-weight:normal; text-decoration:none; display:block; text-align:left; padding-top:4px; padding-bottom:4px; padding-left:5px; }
+.menulink:visited{  } 
+.menulink:hover{ color:#00008b;text-decoration:none; font-weight:normal;background: white url(../images/MenuHighlight.png) repeat-x; }
+.menuband{ font-weight:bold; height:20px; padding-top:5px; text-align:center; }
+.buttonlinks{ font-weight:bold; text-decoration:none; display:block; padding:2px; }
+.buttonlinks:visited{ color:#fff8dc; }
+.buttonlinks:hover{ color:#00008b; text-decoration:none; background:white;} 
+
+.imagelink{ text-decoration:none; display:inline-block; padding-left:4px; padding-right:4px; padding-top:2px; }
+.imagelink:hover{ background:#b0c4de; color:black; text-decoration:none; } 
+
+.submitbutton{ font-weight:bold; height:35px; width:200px; background:url(../images/SubmitButton.gif); color:#fffacd; border:none 0; }
+.submitbutton:hover { background: url(../images/SubmitButtonHover.gif); } 
+.submitbutton:active { background: url(../images/SubmitButtonPressed.gif); }
+
+.smallbutton{ height:22px; width:90px; font-size:8pt; color:Navy; background:url(../images/smallbutton.gif); border:none 0; }
+.smallbutton:hover { background: url(../images/smallbuttonhover.gif); }
+.smallbutton:active { background: url(../images/smallbuttonpressed.gif); }
+
+.smallbuttontext{ font-size:8pt; height:20px; }
+
+.gradienthighlight{ background:#fff url(../images/horizontalgradient.png) repeat-y; }
+
+.gridheader, .gridheaderbig, .gridheaderleft, 
+.gridheaderright{ height:20px; padding:4px; background:#003399 url(../images/vertgradient.png) repeat-x bottom; font-weight:bold; text-decoration:none; }
+
+.gridheaderleft{ text-align:left; }
+.gridheaderright{ text-align:right; }
+.gridheaderbig{ background:url(../images/vertgradient40.png) repeat-x bottom; }
+.gridnormal{ background-color:#eee; }
+.gridalternate{ background-color:#b5c7d6; }
+.gridhighlight{ background-color:#ffcc66; cursor:pointer; }
+.errormessage{ font-size:10pt; font-weight:bold; color:Maroon; }
+.errordisplay{ font-size:10pt; font-weight:normal; color:#8b0000; border:solid 2px #8b0000; background-color:#fff8dc; padding-left:15pt; padding-right:10pt; line-height:15pt; }
+.errordisplay hr{ color:#8b0000; }
+.dialogwindow{ /*margin:0;*/ background:#eee; font-size:8pt; }
+.descriptionheader{ background:#003399; color:#fff; font-size:8pt; text-align:left; padding:10px; }
+
+.tabbutton, 
+.selectedtabbutton{ font-size:8pt; background:transparent url(../images/tabnormal.gif) no-repeat; text-align:center; vertical-align:middle; cursor:pointer;/*cursor:hand;*/ color:#00008b; width:120px; border:none 0; }
+.tabbutton:hover{ background:transparent url(../images/tabhover.gif) no-repeat; }
+.selectedtabbutton{ font-weight:bold; color:#fff; background:transparent url(../images/tabselected.gif) no-repeat; cursor:default; }
+
+.roundedcordner_ul, .roundedcorner_ur{ height:25px; width:20px; padding:0; }
+/* these images were deleted or went to the planet of lost socks or something */
+/* 
+.roundedcorner_ul{ background: url(../images/corner_ul.gif) no-repeat; }
+.roundedcorner_ur{ background: url(../images/corner_ur.gif) no-repeat; } 
+*/
+
+.roundedcorner_center{ height:20px; text-align: center; padding:2px 0 0 0; font-weight:bold; background-color:#003399; }
+
+
+
+
+/* Original global rules
+*****************************************
+BODY,TABLE,TD,TH,INPUT,TEXTAREA,SELECT
+{
+    font-family: Verdana,sans-serif;
+    font-size: 10pt;
+}
+BODY
+{
+    margin-top: 0pt;
+    padding-top: 0pt; 
+}
+PRE
+{
+    background: LightGray;
+    color: #00008b;
+    font-family: Courier New;
+    font-size: 10pt;
+    font-weight: normal;
+}
+H1
+{
+    background-color: #eeeeee;
+    color: navy;
+    font-size: 16pt;
+    height: 25pt;
+    font-weight: bold;
+    margin-bottom: 0pt;
+    margin-top: 0pt;
+    padding-bottom: 0px;
+    padding-top: 3pt;
+    TEXT-ALIGN: center
+}
+H2
+{
+    color: maroon;
+    font-size: 14pt;
+    font-weight: bold;
+    margin-bottom: 0pt;
+    margin-top: 0pt;
+    padding-bottom: 0pt;
+    padding-top: 0pt
+}
+H3
+{
+    color: navy;
+    font-size: 10pt;
+    font-weight: bold;
+    margin-bottom: 0pt;
+    margin-top: 0pt;
+    padding-bottom: 0pt;
+    padding-top: 0pt
+}
+FORM
+{
+    margin-bottom: 0pt;
+    margin-top: 0pt;
+    padding-bottom: 0pt;
+    padding-top: 0pt
+}
+TABLE
+{
+ 	border-collapse: collapse;
+}
+TABLE.blackborder, DIV.blackborder
+{
+	border-style:solid;
+	border-width: 2px;
+	border-color: #00008b;
+}
+TD
+{
+	Border-collapse: collapse;
+    border-color: #d3d3d3;
+}
+table.blackborder TD
+{
+	border-width:1px;
+	border-color:#d3d3d3;
+}
+
+
+TH
+{
+	border-collapse: collapse;
+	font-weight: bold;
+	text-align: center;
+}
+A 
+{ color:#00008b; }
+A:visited
+{
+	color: #8b0000;
+}
+A:hover 
+{ color:Red;}
+HR 
+{ color:#00008b; background: #00008b; border: 0; height:1px;}
+	
+UL 
+{
+    margin-bottom: 0pt;
+    margin-top: 2pt;
+    padding-bottom: 2pt;
+    padding-top: 2pt;
+}	
+LI
+{
+	padding-top: 2pt;
+	padding-bottom: 0pt;
+}*/

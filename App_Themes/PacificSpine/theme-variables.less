@@ -1,0 +1,83 @@
+﻿/* PacificSpine/theme-variables.less */
+
+
+//	1. Comment out variable definitions to inherit defaults
+//		* defaults iherited from \pgs\css\theme-variables.less
+//	2. New variables intended for use by all themes should be defined in \pgs\css\theme-variables.less 
+//  3. New variables intended for use by a specific theme should have names beginning with a theme-initialism bounded by underscores (example: @_pn_green)
+//	This file can be copied, and used as a starting point for new themes
+
+
+// Variable Global Style options
+	// Closed Layout options
+		//@isClosedLayout: true;
+		//@bodyBackgroundColor:
+		//@bodyBackgroundImage:	
+		//@bodyBackgroundRepeat:
+		//@bodyBackgroundPosition:
+	// Header options
+		//@headBackgroundColor: 
+		//@headBackgroundImage: 
+		//@headBackgroundRepeat: 
+		//@headBackgroundPosition: 
+		@headLogoImage: url("images/logo.jpg");
+		@headLogoWidth: 380px;
+		@headLogoHeight: 113px;
+		//@headTitleFontFamily: 
+		//@headTitleFontSize: 
+	// Typography options
+		@font-family-base: Verdana, Geneva, sans-serif;
+		@font-size-base: 15px;
+		@headings-font-family: 'Montserrat', sans-serif;
+		@font-size-h2: 36px;
+		@font-weight-h2: bold;
+		@font-size-h3: 24px;
+		@font-weight-h3: normal;
+		@font-size-h4: 18px;
+		@font-weight-h4: bold;
+		//@font-size-h5: 18px;
+		//@font-weight-h5: bold;
+		@headings-color: @_ps_gray_dark;
+	// Link and Button options
+		@btn-default-color: white;
+		@btn-default-bg: @_ps_orange;
+		@btn-default-border: darken(@_ps_orange, 10);
+		@brand-primary: @_ps_green;
+		@link-color: @_ps_blue;
+		//@link-hover-color: 
+	// Hued Grays (for backgrounds, etc) options
+		//@huedGrayDarkest:											//	4% - 3% lum
+		//@huedGrayDarker:											//	13% - 3% lum
+		//@huedGrayDark:											//	20% - 3% lum
+		//@huedGray: darken(#8c6f1d,3);								//	33% - 3% lum
+		//@huedGrayLight:											//	60% - 3% lum
+		//@huedGrayLighter:											//	93% - 3% lum
+		//@huedGrayLightest:										//	96% - 3% lum
+	// Other Colors
+		@_ps_yellow: #f9ec78;
+		@_ps_orange: #ec693d;	@_ps_orange_r: 236;		@_ps_orange_g: 105;		@_ps_orange_b: 61;
+		@_ps_green: #33cc99;
+		@_ps_blue: #3366ff;
+		@_ps_blue_navy: #001e6f;
+		@_ps_gray_dark: #4d4d4d;
+		@_ps_gray: #808285;
+
+// Component Styles	
+	// Main Navbar (nav-main-list)
+		@navbar-default-bg: white;
+		@navbar-default-color: @_ps_gray_dark;
+		@navbar-default-link-color: @_ps_gray_dark;
+		@navbar-default-link-hover-color: white;
+		@navbar-default-link-hover-bg: @_ps_blue;
+		@navbar-default-link-active-color: white;
+		@navbar-default-link-active-bg: @_ps_blue_navy;
+	// Home page carousel	
+		@homePageCarouselHeight: 500px;								
+	// Action Nav
+		//@actionBackgroundColorDefault: 
+		//@manageBackgroundColor: 
+		//@donateBackgroundColor: 
+		//@inviteBackgroundColor:
+		//@subscribeBackgroundColor:
+	// Badge
+		//@badgeBackgroundColor: 

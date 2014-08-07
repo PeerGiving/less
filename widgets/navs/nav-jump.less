@@ -1,0 +1,19 @@
+﻿/* nav-jump.less */
+
+	.nav-jump {
+		visibility: hidden;
+
+		& > .container {
+			padding-bottom: @line-height-computed*3/2;
+		}
+	}
+	.secondary-content + .nav-jump {
+		background-color: darken(@huedGrayLightest,5);	
+	}
+	
+	// Mobile Look
+	@media (max-width: @screen-xs-max) {
+		.nav-jump {
+			text-align: center;
+		}		
+	}	

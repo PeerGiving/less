@@ -1,0 +1,202 @@
+/* abba\theme.less */
+
+
+// Global Styles
+	
+	header {
+		h1 {
+			float: left;
+		}
+		.headerZone2 {
+			.clearfix();
+			.heels();
+			
+			float: right;
+			padding-top: 20px;
+			width: auto;
+			
+			.tagline {
+				display: inline-block;
+				padding-right: 20px;
+				width: 353px;
+				vertical-align: top;
+				text-align: right;
+			
+				@media (max-width: @screen-sm-max) {
+					width: 200px;
+					font-size: 11px;
+				}
+
+				p {
+					margin-bottom: 2px;
+					color: #666;
+
+					& + p {
+						float: right;
+					}
+				}
+			}
+			.newsletter-box {
+				display: inline-block;
+				padding-left: 20px;		
+				border-left: @huedGrayLighter 1px solid;
+				vertical-align: top;
+			}	
+		}
+	}
+
+// Page/Component Styles
+	.home {
+		.zone-home-below-nav {
+			.blue-box {
+				display: block;
+				border: 4px solid #3d8aa4;
+				padding: 10px 15px;
+				font-size: 24px;
+				line-height: 1;
+				text-align: center;
+				color: #3d8aa4;
+
+				&:hover {
+					text-decoration: none;
+				}
+				.uppercase {
+					line-height: 1.2;
+					margin-bottom: 10px;
+
+					@media (min-width: @screen-sm-min) {
+						font-size: 32px;
+					}
+				}
+				.table-cell {
+					vertical-align: middle;
+				}
+				@media (min-width: @screen-sm-min) {
+					.table-cell + .table-cell {
+						padding-left: 2 * @gridGutterWidth;
+					}
+				}
+			}
+			.gray-box {
+				border: 4px solid @gray-lighter;
+				padding: 0 10px;
+				line-height: 1;
+				color: @gray-light;
+
+				@media (min-width: @screen-sm-min) {
+					margin-right: @gridGutterWidth;
+					font-size: 72px;
+				}
+			}
+			h2 {
+				margin-bottom: 0;
+				font-size: 24px;
+				text-transform: uppercase;
+				color: @gray-light;
+
+				.pull-top();
+			}
+			.col-sm-7 {
+				position: relative;
+
+				.btn {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					margin-bottom: 20px;
+					margin-right: 40px;
+				}
+			}
+			.col-sm-5 {
+				a {
+					display: block;
+					color: black;
+				
+					&:hover {
+						text-decoration: none;
+					}
+					img {
+						@media (min-width: @screen-sm-min) {
+							padding-left: 40px;
+						}
+						
+						.center-block();
+					}
+					@media (min-width: @screen-sm-min) {
+						p {
+							padding-left: 40px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.about {
+	.faq,
+		h2 {
+			border-bottom: 1px solid black;
+
+			a.backToTop {
+				float: right;
+				display: inline-block;
+				font-size: 18px;
+				font-weight: normal;
+				vertical-align: bottom;
+			}
+		}
+	}
+	.about {
+		// Modifiers
+		&.about-about {
+			.navContainer {
+				display: table;
+				width: 100%;
+
+				h3 {
+					display: table-cell;
+					margin-right: @gridGutterWidth;
+					font-weight: normal;
+				}
+				.intraNav {
+					display: table-cell;
+					width: 85%;
+					list-style: none;
+
+					li {
+						border-bottom: 1px solid #ccc;
+						font-size: 18px;
+						line-height: @line-height-computed * 1.4;
+					}
+				}
+			}
+		}
+		&.about-resources {
+			.about-content {
+				ul {
+					list-style: none;
+
+					a {
+						font-weight: bold;
+					}
+				}
+			}
+		}
+		&.about-contact {
+			address {
+				margin-bottom: 30px;
+			}
+		}	
+
+		// Gerb: This is weird. In the future, maybe remove and
+		//  convert pages to use col-md-8
+		@media (min-width: @screen-md-min) {
+			.about-content {			
+				p {
+					width: 66%;
+				}
+				ul {
+					width: 62%;
+				}				
+			}
+		}		
+	}		

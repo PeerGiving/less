@@ -1,0 +1,138 @@
+/* styles.less
+	This is a static file that must be manually updated
+	to include any .less files that are used by the
+	site.  
+*******************************************************/ 
+
+
+// TWITTER BOOTSTRAP Core
+	
+	// From bootstrap-2
+	@import "../css/bootstrap-2/variables.less";
+	@import "../css/bootstrap-2/mixins.less";
+
+	// Bootstrap-3
+	@import "../bootstrap-3.1.1/less/bootstrap.less";
+
+// PGS Reset
+	@import "../css/pgs/reset.less";
+	@import "../css/pgs/anthem.less";
+
+// PGS Variables and Mixins
+	@import "../css/pgs/variables.less";
+	@import "../css/pgs/mixins.less";
+
+// PGS Theme Defaults and Layout Mixins
+	@import "../css/pgs/theme-variables.less";
+	@import "../css/pgs/layout-mixins.less";
+
+// PGS Core (site-wide) Styles
+	@import "../css/pgs/default.less";
+	// Order Alphabetically:
+		@import "../css/pgs/addthis.less";
+		@import "../css/pgs/admin.less";
+		@import "../css/pgs/asp.net.less";
+		@import "../css/pgs/buttons.less";
+		@import "../css/pgs/callouts.less";
+		@import "../css/pgs/icons.less";
+		@import "../css/pgs/img-shape.less";
+		@import "../css/pgs/forms.less";
+		@import "../css/pgs/labels-badges.less";
+		@import "../css/pgs/media.less";
+		@import "../css/pgs/navs.less";
+		@import "../css/pgs/pgs.fileupload.less";
+		@import "../css/pgs/scaffolding.less";
+		@import "../css/pgs/tables.less";
+		@import "../css/pgs/tiles.less";
+		@import "../css/pgs/thumbnails.less";
+		@import "../css/pgs/type.less";
+		@import "../css/pgs/utilities.less";
+		@import "../css/pgs/wells.less";
+		@import "../fonts/fonts.less";
+
+// THIRD-PARTY Styles
+	// Order Alphabetically:
+		@import "../css/third-party/font-awesome/font-awesome.less";
+		@import "../css/third-party/jquery.cluetip.less";
+		@import "../css/third-party/jquery.jcrop.less"; 
+		@import "../css/third-party/thickbox.less"; 
+		@import "../css/third-party/westwind.less";
+		@import "../css/third-party/bootstrap-datepicker_standalone3.less";
+
+// PGS Third-party Overrides
+	@import "../css/pgs/pgs.datepicker.less";
+	@import "../css/pgs/pgs.jcrop.less";
+	@import "../CKEditor_4.0.2/ckeditor.pgs.less";
+	@import "../css/pgs/pgs.thickbox.less";
+
+// PGS Page/Widget-specific Styles
+	// Order Alphabetically:
+		@import "../admin/admin-pages.less";
+		@import "../admin/theme-editor-HTML.less";
+		@import "../asset-mgmt/manage-donations.less"; 
+		@import "../category.less";
+		@import "../controls/asset/asset-info.less";
+		@import "../controls/asset/comments.less";
+		@import "../controls/asset/comments-summary.less";
+		@import "../controls/asset/mixedMedia/updates-editor.less"; 
+		@import "../controls/image-upload.less";
+		@import "../controls/pager/pager.less";
+		@import "../controls/pages-list-item.less";
+		@import "../controls/posts/post-view/post-view.less";
+		@import "../create-asset.less";
+		@import "../css/pgs/asset.less";
+		@import "../css/pgs/mailChimp.less";
+		@import "../donate/donate.less";
+		@import "../donate/donate-offline.less";
+		@import "../donate/donate-success.less";
+		@import "../fundraiser.less";
+		@import "../home.less";
+		@import "../login-signup/activate-account.less";
+		@import "../login-signup/login.less";
+		@import "../login-signup/login-signup.less";
+		@import "../manage-custom-page.less";
+		@import "../project.less";
+		@import "../search/search.less";
+
+		@import "../widgets/activity/community-updates-brief-list-item.less";
+		@import "../widgets/add-this/add-this.less";
+		@import "../widgets/fundraising/asset-fundraisers.less";
+		@import "../widgets/fundraising/days-left.less";
+		@import "../widgets/fundraising/progress-bar-pgs.less";
+		@import "../widgets/activity/asset-activity-list/asset-activity-list.less";
+		@import "../widgets/activity/asset-activity-list/asset-activity-list-item.less";
+		@import "../widgets/activity/asset-activity-list/asset-post-activity-list-item.less";
+		@import "../widgets/activity/asset-activity-list/asset-activity-header.less";
+		@import "../widgets/asset/asset-settings-view.less";
+		@import "../widgets/asset/category-list/category-list-item.less";
+		@import "../widgets/asset/feature-item.less";
+		@import "../widgets/asset/asset-teaser.less";
+		@import "../widgets/asset/fundraiser-list-featured/fundraiser-list-featured-item.less";
+		@import "../widgets/asset/fundraising-tile-list/fundraising-tile-list-item.less";
+		@import "../widgets/asset/project-list/project-list.less";
+		@import "../widgets/asset/project-list/project-list-item.less";
+		@import "../widgets/asset/team-member-list/avatar-list.less";
+		@import "../widgets/asset/team-member-list/name-list.less";
+		@import "../widgets/asset/team-member-list/team-member-list.less";
+		@import "../widgets/donate/donation-target-assets.less";
+		@import "../widgets/fundraising/fundraiser-list/fundraiser-list.less";
+		@import "../widgets/fundraising/fundraiser-list/fundraiser-list-item.less";
+		@import "../widgets/fundraising/fundraising-info.less";
+		@import "../widgets/fundraising/fundraising-info-inline.less";
+		@import "../widgets/home/welcome-message.less"; 
+		@import "../widgets/message/message.less";
+		@import "../widgets/navs/nav-account.less";
+		@import "../widgets/navs/nav-breadcrumb.less"; 		
+		@import "../widgets/navs/nav-footer.less"; 		
+		@import "../widgets/navs/nav-jump.less";
+		@import "../widgets/navs/nav-main-list.less"; 
+		@import "../widgets/old-browser-message.less";
+		@import "../widgets/pages/pages-list.less";
+		@import "../widgets/search-box/search-box.less"; 
+		@import "../widgets/slides/slide.less"; 
+		@import "../widgets/slides/slide-manage-list.less"; 
+		@import "../widgets/slides/slideshow.less";
+		@import "../widgets/slides/home-page-carousel.less";
+		@import "../widgets/slides/carousel-item.less";
+		@import "../widgets/file-upload.less";
+		

@@ -1,0 +1,87 @@
+﻿/* buttons.less */
+
+
+	// Action Panel Buttons
+	.actionNav {
+		a {
+			&,
+			&:link, 
+			&:visited, 
+			&:active {
+				color: white;
+				display: block;
+				line-height: 1;
+				font-size: 20px;
+				font-weight: bold;
+				margin: 0 0 2px; 
+				padding: 11px 10px; 
+				text-transform: uppercase;
+				.border-radius(4px);
+				@shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+				.box-shadow(@shadow);
+			}
+			&:hover {
+				text-decoration: none;
+			}
+			span {
+				color: white;
+				font-size: 15px;
+				font-weight: normal;
+				text-transform: none;
+			}
+			.colorActionNavButton(@actionBackgroundColorDefault);
+		}
+		a.manage {
+			.colorActionNavButton(@manageBackgroundColor);
+		}
+		a.donate {
+			.colorActionNavButton(@donateBackgroundColor);
+		}
+	}
+	.colorActionNavButton(@background-color) {
+		&:link, 
+		&:visited {
+			.buttonBackground(@background-color,darken(@background-color,10%));
+		}
+		&:hover, 
+		&:active {
+			background: darken(@background-color,10%);
+		}
+	}
+
+	// Two Phrase Button (to replace btnBlock and actionNav buttons)
+	.btn.btn-two-phrase {
+		padding-left: 10px;
+		padding-right: 10px;
+		white-space: normal;
+		text-align: left;
+		font-size: 22px;
+		font-weight: bold;
+
+		span {
+			display: block;
+			font-size: 13px;
+			font-weight: normal;
+			text-transform: uppercase;
+		}
+	}
+
+	// Round Buttons
+	a.arrowRoundUp,
+	a.arrowRoundDown {
+		display: inline-block;
+		width: 35px;
+		height: 35px;
+	}
+	a.arrowRoundUp {
+		background-image: url("@{cssImagesPath}/arrow_up.png");
+	}
+	a.arrowRoundDown {
+		background-image: url("@{cssImagesPath}/arrow_down.png");
+	}
+		
+
+	// MISC
+	.btn-red {
+	    .coloredButton(@red);
+	}

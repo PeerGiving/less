@@ -1,0 +1,61 @@
+﻿/* \widgets\activity\community-updates-brief-list-item.less */
+
+	.community-updates-brief-list-item {
+		border-top: dotted 1px black;
+		padding: 18px 0;
+	
+		// Layouts
+		.table {
+			table-layout: fixed;
+			margin-bottom: 0;
+
+			.table-cell {
+				vertical-align: top;
+
+				&.img {
+					width: 80px;
+				}
+			}
+		}
+		.foot {
+			margin-top: 5px;
+
+			div,
+			a,
+			abbr {
+				text-transform: uppercase;
+				color: @gray-light;
+				font-size: 11px;
+				line-height: 14px;
+				border: none;
+			}
+		}
+
+		// Elements
+		.table-cell > a {
+			text-decoration: none;
+
+			&:hover {
+				h4 {
+					color: @link-color;
+				}
+			}
+		}
+		h4 {
+			margin-top: 2px !important;
+			color: black;
+			margin-bottom: 0;
+			word-wrap: break-word;
+		}
+		p {
+			color: @textColor;
+		}
+	}
+
+
+	/* \widgets\activity\community-updates-brief-list.ascx  <-- should be moved to own file */
+	.community-updates-brief-list {
+		ul li:last-child {
+			border-bottom: dotted 1px black;
+		}
+	}

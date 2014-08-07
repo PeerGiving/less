@@ -1,0 +1,76 @@
+﻿/* carousel-item.ascx */
+
+    .carousel-item {
+		background-color: black;
+		max-width: 100%;
+		overflow: hidden;
+		
+		img {
+			&:extend(.img-responsive);
+			line-height: 1;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			top: 0;
+			right: 0;
+			margin: auto;
+		}
+		.carousel-caption {
+			// Override Bootstrap caption styles
+			left: 0;
+			right: 0;
+			bottom: 0;
+
+			// PGS specific
+			#gradient > .vertical(rgba(0,0,0,0), rgba(0,0,0,1), 50%, 100%); 
+		
+			.carousel-caption-inner {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				padding: 15px 15%;
+
+				h3 {
+					color: white;
+					font-weight: bold;
+				}
+				p {
+					word-wrap: break-word;
+					margin-bottom: 0;
+		
+					.description {
+						margin-right: 10px;
+					}	
+				}
+			}
+		}
+		
+		// Phone
+		@media (max-width: @screen-xs-max) {
+			height: @homePageCarouselHeight * (@screen-xs / @screen-md);
+			background: black;
+
+			.carousel-caption {
+				height: @homePageCarouselHeight * (@screen-xs / @screen-md);
+			}
+		}
+
+		// Tablet
+		@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+			height: @homePageCarouselHeight * (@screen-sm / @screen-md);
+
+			.carousel-caption {
+				height: @homePageCarouselHeight * (@screen-sm / @screen-md);
+			}
+		}
+
+		// Desktop
+		@media (min-width: @screen-md-min) {
+			height: @homePageCarouselHeight;
+			
+			.carousel-caption {
+				height: @homePageCarouselHeight;
+			}
+		}
+	}
