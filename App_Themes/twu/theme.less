@@ -84,39 +84,48 @@
 			}
 		}
 		.home-zone {
-			margin: @line-height-computed 0 0;
+			margin: @line-height-computed 0;
 			
 			.twu-home-circle {
-				position: relative;
+				background-repeat: no-repeat;
+				background-position: 0 0;
+				display: inline-block;
+				width: 135px;
+				height: 135px;
+				margin-left: 20px;
 				text-align: center;
 				color: black;
-				display: inline-block;
 
-				img.yellow {
-					position: absolute;
-					top: 0;
-					left: 0;
-					display: none;
-				}
 				&:hover,
 				&:active {
 					text-decoration: none;
-
-					img.yellow {
-						display: block;
-					}
 				}
 				h3 {
-					position: absolute;
-					top: 30%;
-					left: 0;
-					margin: 0;
-					width: 100%;
 					line-height: 28px;
-
-					@media (max-width: @screen-sm-max) {
-						padding: 0 23px;
-					}
+					margin-top: 135/2 - 28px;
+				}
+				&:first-child {
+					margin-left: 0;
+				}
+				&.impact {
+					background: url("images/Home/what-is-impact.png");
+					background-size: 135px 135px;
+				}
+				&.projects {
+					background: url("images/Home/featured-projects.png");
+					background-size: 135px 135px;
+				}
+				&.student {
+					background: url("images/Home/student-bloggers.png");
+					background-size: 135px 135px;
+				}
+				&.involved {
+					background: url("images/Home/get-involved.png");
+					background-size: 135px 135px;
+				}
+				&:hover {
+					background-image: url("images/Home/circleYellow.png");
+					background-size: 135px 135px;
 				}
 			}
 		}

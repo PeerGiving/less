@@ -238,25 +238,19 @@
 // Page Styles
 	.home {
 		.slit {
-			@media (min-width: @screen-sm-min) {
-				background: url("images/shadow-bottom-wall.png") no-repeat -10px bottom;
-				overflow: hidden;
-				padding: 0 30px;
-			}
+			background: url("images/shadow-bottom-wall.png") no-repeat -10px bottom;
+			overflow: hidden;
+			padding: 0 30px;
 
 			.subscribe,
 			.follow {
-				padding: 4px 15px 15px;
+				padding: 4px 30px 20px;
 				margin-top: 5px;
 				vertical-align: bottom;
 				box-shadow: 0 0 10px rgba(0,0,0,0.2);
-				border-radius: 5px;
-
-				@media (min-width: @screen-sm-min) {
-					padding: 4px 30px 20px;
-					border-top-left-radius: 5px;
-					border-top-right-radius: 5px;
-				}
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				height: 108px;
 
 				h4 {
 					font-family: @_60mkc_fontFamily;
@@ -264,28 +258,14 @@
 				}
 			}
 			.subscribe {
-				@media (max-width: @screen-xs-max) {
-					width: 300px;
-					margin: 0 auto;
-				}
-				@media (min-width: @screen-sm-min) {
-					margin-left: 7px;
-					display: inline-block;
-				}
+				margin-left: 7px;
 
 				iframe {
-					margin-bottom: -7px;
+					margin-bottom: -3px;
 				}	
 			}
 			.follow {
-				@media (max-width: @screen-xs-max) {
-					width: 165px;
-					margin: 15px auto 0;
-				}
-				@media (min-width: @screen-sm-min) {
-					display: inline-block;
-					margin-left: @gridGutterWidth;
-				}
+				margin-left: @gridGutterWidth;
 			}
 		}
 	}
