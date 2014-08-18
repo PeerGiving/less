@@ -25,5 +25,5 @@ You will find that variable values inherit down the following hierarchy:
  
 When overriding a variable, it's a good idea to trace it in order of inheritance.
 
-##Finding where variables are used
+##Finding where classes are used
 At this time, we do not provide our HTML markup in this repository. Unfortunately that means you will not be able to search for all uses of a given style. 
