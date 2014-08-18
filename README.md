@@ -12,6 +12,18 @@ The primary styling file for a given PeerGiving instance or *theme* is **[App_Th
 2. the **theme-variables.less** file (which is used to override core PeerGiving and Boostrap variables)
 3. the **theme.less** file (which is used for custom styling that is more complex than simple variable changes).
 
+##Theme Variables
+
 It is strongly recommended to copy from the template **App_Themes / _empty / [theme-variables.less](https://github.com/PeerGivingSolutions/themes/tree/master/App_Themes/_empty/theme-variables.less)** when building a new theme from scratch.
 
+You will find that variable values inherit down the following hierarchy:
 
+1. bootstrap-3 / less / variables.less
+2. css / pgs / variables.less
+3. css / pgs / theme-variables.less
+4. App_Themes / [themeID] / theme-variables.less
+ 
+When overriding a variable, it's a good idea to trace it in order of inheritance.
+
+##Finding where variables are used
+At this time, we do not provide our HTML markup in this repository. Unfortunately that means you will not be able to search for all uses of a given style. 
