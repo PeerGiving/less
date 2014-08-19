@@ -1,4 +1,4 @@
-#[PeerGiving](www.peergiving.com)/peergiving-less
+#[PeerGiving](www.peergiving.com)/less
 PeerGiving is a fundraising platform that empowers charities and their fundraisers to succeed. 
 
 To match the look and feel of a PeerGiving instance to a charity's brand, a front-end developer will need to reference code from this reposity.
@@ -16,7 +16,7 @@ The primary styling file for a given PeerGiving instance or *theme* is **[App_Th
 
 It is strongly recommended to copy from the template **App_Themes / _empty / [theme-variables.less](https://github.com/PeerGivingSolutions/themes/tree/master/App_Themes/_empty/theme-variables.less)** when building a new theme from scratch.
 
-You will find that variable values inherit down the following hierarchy:
+You will find that variable values inherit up the following hierarchy tree:
 
 1. bootstrap-3 / less / variables.less
 2. css / pgs / variables.less
