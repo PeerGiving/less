@@ -18,9 +18,9 @@ It is strongly recommended to copy from the template **App_Themes / _empty / [th
 
 You will find that variable values inherit up the following hierarchy tree:
 
-1. bootstrap-3 / less / variables.less
-2. css / pgs / variables.less
-3. css / pgs / theme-variables.less
+1. bootstrap-3 / less / [variables.less](https://github.com/PeerGiving/less/blob/master/bootstrap-3.1.1/less/variables.less)
+2. css / pgs / [variables.less](https://github.com/PeerGiving/less/blob/master/css/pgs/variables.less)
+3. css / pgs / [theme-variables.less](https://github.com/PeerGiving/less/blob/master/css/pgs/theme-variables.less)
 4. App_Themes / [themeID] / theme-variables.less
  
 When overriding a variable, it's a good idea to trace it in order of inheritance.
