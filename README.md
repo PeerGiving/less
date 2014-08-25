@@ -4,9 +4,9 @@ PeerGiving is a fundraising platform that empowers charities and their fundraise
 To match the look and feel of a Peer Giving instance to a charity's brand, a front-end developer will need to reference code from this repository.
 
 ##Overview
-The primary styling file for the un-themed Peer Giving platform is **css /** [**styles.less**](https://github.com/PeerGiving/themes/blob/master/css/styles.less). This file pulls in all required styles for an unbranded PeerGiving product (including the Boostrap framework).
+The primary styling file for the un-themed Peer Giving platform is **css /** [**styles.less**](https://github.com/PeerGiving/less/blob/master/css/styles.less). This file pulls in all required styles for an unbranded PeerGiving product (including the Boostrap framework).
 
-The primary styling file for a given PeerGiving instance or *theme* is **[App_Themes](https://github.com/PeerGiving/themes/tree/master/App_Themes) / [themeID] / styles.less**. This file pulls in:
+The primary styling file for a given PeerGiving instance or *theme* is **[App_Themes](https://github.com/PeerGiving/less/tree/master/App_Themes) / [themeID] / styles.less**. This file pulls in:
 
 1. the core styling file mentioned above
 2. the **theme-variables.less** file (which is used to override core PeerGiving and Boostrap variables)
@@ -14,7 +14,7 @@ The primary styling file for a given PeerGiving instance or *theme* is **[App_Th
 
 ##Theme Variables
 
-It is strongly recommended to copy from the template **App_Themes / _empty / [theme-variables.less](https://github.com/PeerGiving/themes/tree/master/App_Themes/_empty/theme-variables.less)** when building a new theme from scratch.
+It is strongly recommended to copy from the template **App_Themes / _empty / [theme-variables.less](https://github.com/PeerGiving/less/tree/master/App_Themes/_empty/theme-variables.less)** when building a new theme from scratch.
 
 You will find that variable values inherit up the following hierarchy tree:
 
