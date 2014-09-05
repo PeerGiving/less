@@ -6,61 +6,46 @@
 		z-index: 0; /*Fixes issue where Facebook like comment box is behind the active button.*/
 		vertical-align: text-bottom;
 	}
-	.header-wrapper {
+	&.thin-style {	// Used for Home Page only
+		margin-top: 21px;
+
+		h3 {
+			white-space: nowrap;
+		}
+	}
+	h3 {
 		margin-top: 5px;
-		float: left;
+	}
+	.buttons {
+		width: 100%;
+		vertical-align: top;
+		text-align: right;
+
+		a {
+			.heels-half();
+		}
+	}
+	.follow-button {
+		vertical-align: inherit;
+	}
+	.filter-group {
+		text-align: center;
 	}
 
-	&.thin-style {		// Used on Home/Blog pages
-		margin-top: 18px;
-
-		.clearfix();
-
-		.add-post {
-			.indent-half();
-		}
-		.header-wrapper {
-			float: left;
-		}
-		.follow-and-filters {
-			float: left;
-		}
-	}
-	&.filter-style {	// Used on Project/Fundraising pages
-		.add-post {
-			float: right;
-			margin-top: -7px;
-		}
-		.follow-and-filters {
-			.follow-button {
-				margin: -2px 0 12px;
-			}
-			.filter-group {
-				text-align: center;
-			}
-		}
-	}
-	
-	// Phone
-	@media (max-width: @screen-xs-max) {
-	}
-	
-	// Desktop/Tablet
+	// Tablet and Desktop
 	@media (min-width: @screen-sm-min) {
-		&.filter-style {
-			.header-wrapper {
-				float: none;
-			}
-			.follow-and-filters {
-				.clearfix();
-				
-				.follow-button {
-					.indent-none();
-				}
-				.filter-group {
-					float: right;
-				}
-			}
+		.filter-group {
+			text-align: left;
+		}
+		h3 {
+			white-space: nowrap;
+		}
+	}
+
+	// Desktop
+	@media (min-width: @screen-md-min) {
+		.buttons {
+			text-align: left;
 		}
 	}
 }

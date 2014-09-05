@@ -1,5 +1,27 @@
 ﻿/* buttons.less */
 
+	.btn-group-right {		// use with .btn-group to float elements right instead of left
+		> .btn {
+			float: right;
+
+			&:first-child {
+				margin-left: -1px;
+			}
+			&:last-child {
+				margin-left: 0px;
+			}
+			&:last-child:not(:first-child) {
+				border-radius: 4px;
+				border-bottom-right-radius: 0;
+				border-top-right-radius: 0;
+			}
+			&:first-child:not(:last-child):not(.dropdown-toggle) {
+				border-radius: 4px;
+				border-bottom-left-radius: 0;
+				border-top-left-radius: 0;
+			}
+		}
+	}
 
 	// Action Panel Buttons
 	.actionNav {

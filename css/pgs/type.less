@@ -33,25 +33,38 @@
 		margin-top: @line-height-h4 / 2;
 		margin-bottom: @line-height-h4 / 2;
 	}
+	h5 {
+		color: @font-color-h5;
+		font-weight: @font-weight-h5;
+		line-height: @line-height-h5;
+		margin-top: @line-height-h5 / 2;
+		margin-bottom: @line-height-h5 / 2;
+	}
 
 	@media (max-width: @screen-xs-max) {
 		h1 { font-size: @font-size-h1-phone; }
 		h2 { font-size: @font-size-h2-phone; }
 		h3 { font-size: @font-size-h3-phone; }
 		h4 { font-size: @font-size-h4-phone; }
+		h5 { font-size: @font-size-h5-phone; }
 	}
 	
 	// Pull top of the text in headings right to the top
 	//  (in addition to removing the top margin, reverse the impact of line-height so that text moves snuggly to the top)
-	h2.pull-top-hard {
+	/*h2.pull-top-hard {
 		margin-top: -(@line-height-h2 - 1) * @font-size-h2 !important;
 	}
 	h3.pull-top-hard {
 		margin-top: -(@line-height-h3 - 1) * @font-size-h3 !important;
 	}
 	h4.pull-top-hard {
-		margin-top: -(@line-height-h4 - 1) * @font-size-h4 !important;
+		margin-top: -(@line-height-h5 - @font-size-h5)/2 - 4;
+		//-(@line-height-h4 - 1) * @font-size-h4 !important;
 	}
+	h5.pull-top-hard {
+		margin-top: -(@line-height-h5 - @font-size-h5)/2 - 1;
+		//-(@line-height-h5 - 1) * @font-size-h5 !important;
+	}*/
 
 
 	li {
@@ -279,4 +292,10 @@
 	.project-description p {
 		font-size: 16px;
 		line-height: 1.9;
+	}
+
+	// Help Text
+	.help-block {
+		font-size: @font-size-base - 1;
+		color: @gray-light;
 	}

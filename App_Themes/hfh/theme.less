@@ -392,55 +392,47 @@
 			.volunteer {
 				position: relative;
 				display: block;
-				background: black;
+				
+				@media (min-width: @screen-sm-min) {
+					background: black;
 
-				.image {
-					position: relative;
-					display: block;
-					border: @_hfh_blue solid 6px;
-					opacity: 0.7;
-
-					@media (min-width: @screen-sm-min) {
-						background-position: -15px -15px;
-						background-size: 187px 187px;
-						width: 157.5px;
-						height: 157.5px;
-					}
-					@media (min-width: @screen-md-min) {
-						background-position: -21px -20px;
-						background-size: 245px 245px;
-						width: 213px;
-						height: 213px;
+					&:hover > img {
+						opacity: 0.5;
 					}
 				}
-				&:hover > .image {
-					opacity: 0.5;
+				@media (max-width: @screen-xs-max) {
+					img {
+						margin: 10px auto;
+					}
 				}
 				.text-overlay {
 					position: absolute;
-					top: 6px;
-					left: 6px;
+					top: 22%;
 					text-align: center;
 					color: white;
+					width: 100%;
+					text-shadow: black 1px 1px;
 
 					@media (min-width: @screen-sm-min) {
-						width: 145px;	
+						top: 16%;
+						left: 0;
+						width: 150px;	
 						padding-top: 15px;
 					}
 					@media (min-width: @screen-md-min) {
-						width: 201px;
+						width: 213px;
 						padding-top: 50px;
 					}
 
 					h3 {
 						width: 100%;
-						font-size: 28px;
+						font-size: 24px;
 						border-bottom: 1px solid white;
 						padding-bottom: 8px;
-						margin-left: auto;
-						margin-right: auto;
+						margin: 0 auto;
 
 						@media (min-width: @screen-md-min) {
+							font-size: 28px;
 							width: 80%;
 						}
 					}
@@ -449,22 +441,13 @@
 					}
 				}
 			}
-			.give .image {
-				background-image: url("images/home/_thumb_give.png");
-			}
-			.shop .image {
-				background-image: url("images/home/_thumb_shop.png");
-			}
-			.build .image {
-				background-image: url("images/home/_thumb_build.png");
-			}
-			.volunteer .image {
-				background-image: url("images/home/_thumb_volunteer.png");
-			}
 		}
 		.welcome-newsletter {
-			margin-top: 50px;
 			margin-bottom: 20px;
+
+			@media (min-width: @screen-sm-min) {
+				margin-top: 50px;
+			}
 
 			.welcome {
 				h2 {

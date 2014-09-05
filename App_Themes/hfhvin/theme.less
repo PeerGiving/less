@@ -165,11 +165,18 @@
 // Custom Page/Zone Styles
 	.home {
 		.zone-home-below-slideshow a {
-			img {
-				.opacity(0.9);
+			@media (max-width: @screen-xs-max) {
+				img {
+					margin: 10px auto;
+				}
 			}
-			:hover {
-				.opacity(1);
+			@media (min-width: @screen-sm-min) {
+				img {
+					.opacity(0.9);
+				}
+				:hover {
+					.opacity(1);
+				}
 			}
 		}
 	}

@@ -2,11 +2,19 @@
 
 
 // Type
-	.all-caps {
+	.all-caps,
+	.text-transform-uppercase {
 		text-transform: uppercase;
 	}
-	.normal-weight {
+	.normal-weight,
+	.font-weight-normal {
 		font-weight: normal;
+	}
+	.text-align-right {
+		text-align: right;
+	}
+	.text-align-center {
+		text-align: center;
 	}
 
 	// Curly quotes - standard and easy!
@@ -124,10 +132,17 @@
 		margin-bottom: 0 !important;
 	}
 
+	.vertical-align-bottom,
 	.valign-bottom {
 		vertical-align: bottom;
 	}
-
+	.vertical-align-text-bottom,
+	.valign-text-bottom {
+		vertical-align: text-bottom;
+	}
+	.vertical-align-top {
+		vertical-align: top;
+	}
 
 	// Gerb/July/2012: Please use "heels" classes instead of these
 	// The use of the below will quickly throw vertical-spacing 
@@ -195,7 +210,9 @@
 	.indent-25 {	// Use for matching checkbox labels
 		margin-left: 25px;
 	}
-
+	.width-100 {
+		width: 100%;
+	}
 
 // Dividers
 	.barDivider:before {
@@ -207,18 +224,22 @@
 
 
 // Display, Positioning, Layout
-	.block {
+	.block,
+	.display-block {
 		display: block;
 	}
-	.inline-block {
+	.inline-block,
+	.display-inline-block {
 		display: inline-block;
 	}
-	.inline {
+	.inline,
+	.display-inline {
 		display: inline;
 	}
 	.display-table,
 	.table {
 		display: table;
+		width: 100%;
 	}
 	.display-table-row,
 	.table-row,
@@ -230,14 +251,14 @@
 	.cell {
 		display: table-cell;
 	}
-	.col-sm-table-cell {	// This is for use on elements WITH .col-sm-# classes
+	.col-sm-table-cell {	// This is for use on elements WITH .col-sm-# classes (use parent "row display-table")
 		@media (min-width: @screen-sm-min) {
 			display: table-cell;
 			vertical-align: top;
 			float: none;
 		}
 	}
-	.col-md-table-cell {	// This is for use on elements WITH .col-md-# classes
+	.col-md-table-cell {	// This is for use on elements WITH .col-md-# classes (use parent "row display-table")
 		@media (min-width: @screen-md-min) {
 			display: table-cell;
 			vertical-align: top;
@@ -327,7 +348,6 @@
 		bottom: 0;
 		left: 0;
 	}
-	
 	.simpleReadMore-wrap {
 		position: relative;
 		overflow: hidden;

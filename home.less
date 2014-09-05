@@ -1,9 +1,12 @@
 ﻿// Mobile Style
-@media(max-width: @screen-sm-max) {
-	.home {
+div.home {
+	@media(max-width: @screen-sm-max) {
 		.fundraising-tile-list,
 		.community-updates-brief-list-home {
 			.heels-double;
 		}
+	}
+	@media (max-width: @screen-sm-max) {
+		margin-top: -@container-padding-top / 2;
 	}
 }

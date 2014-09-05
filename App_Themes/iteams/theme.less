@@ -1,0 +1,137 @@
+﻿///
+/// _empty
+///
+
+
+// General Styles
+// style HTML elements here (h3, p, blockquote, a...)
+blockquote {
+	border-left: 0px;
+	border-top: 2px solid @gray-lighter;
+	border-bottom: 2px solid @gray-lighter;
+	margin: 30px 0;
+	padding: 10px 40px;
+	text-align: center;
+}
+
+// Template Styles 
+// styles for template components (header, navbar, footer...)
+.nav-footer-inner {
+	> .container:first-child {
+		display: none;
+	}
+	.follow {
+		color: white;
+		background: @gray;
+		text-align: center;
+
+		.container {
+			padding: 20px 30px;
+
+			.addthis_horizontal_follow_toolbox {
+				vertical-align: bottom;
+				margin-left: 10px;
+			}
+		}
+	}
+	hr {
+		border-top: 7px solid @gray-light;
+	}
+	iframe {
+		border: 0px;
+		height: 116px;
+	}
+}
+.nav-footer .nav-footer-inner {
+	a {
+		color: @text-color;
+	}
+	.row.top .col-md-12 {
+		border-bottom: 2px solid @gray-light;
+	}
+	.row.bottom {
+		.col-md-12,
+		.custom,
+		.custom a {
+			color: @text-color;
+		}
+	}
+}
+
+// Shared Styles 
+// styles used all over the site
+.row-square-images {
+	.img-container {
+		display: inline;
+		margin: 26px;
+
+		@media (min-width: @screen-md-min) {
+			display: block;
+			width: 241px;
+			height: 161px;
+		}
+	}
+	a.img-container {		
+		img.img-hover {
+			display: none;
+		}
+		&:hover img {
+			display: none;
+
+			&.img-hover {
+				display: block;
+			}
+		}
+	}
+}
+.color-gray-light {
+	color: @gray-light;
+}
+hr._iteams {
+	margin: 40px 0;
+	border-top: 7px solid @gray-lighter;
+}
+hr._iteams-2px {
+	margin: 40px 0;
+	border-top: 2px solid @gray-lighter;
+}
+.h5 {
+	margin: 8px 0;
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 16px;
+}
+
+// Page Styles 
+// styles specific to one page only (if used on more, should live in shared styles section)
+.home {
+	p.center {
+		text-align: center;
+		color: @gray-light;
+	}
+	.learn-about-us {
+		text-align: center;
+
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+		img + h3 {
+			margin-top: 17.5px;
+		}
+	}
+}
+.why-education {
+	.row-square-images p {
+		color: @gray-light;
+	}
+}
+.single-story {
+	.addthis-native-toolbox {
+		text-align: center;
+
+		> div {
+			display: inline-block;
+		}
+	}
+}

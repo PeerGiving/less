@@ -1,4 +1,4 @@
-﻿/* _empty/theme-variables.less */
+﻿/* SurreyCares/theme-variables.less */
 
 
 //	1. Comment out variable definitions to inherit defaults
@@ -20,38 +20,39 @@
 		//@headBackgroundImage: 
 		//@headBackgroundRepeat: 
 		//@headBackgroundPosition: 
-		//@headLogoImage: 
-		//@headLogoWidth: 
-		//@headLogoHeight: 
+		@headLogoImage: url("images/logo.jpg");
+		@headLogoWidth: 255px;
+		@headLogoHeight: 72px;
 		//@headTitleFontFamily: 
 		//@headTitleFontSize: 
 	// Typography options
-		//@import url( google fonts )
-		//@font-family-base: 
-		//@font-size-base:
-		//@line-height-base:	// unitless
-		//@text-color:
-		//@headings-font-family: 
-		//@headings-font-weight:
-		//@headings-color:
+		@import url(//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,600,400,700);
+		@font-family-base: "Open Sans", sans-serif;
+		@font-size-base: 14px;
+		@font-weight-base: 300;
+		//@line-height-base:
+		@text-color: @_surreycares_grey;
+		@headings-font-family: "Open Sans", sans-serif;
+		@headings-color: @_surreycares_grey;
+		@headings-font-weight: 300;
 		//@font-family-system:
 		//@font-size-system-base:
-		//@font-size-h2:
+		@font-size-h2: 48px;
 		//@font-color-h2:
 		//@font-weight-h2:
-		//@font-size-h3:
+		@font-size-h3: 32px;
 		//@font-color-h3:
 		//@font-weight-h3:
-		//@font-size-h4:
+		@font-size-h4: 22px;
 		//@font-color-h4:
 		//@font-weight-h4:
-		//@font-size-h5:
+		@font-size-h5: 18px;
 		//@font-color-h5:
-		//@font-weight-h5:
+		@font-weight-h5: 600;
 	// Link and Button options
-		//@brand-primary: specify primary button background color here
-		//@link-color: 
-		//@link-hover-color: 
+		@brand-primary: @_surreycares_teal;
+		@link-color: @_surreycares_pink;
+		@link-hover-color: @link-color;
 		//@btn-default-color:
 		//@btn-default-bg:
 		//@btn-default-border:
@@ -64,18 +65,23 @@
 		//@huedGrayLighter:											//	93% - 3% lum
 		//@huedGrayLightest:										//	96% - 3% lum
 	// Other Colors (use @_client_color scheme for variable names)
-		//@_empty_black: black;
-		
+		@_surreycares_pink: #ed1555;
+		@_surreycares_teal: #00ae9e;
+		@_surreycares_grey: #464749;
+		@_surreycares_orange: #febb31;
+		@_surreycares_purple: #ef5091;
+		@_surreycares_green: #bed630;
+		@_surreycares_orange-light: #febb31;
 
 // Component Styles	
 	// Main Navbar (nav-main-list)
 		//@navbar-default-bg: 
 		//@navbar-default-color:
-		//@navbar-default-link-color:
-		//@navbar-default-link-hover-color:
-		//@navbar-default-link-hover-bg:
-		//@navbar-default-link-active-color:
-		//@navbar-default-link-active-bg:
+		@navbar-default-link-color: black;
+		@navbar-default-link-hover-color: white;
+		@navbar-default-link-hover-bg: @_surreycares_pink;
+		@navbar-default-link-active-color: white;
+		@navbar-default-link-active-bg: @_surreycares_teal;
 	// Account Nav
 		//@nav-account-bg:
 		//@nav-account-link-color:
@@ -86,7 +92,7 @@
 		//@breadcrumb-color:
 		//@breadcrumb-link-color:
 		//@breadcrumb-link-hover-color:
-		//@breadcrumb-active-color"
+		//@breadcrumb-active-color:
 	// Home page carousel	
 		//@homePageCarouselHeight:	
 
