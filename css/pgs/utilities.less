@@ -1,6 +1,23 @@
 ﻿/* utilities.less */
 
 
+// Behaves like a link
+	.link-like {
+		color: @link-color;
+		text-decoration: none;
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			color: @link-hover-color;
+			text-decoration: underline;
+		}
+
+		&:focus {
+			.tab-focus();
+		}
+	}
+
 // Type
 	.all-caps,
 	.text-transform-uppercase {
@@ -330,6 +347,15 @@
 	.gray-light {
 		color: @gray-light;
 	}
+	.link-red {
+		color: red;
+
+		&:hover,
+		&:active {
+			color: darken(red, 15%);
+		}
+	}
+
 
 // Shadow
 	.shadow-pgs {

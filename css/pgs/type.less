@@ -299,3 +299,26 @@
 		font-size: @font-size-base - 1;
 		color: @gray-light;
 	}
+
+	// Table with tight left column 
+	.table-with-column-left-tight {
+		display: table;
+
+		> * {
+			display: table-row;
+
+			> * {
+				display: table-cell;
+
+				&:after {
+					content: "";
+					display: inline-block;
+					margin-right: 10px;
+				}
+				&:first-child {
+					white-space: nowrap;
+					width: 1px;
+				}
+			}
+		}
+	}

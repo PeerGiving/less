@@ -62,3 +62,22 @@
 		border-bottom-color: transparent;
 		cursor: default;
 	}
+
+#__AnthemCall_Wait {
+	position: fixed;
+	z-index: 9999;
+	min-width: 100%;
+	min-height: 100%;
+	background-color: rgba(0,0,0,0.45);
+
+	> div {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-left: -77px;
+		margin-top: -77px;
+		width: 154px;
+		height: 154px;
+		background: url("@{mainImagesPath}/loading.gif") no-repeat 0 0;
+	}
+}
