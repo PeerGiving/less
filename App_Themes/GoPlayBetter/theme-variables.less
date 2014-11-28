@@ -1,4 +1,4 @@
-﻿/* _empty/theme-variables.less */
+﻿/* goplaybetter/theme-variables.less */
 
 
 //	1. Comment out variable definitions to inherit defaults
@@ -20,18 +20,41 @@
 		//@headBackgroundImage: 
 		//@headBackgroundRepeat: 
 		//@headBackgroundPosition: 
-		//@headLogoImage: 
-		//@headLogoWidth: 
-		//@headLogoHeight: 
+		@headLogoImage: url("images/logo.jpg");
+		@headLogoWidth: 120px;
+		@headLogoHeight: 120px;
 		//@headTitleFontFamily: 
 		//@headTitleFontSize: 
 	// Typography options
-		//@font-family-base: 
-		//@headings-font-family: 
+		@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic);
+		@font-family-base: "Noto Sans", sans-serif;
+		@font-size-base: 16px;
+		@line-height-base: 1.375;	// unitless
+		//@text-color:
+		@headings-font-family: "Noto Sans", sans-serif;
+		//@headings-font-weight:
+		//@headings-color:
+		//@font-family-system:
+		//@font-size-system-base:
+		@font-size-h2: 38px;
+		@font-color-h2: #a09794;
+		@font-weight-h2: normal;
+		@font-size-h3: 34px;
+		@font-color-h3: #E78424;
+		@font-weight-h3: normal;
+		@font-size-h4: 24px;
+		@font-color-h4: #a09794;
+		@font-weight-h4: bold;
+		@font-size-h5: 18px;
+		@font-color-h5: #E78424;
+		@font-weight-h5: bold;
 	// Link and Button options
+		@brand-primary: #F6B400; // specify primary button background color here
 		//@link-color: 
 		//@link-hover-color: 
-		//@brand-primary:
+		@btn-default-color: #ffffff;
+		@btn-default-bg: #24B9A5;
+		@btn-default-border: darken(@btn-default-bg,5);
 	// Hued Grays (for backgrounds, etc) options
 		//@huedGrayDarkest:											//	4% - 3% lum
 		//@huedGrayDarker:											//	13% - 3% lum
@@ -45,13 +68,13 @@
 
 // Component Styles	
 	// Main Navbar (nav-main-list)
-		//@navbar-default-bg: 
-		//@navbar-default-color:
-		//@navbar-default-link-color:
-		//@navbar-default-link-hover-color:
-		//@navbar-default-link-hover-bg:
-		//@navbar-default-link-active-clor:
-		//@navbar-default-link-active-bg:
+		@navbar-default-bg: #a09794;
+		@navbar-default-color: #fbfbf8;
+		@navbar-default-link-color: #fbfbf8;
+		@navbar-default-link-hover-color: #a09794;
+		@navbar-default-link-hover-bg: #fbfbf8;
+		@navbar-default-link-active-color: #a09794;
+		@navbar-default-link-active-bg: #fbfbf8;
 	// Home page carousel	
 		//@homePageCarouselHeight:									
 	// Action Nav
