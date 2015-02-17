@@ -16,7 +16,7 @@ The primary styling file for a given PeerGiving instance or *theme* is **[App_Th
 
 It is strongly recommended to copy from the template **App_Themes / _empty / [theme-variables.less](https://github.com/PeerGiving/less/tree/master/App_Themes/_empty/theme-variables.less)** when building a new theme from scratch.
 
-You will find that variable values inherit up the following hierarchy tree:
+You will find that variable values inherit down the following hierarchy tree, where values in latter files (like #4) override those in former files (like #1):
 
 1. bootstrap-3 / less / [variables.less](https://github.com/PeerGiving/less/blob/master/bootstrap-3.1.1/less/variables.less)
 2. css / pgs / [variables.less](https://github.com/PeerGiving/less/blob/master/css/pgs/variables.less)
