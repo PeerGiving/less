@@ -53,13 +53,13 @@
 				
 		// Phone
 		@media (max-width: @screen-xs-max) {			
-			margin-bottom: 50px;	// The height of the navbar-fixed-top 
+			//margin-bottom: 50px;	// The height of the navbar-fixed-top 
 
 			.navbar {
 				background-color: @navbar-phone-bg;
 				
 				.shadow-deeper-pgs();
-				.navbar-fixed-top();	// Fix the nav to the top of the phone's screen
+				//.navbar-fixed-top();	// Fix the nav to the top of the phone's screen
 
 				.navbar-toggle {
 					&:hover,
@@ -69,6 +69,9 @@
 				}
 				.navbar-brand {
 					color: @navbar-phone-color;
+					float: none;
+					height: auto;
+					word-wrap: break-word;
 				}
 			}
 			& + .nav-breadcrumb {

@@ -1,0 +1,37 @@
+/* goplaybetter/theme.less */
+
+
+// Global Styles
+	h2 {
+		line-height: 44px;
+		text-transform: uppercase;
+	}
+	h3 {
+		line-height: 32px;
+	}
+	h4 {
+		line-height: 30px;
+	}
+	h5 {
+		line-height: 22px;
+		text-transform: uppercase;
+	}
+	.nav-main-list .home {
+		a .icon-home-img {
+			background-position: 0 0;
+		}
+		a:hover .icon-home-img {
+			background-position: -18px 0;
+		}
+		&.active .icon-home-img {
+			background-position: -18px 0;
+		}
+	}
+	.nav-breadcrumb .container .breadcrumb > .active {
+		color: #ddd;
+	}
+
+// Page-specific Styles
+	.our-projects h2 + h3 {
+		display: none;
+	}
