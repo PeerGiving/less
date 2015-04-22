@@ -8,10 +8,16 @@ h1{
 	font-size:@font-size-base*2.6;
 }
 h2{
-	font-size:@font-size-base*2.6;
+	font-size:36px;
+	font-weight:500;
 }
 h3{
-	font-size:@font-size-base*2.15;
+	font-size:26px;
+	font-weight:500;
+
+	.legend{
+		font-size:22px;
+	}
 }
 h4{
 	font-size:@font-size-base*1.7;
@@ -26,5 +32,19 @@ h4{
 
 	&:hover{
 		color:@_ugm_brand-primary-color;
+	}
+}
+
+.category-list-item .col-md-4 .category-list-item-inner .hover-tile{
+	font-size:12px;
+}
+
+.btn.donate{
+	background: @btn-success-bg;
+}
+
+@media (min-width: 1018px){
+	#cpMain_aDonate, #cpMain_aStartFundraiser{
+		font-size: 20px;
 	}
 }

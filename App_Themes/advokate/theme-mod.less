@@ -1,0 +1,76 @@
+//Typography
+	h1, h2, h3, h4, h5{		
+		font-weight: 700;	
+		color: @_advk_brand-primary-color;	
+		line-height:1.1;	
+	}		
+			
+	h1{		
+		font-size:@font-size-base*2.6;	
+	}		
+	h2{		
+		font-size:@font-size-base*2.6;	
+	}		
+	h3{		
+		font-size:@font-size-base*2.15;	
+	}		
+	h4{		
+		font-size:@font-size-base*1.7;	
+	}		
+	h4{		
+		font-size:@font-size-base;	
+	}		
+			
+
+.nav-breadcrumb {
+  background-image: -webkit-linear-gradient(top, @_advk_brand-tertiary-color 0, @_advk_brand-tertiary-color 100%);
+  background-image: linear-gradient(to bottom, @_advk_brand-tertiary-color 0, @_advk_brand-tertiary-color 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@_advk_brand-tertiary-color', endColorstr='@_advk_brand-tertiary-color', GradientType=0);
+  border: 0;
+}
+			
+.nav-breadcrumb .container .breadcrumb>li>a{		
+	&:hover{	
+		color:black;
+	}	
+}		
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: white;
+}
+.nav-main-list .navbar-default {
+  border:0;
+}
+
+#divHeaderContainer{
+	padding:0;
+	margin-top: 10px;
+
+		h1.pull-top, header{
+			margin:0;
+		}
+
+}
+
+body .head-wrapper header h1 a{
+	max-width: 100%;
+}
+
+.sectionFundraise ol.ctaList{
+	background: rgba(100, 187, 69, 0.65);
+	padding: 20px;
+}
+.btn{
+	border:0;
+}
+
+#fundraise.sectionFundraise {
+  background: #999999 url('/App_Themes/advokate/uploads/fundraisingSectionTick_bw.png') no-repeat 55px 0px;
+}
+#fundraise .cake {
+  background: #999999 url('/App_Themes/advokate/uploads/cake_bw.jpg') no-repeat 90% bottom;
+}
+.sectionFundraise ol.ctaList > li:before{
+	color:@_advk_brand-primary-color;
+}
