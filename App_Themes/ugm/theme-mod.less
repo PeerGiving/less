@@ -1,3 +1,37 @@
+/*START - Mixins*/
+.scale-mxn (@factor) {
+	-webkit-transform: scale(@factor);
+	-moz-transform: 	 scale(@factor);
+	-ms-transform: 		 scale(@factor);
+	-o-transform: 		 scale(@factor);
+}
+.opacity-mxn (@opacity: 0.5) {
+	-webkit-opacity: 	@opacity;
+	-moz-opacity: 		@opacity;
+	opacity: 		@opacity;
+}
+.border-radius-mxn (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+.box-shadow-mxn (@string) {
+	-webkit-box-shadow: @string;
+	-moz-box-shadow:    @string;
+	box-shadow:         @string;
+}
+.inner-shadow-mxn (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+	-webkit-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:    inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:         inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+/*END - Mixins*/
+
 h1, h2, h3, h4, h5{
 	font-weight: 500;
 	color: @_ugm_brand-primary-color;
@@ -26,6 +60,22 @@ h4{
 	font-size:@font-size-base;
 }
 
+.head-wrapper header {
+  margin-bottom: -10px;
+}
+#divHeaderContainer {
+  margin-top: -34px;
+}
+body>form>.container {
+  padding-top:30px;
+  padding-bottom: 30px;
+}
+body .head-wrapper header h1 a{
+	background-position: center;
+}
+.nav-account .nav-account-inner>li>a {
+  background: #f8f8f8;
+}
 
 .nav-breadcrumb .container .breadcrumb>li>a{
 	color:#777;
@@ -42,6 +92,79 @@ h4{
 .btn.donate{
 	background: @btn-success-bg;
 }
+
+
+/*Homepage 3 under slider*/
+.ugmHomepageCTAs{
+	text-align: center;
+	img{
+		max-width: 100%;
+	}
+	&:hover{
+		.opacity-mxn(0.8);
+	}
+}
+
+
+/*Fundraising*/
+.fundraising h2{
+	margin-top: 0;
+}
+.project #cpMain_divDonateFundraise .col-md-8 {
+	display: none;
+}
+
+/* Category Pages */
+.category .category-media + div.heels.hidden-xs {
+	display: none;
+}
+
+
+
+/*Customized Footer*/
+	.ugmMCSignupHrzntlField{
+		padding:0;
+
+		input{
+			border:1px solid #ccc;
+			border-right:0;
+			.border-radius-mxn(0);
+		}
+		input[type=button]{
+			background: @_ugm_brand-primary-color;
+		}
+	}
+	.ugmFooterLogoWrapper{
+		img{
+			max-width:100%;
+		}
+	}
+	.nav-footer .nav-footer-inner .row.top .col-md-12.ugmCustomizedFooter{
+		.box-shadow-mxn(none);
+		  border-bottom: 0;
+		  padding-top: 42px;
+		  padding-bottom: 0;
+	}
+       .nav-footer {
+		.ugm_facebook,
+		.ugm_twitter {
+			width: 41px;
+			height: 41px;
+			display: inline-block;
+
+			&:hover {
+				text-decoration:none;
+				.opacity-mxn(0.8);
+			}
+		}
+		.ugm_facebook {
+			margin-left: -1px !important;
+			background-image: url("images/facebook_footer.png");
+		}
+		.ugm_twitter {
+			background-image: url("images/twitter_footer.png");
+		}
+	}
 
 @media (min-width: 1018px){
 	#cpMain_aDonate, #cpMain_aStartFundraiser{
