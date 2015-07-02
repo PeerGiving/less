@@ -1,4 +1,4 @@
-﻿/* _missionupreach/theme-variables.less */
+/* _empty/theme-variables.less */
 
 
 //	1. Comment out variable definitions to inherit defaults
@@ -10,50 +10,55 @@
 
 // Variable Global Style options
 	// Closed Layout options
-		//@isClosedLayout:
-		//@bodyBackgroundColor:
+		//@isClosedLayout: true;
+		@bodyBackgroundColor: #3D3D3D;
 		//@bodyBackgroundImage:	
 		//@bodyBackgroundRepeat:
 		//@bodyBackgroundPosition:
 	// Header options
-		//@headBackgroundColor: 
+		@headBackgroundColor: #3D3D3D;
 		//@headBackgroundImage: 
 		//@headBackgroundRepeat: 
 		//@headBackgroundPosition: 
-		//@headLogoImage: 
-		//@headLogoWidth: 
-		//@headLogoHeight: 
+		@headLogoImage: url('/App_Themes/missionupreach/uploads/GiveHope_logo_01_178x140.png');
+		@headLogoWidth: 178px;
+		@headLogoHeight: 140px;
 		//@headTitleFontFamily: 
 		//@headTitleFontSize: 
 	// Typography options
-		//@import url( google fonts )
-		//@font-family-base: 
-		//@font-size-base:
-		//@line-height-base:	// unitless
+		@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+		@font-family-base: Montserrat, Helvetica, Arial, sans-serif;
+		@font-size-base: 14px;
+		@line-height-base: 1.375; // unitless
 		//@text-color:
 		//@headings-font-family: 
 		//@headings-font-weight:
 		//@headings-color:
 		//@font-family-system:
 		//@font-size-system-base:
-		//@font-size-h2:
-		//@font-color-h2:
-		//@font-weight-h2:
-		//@font-size-h3:
-		//@font-color-h3:
-		//@font-weight-h3:
-		//@font-size-h4:
-		//@font-color-h4:
-		//@font-weight-h4:
-		//@font-size-h5:
-		//@font-color-h5:
-		//@font-weight-h5:
+
+		@font-size-h2: @font-size-base*2.6;
+		@font-color-h2: #3D3D3D;
+		@font-weight-h2: 700;
+
+		@font-size-h3: @font-size-base*2.15;
+		@font-color-h3: #3D3D3D;
+		@font-weight-h3: 400;
+
+		@font-size-h4: @font-size-base*1.17;
+		@font-color-h4: #3D3D3D;
+		@font-weight-h4: 400;
+
+		@font-size-h5: @font-size-base*1.0;
+		@font-color-h5: #3D3D3D;
+		@font-weight-h5: 400;
+
 	// Link and Button options
-		//@brand-primary: // specify primary button background color here
-		//@link-color: 
+		@brand-primary: #EABA46; // specify primary button background color here
+		@link-color: #428bca;
 		//@link-hover-color: 
-		//@btn-default-color:
-		//@btn-default-bg:
+		@btn-default-color: #ffffff;
+		@btn-default-bg: #3D3D3D;
 		//@btn-default-border:
 	// Hued Grays (for backgrounds, etc) options
 		//@huedGrayDarkest:											//	4% - 3% lum
@@ -69,24 +74,26 @@
 
 // Component Styles	
 	// Main Navbar (nav-main-list)
-		//@navbar-default-bg: 
+		@navbar-default-bg: #f8f8f8;
 		//@navbar-default-color:
 		//@navbar-default-link-color:
-		//@navbar-default-link-hover-color:
-		//@navbar-default-link-hover-bg:
-		//@navbar-default-link-active-color:
-		//@navbar-default-link-active-bg:
+		@navbar-default-link-hover-color:#3D3D3D;
+		@navbar-default-link-hover-bg:#e7e7e7;
+		@navbar-default-link-active-color: #ffffff;
+		@navbar-default-link-active-bg: #EABA46;
+
+
 	// Account Nav
-		//@nav-account-bg:
-		//@nav-account-link-color:
-		//@nav-account-link-hover-color:
-		//@nav-account-link-hover-bg:
-		//@nav-account-link-active-bg:
+		@nav-account-bg: #f8f8f8;
+		@nav-account-link-color: #ffffff;
+		@nav-account-link-hover-color: #3D3D3D;
+		@nav-account-link-hover-bg: #e7e7e7;
+		@nav-account-link-active-bg: #555555;
 	// Breadcrumb Nav
 		//@breadcrumb-color:
-		//@breadcrumb-link-color:
-		//@breadcrumb-link-hover-color:
-		//@breadcrumb-active-color"
+		@breadcrumb-link-color: #777777;
+		@breadcrumb-link-hover-color: #428bca;
+		@breadcrumb-active-color: #999999;
 	// Home page carousel	
 		//@homePageCarouselHeight:	
 
