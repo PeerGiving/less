@@ -1,0 +1,118 @@
+/* _empty/theme-variables.less */ 		
+ 		
+ 		
+//	1. Comment out variable definitions to inherit defaults 	
+//		* defaults iherited from \pgs\css\theme-variables.less 
+//	2. New variables intended for use by all themes should be defined in \pgs\css\theme-variables.less 
+//  3. New variables intended for use by a specific theme should have names beginning with a theme-initialism bounded by underscores (example: @_pn_green) 		
+//	This file can be copied, and used as a starting point for new themes 	
+ 		
+//Import Google Font
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+//Set client specific brand primary for misc use
+@_ecc_brand-primary: #b53430;
+
+
+// Variable Global Style options 		
+	// Closed Layout options 	
+		@isClosedLayout: false;
+		//@bodyBackgroundColor: 
+		//@bodyBackgroundImage: 
+		//@bodyBackgroundRepeat: 
+		//@bodyBackgroundPosition: 
+	// Header options 	
+		@headBackgroundColor: #fff;
+		//@headBackgroundImage:;
+		//@headBackgroundRepeat:
+		//@headBackgroundPosition:  
+		@headLogoImage: url('/App_Themes/covchurch/uploads/ecc-logo-lockup-blue.png');
+		@headLogoWidth: 348px;
+		@headLogoHeight: 48px;
+		//@headTitleFontFamily: 
+		//@headTitleFontSize: 
+	// Typography options 	
+		@font-family-base: 'Droid Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+		@font-size-base: 14px;
+		@line-height-base:	1.375;
+		//@text-color: 
+		//@headings-font-family: 
+		//@headings-font-weight: 
+		//@headings-color: @_ecc_brand-primary;
+		//@font-family-system: 
+		//@font-size-system-base: 
+
+		//@font-size-h2: @font-size-base * 2.6;
+		//@font-color-h2: @_ecc_brand-primary;
+		//@font-weight-h2: normal;
+
+		//@font-size-h3: @font-size-base * 2.15;
+		//@font-color-h3: @_ecc_brand-primary;
+		//@font-weight-h3: bold;
+
+		//@font-size-h4: @font-size-base * 1.7;
+		//@font-color-h4: @_ecc_brand-primary;
+		//@font-weight-h4: bold;
+
+		//@font-size-h5: @font-size-base * 1.0;
+		//@font-color-h5: @_ecc_brand-primary;
+		//@font-weight-h5: bold;
+
+	// Link and Button options 	
+		@brand-primary: @_ecc_brand-primary;// specify primary button background color here 
+		@link-color: #27aae1;																					
+		//@link-hover-color: 
+		@btn-default-color: #333;
+		@btn-default-bg: #fff;
+		//@btn-default-border: 
+	// Hued Grays (for backgrounds, etc) options 	
+		//@huedGrayDarkest:											//	4% - 3% lum											
+		//@huedGrayDarker:											//	13% - 3% lum											
+		//@huedGrayDark:											//	20% - 3% lum											
+		//@huedGray: darken(#8c6f1d,3);								//	33% - 3% lum														
+		//@huedGrayLight:											//	60% - 3% lum											
+		//@huedGrayLighter:											//	93% - 3% lum											
+		//@huedGrayLightest:										//	96% - 3% lum												
+	// Other Colors (use @_client_color scheme for variable names) 	
+		//@_empty_black: black; 
+ 		
+ 		
+// Component Styles 		
+	// Main Navbar (nav-main-list) 	
+		//@navbar-default-bg: #f8f8f8;
+		//@navbar-default-color: 
+		//@navbar-default-link-color: 
+		//@navbar-default-link-hover-color: 
+		//@navbar-default-link-hover-bg: 
+		//@navbar-default-link-active-color: 
+		//@navbar-default-link-active-bg: 
+	// Account Nav 	
+		//@nav-account-bg: 
+		//@nav-account-link-color: 
+		//@nav-account-link-hover-color: 
+		//@nav-account-link-hover-bg: 
+		//@nav-account-link-active-bg: 
+	// Breadcrumb Nav 	
+		//@breadcrumb-color: 
+		@breadcrumb-link-color: #777;
+		@breadcrumb-link-hover-color: #27aae1;
+		@breadcrumb-active-color: #999;
+	// Home page carousel 	
+		//@homePageCarouselHeight: 
+ 		
+ 		
+// Viewport Styles 		
+	// Navbar 	
+		//@navbar-phone-bg: 
+		//@navbar-phone-color: 
+ 		
+ 		
+// Outdated? 		
+	// Action Nav 	
+		//@actionBackgroundColorDefault: 
+		//@manageBackgroundColor: 
+		//@donateBackgroundColor: 
+		//@inviteBackgroundColor: 
+		//@subscribeBackgroundColor: 
+	// Badge 	
+		//@badgeBackgroundColor:

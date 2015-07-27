@@ -7,16 +7,18 @@
 //  3. New variables intended for use by a specific theme should have names beginning with a theme-initialism bounded by underscores (example: @_pn_green)
 //	This file can be copied, and used as a starting point for new themes
 
+@_mishup_darkgrey: #3D3D3D;
 
 // Variable Global Style options
 	// Closed Layout options
 		//@isClosedLayout: true;
-		@bodyBackgroundColor: #3D3D3D;
+		//@bodyBackgroundColor:  @_mishup_darkgrey;
+		@bodyBackgroundColor:  #fff;
 		//@bodyBackgroundImage:	
 		//@bodyBackgroundRepeat:
 		//@bodyBackgroundPosition:
 	// Header options
-		@headBackgroundColor: #3D3D3D;
+		@headBackgroundColor:  @_mishup_darkgrey;
 		//@headBackgroundImage: 
 		//@headBackgroundRepeat: 
 		//@headBackgroundPosition: 
@@ -30,27 +32,27 @@
 		@font-family-base: Montserrat, Helvetica, Arial, sans-serif;
 		@font-size-base: 14px;
 		@line-height-base: 1.375; // unitless
-		//@text-color:
+		//@text-color: #fff;
 		//@headings-font-family: 
 		//@headings-font-weight:
-		//@headings-color:
+		@headings-color: @brand-primary;
 		//@font-family-system:
 		//@font-size-system-base:
 
 		@font-size-h2: @font-size-base*2.6;
-		@font-color-h2: #3D3D3D;
+		//@font-color-h2:  @brand-primary;
 		@font-weight-h2: 700;
 
 		@font-size-h3: @font-size-base*2.15;
-		@font-color-h3: #3D3D3D;
+		//@font-color-h3:  @brand-primary;
 		@font-weight-h3: 400;
 
 		@font-size-h4: @font-size-base*1.17;
-		@font-color-h4: #3D3D3D;
+		//@font-color-h4:  @brand-primary;
 		@font-weight-h4: 400;
 
 		@font-size-h5: @font-size-base*1.0;
-		@font-color-h5: #3D3D3D;
+		//@font-color-h5:  @brand-primary;
 		@font-weight-h5: 400;
 
 	// Link and Button options
@@ -58,7 +60,7 @@
 		@link-color: #428bca;
 		//@link-hover-color: 
 		@btn-default-color: #ffffff;
-		@btn-default-bg: #3D3D3D;
+		@btn-default-bg:  @_mishup_darkgrey;
 		//@btn-default-border:
 	// Hued Grays (for backgrounds, etc) options
 		//@huedGrayDarkest:											//	4% - 3% lum
@@ -74,26 +76,27 @@
 
 // Component Styles	
 	// Main Navbar (nav-main-list)
-		@navbar-default-bg: #f8f8f8;
-		//@navbar-default-color:
-		//@navbar-default-link-color:
-		@navbar-default-link-hover-color:#3D3D3D;
-		@navbar-default-link-hover-bg:#e7e7e7;
-		@navbar-default-link-active-color: #ffffff;
-		@navbar-default-link-active-bg: #EABA46;
+		//@navbar-default-bg: #f8f8f8;
+		@navbar-default-bg:  @_mishup_darkgrey;
+		@navbar-default-color: #fff;
+		@navbar-default-link-color: #fff;
+		@navbar-default-link-hover-color: #fff;
+		@navbar-default-link-hover-bg: @_mishup_darkgrey;
+		@navbar-default-link-active-color: #fff;
+		@navbar-default-link-active-bg: @brand-primary;
 
 
 	// Account Nav
 		@nav-account-bg: #f8f8f8;
 		@nav-account-link-color: #ffffff;
-		@nav-account-link-hover-color: #3D3D3D;
+		@nav-account-link-hover-color:  @_mishup_darkgrey;
 		@nav-account-link-hover-bg: #e7e7e7;
 		@nav-account-link-active-bg: #555555;
 	// Breadcrumb Nav
 		//@breadcrumb-color:
-		@breadcrumb-link-color: #777777;
-		@breadcrumb-link-hover-color: #428bca;
-		@breadcrumb-active-color: #999999;
+		@breadcrumb-link-color: #999;
+		@breadcrumb-link-hover-color: #999;
+		@breadcrumb-active-color: @_mishup_darkgrey;
 	// Home page carousel	
 		//@homePageCarouselHeight:	
 

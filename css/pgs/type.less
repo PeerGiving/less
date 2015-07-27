@@ -296,29 +296,38 @@
 
 	// Help Text
 	.help-block {
-		font-size: @font-size-base - 1;
+		font-size: @baseSmallFontSize;
 		color: @gray-light;
 	}
 
 	// Table with tight left column 
 	.table-with-column-left-tight {
 		display: table;
+		width: 100%;
+		border-spacing: 20px 0;
+		margin-left: -20px;
 
 		> * {
 			display: table-row;
 
 			> * {
 				display: table-cell;
+				vertical-align: middle;
 
-				&:after {
-					content: "";
-					display: inline-block;
-					margin-right: 10px;
-				}
 				&:first-child {
 					white-space: nowrap;
 					width: 1px;
 				}
 			}
+		}
+	}
+	.dl-horizontal-left {
+		> dt {
+			text-align: left;
+		}
+	}
+	.dl-horizontal-normal-weight {
+		> dt {
+			font-weight: normal;
 		}
 	}

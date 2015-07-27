@@ -3,6 +3,179 @@
 ///
 
 
+////////////////////////////////////////////////////
+// Breakpoints
+@bs-max-smartphone: ~"only screen and (max-width: 480px)";
+@bs-max-xs: ~"only screen and (max-width: 767px)";
+
+@bs-min-sm: ~"only screen and (min-width: 768px)";
+@bs-max-sm: ~"only screen and (max-width: 1017px)";
+@bs-in-sm: ~"only screen and (min-width: 768px) and (max-width: 1017px)";
+
+
+@bs-min-md: ~"only screen and (min-width: 1018px)";
+//
+////USAGE////
+// @media @bs-xs {
+//		background: #ccc;
+// }
+////////////////////////////////////////////////////
+/* Mixins */
+.border-radius (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+/* Implementation */
+//#somediv {
+//	.border-radius(20px);
+//} 
+
+.text-shadow (@string: 0 1px 3px rgba(0, 0, 0, 0.25)) {
+	text-shadow: @string;
+}
+.box-shadow (@string) {
+	-webkit-box-shadow: @string;
+	-moz-box-shadow:    @string;
+	box-shadow:         @string;
+}
+.drop-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+	-webkit-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:		@x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+.inner-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+	-webkit-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:    inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:         inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
+.box-sizing (@type: border-box) {
+	-webkit-box-sizing: @type;
+	-moz-box-sizing:    @type;
+	box-sizing:         @type;
+}
+
+.border-radius (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+.border-radiuses (@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+	-webkit-border-top-right-radius:    @topright;
+	-webkit-border-bottom-right-radius: @bottomright;
+	-webkit-border-bottom-left-radius:  @bottomleft;
+	-webkit-border-top-left-radius:     @topleft;
+
+	-moz-border-radius-topright:        @topright;
+	-moz-border-radius-bottomright:     @bottomright;
+	-moz-border-radius-bottomleft:      @bottomleft;
+	-moz-border-radius-topleft:         @topleft;
+
+	border-top-right-radius:            @topright;
+	border-bottom-right-radius:         @bottomright;
+	border-bottom-left-radius:          @bottomleft;
+	border-top-left-radius:             @topleft;
+
+	-moz-background-clip:    padding; 
+	-webkit-background-clip: padding-box; 
+	background-clip:         padding-box; 
+}
+
+.opacity (@opacity: 0.5) {
+	-webkit-opacity: 	@opacity;
+	-moz-opacity: 		@opacity;
+	opacity: 		@opacity;
+}
+
+.gradient (@startColor: #eee, @endColor: white) {
+	background-color: @startColor;
+	background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+	background: -webkit-linear-gradient(top, @startColor, @endColor);
+	background: -moz-linear-gradient(top, @startColor, @endColor);
+	background: -ms-linear-gradient(top, @startColor, @endColor);
+	background: -o-linear-gradient(top, @startColor, @endColor);
+}
+.horizontal-gradient (@startColor: #eee, @endColor: white) {
+ 	background-color: @startColor;
+	background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+	background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+	background-image: -moz-linear-gradient(left, @startColor, @endColor);
+	background-image: -ms-linear-gradient(left, @startColor, @endColor);
+	background-image: -o-linear-gradient(left, @startColor, @endColor);
+}
+
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
+	-webkit-animation: @name @duration @delay @ease;
+	-moz-animation:    @name @duration @delay @ease;
+	-ms-animation:     @name @duration @delay @ease;
+}
+
+.transition (@transition) {
+	-webkit-transition: @transition;  
+	-moz-transition:    @transition;
+	-ms-transition:     @transition; 
+	-o-transition:      @transition;  
+}
+.transform(@string){
+	-webkit-transform: @string;
+	-moz-transform: 	 @string;
+	-ms-transform: 		 @string;
+	-o-transform: 		 @string;
+}
+.scale (@factor) {
+	-webkit-transform: scale(@factor);
+	-moz-transform: 	 scale(@factor);
+	-ms-transform: 		 scale(@factor);
+	-o-transform: 		 scale(@factor);
+}
+.rotate (@deg) {
+	-webkit-transform: rotate(@deg);
+	-moz-transform: 	 rotate(@deg);
+	-ms-transform: 		 rotate(@deg);
+	-o-transform: 		 rotate(@deg);
+}
+.skew (@deg, @deg2) {
+	-webkit-transform:       skew(@deg, @deg2);
+	-moz-transform: 	 skew(@deg, @deg2);
+	-ms-transform: 		 skew(@deg, @deg2);
+	-o-transform: 		 skew(@deg, @deg2);
+}
+.translate (@x, @y:0) {
+	-webkit-transform:       translate(@x, @y);
+	-moz-transform: 	 translate(@x, @y);
+	-ms-transform: 		 translate(@x, @y);
+	-o-transform: 		 translate(@x, @y);
+}
+.translate3d (@x, @y: 0, @z: 0) {
+	-webkit-transform:       translate3d(@x, @y, @z);
+	-moz-transform: 	 translate3d(@x, @y, @z);
+	-ms-transform: 		 translate3d(@x, @y, @z);
+	-o-transform: 		 translate3d(@x, @y, @z);
+}
+.perspective (@value: 1000) {
+	-webkit-perspective: 	@value;
+	-moz-perspective: 	@value;
+	-ms-perspective: 	@value;
+	perspective: 		@value;
+}
+.transform-origin (@x:center, @y:center) {
+	-webkit-transform-origin: @x @y;
+	-moz-transform-origin:    @x @y;
+	-ms-transform-origin:     @x @y;
+	-o-transform-origin:      @x @y;
+}
+
+
+
+
+
+
+
 // General Styles
 // style HTML elements here (h3, p, blockquote, a...)
 h2 {
@@ -20,6 +193,13 @@ h5 {
 
 // Template Styles 
 // styles for template components (header, navbar, footer...)
+html body, html body .head-wrapper {
+	background-color: @bodyBackgroundColor;
+}
+//HIDE THE HEADER
+body>form .head-wrapper>.container {
+	display: none;
+}
 body>form .head-wrapper>.container {
   padding: 0;
 }
@@ -31,7 +211,7 @@ body .head-wrapper header h1 a{
 }
 
 .nav-account {
-  border-top: 5px solid #EABA46;
+  border-top: 3px solid #EABA46;
   .nav-account-inner>li {
 	  border-top: 0;
 	  	a{
@@ -39,13 +219,86 @@ body .head-wrapper header h1 a{
 		}
 	}
 }
+.nav-main-list .navbar-default {
+	border:none;
+	border-bottom: 3px solid @brand-primary;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus,
+.nav-main-list .navbar-nav>.open>a, .nav-main-list .navbar-nav>.open>a:hover, .nav-main-list .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+	color: #FFF;
+	background: @brand-primary;
+	border-bottom: 0;
+}
+#updatePanelAccountNav{
+	background-color:  @_mishup_darkgrey;	
+}
+
+.nav-breadcrumb {
+	background: #F6F6F6;
+	border: 0;
+	margin-top: 15px;
+}
+.nav-footer .nav-footer-inner {
+	border-top: 1px solid #6F6F6F;
+	background-color:  @_mishup_darkgrey;
+}
+
+.nav-footer .nav-footer-inner .row.top .col-md-12, .nav-footer .nav-footer-inner .row.bottom .col-md-12{
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.nav-footer .nav-footer-inner .row.top .col-md-12{
+	border:0;
+}
+.nav-footer .nav-footer-inner .row.bottom .col-md-12{
+	border:0;
+	border-top: 1px solid #6F6F6F;
+}
+#ucFooter_defaultFooter h3{
+	font-size: 26px;
+}
 // Shared Styles 
 // styles used all over the site
 
 
 // Page Styles 
 // styles specific to one page only (if used on more, should live in shared styles section)n)
+	//Logo in nav
+	#divNavCollapse_xs .navbar-nav{
+		height: 80px;
+		margin: 0 0 30px 0;
+		background: url('/App_Themes/missionupreach/uploads/givehope-01_orange_102x80.png') no-repeat left top;
+		padding-left: 120px;
+		padding-top: 15px;
 
+		.transition (all 0.5s ease);
+		
+		.stickyNav & {
+			margin: 10px 0;
+		}
+
+		@media @bs-max-xs {
+			margin-top: 15px;
+  			padding-top: 0;
+			height: auto;
+		}
+		/* @media @bs-in-sm{
+			background: none;
+			padding: 0;
+			margin: 0 0 30px 0;
+			height: 50px;
+		} */
+
+
+	}
+	#divNavCollapse_xs .navbar-nav.navbar-right{
+		height: auto;
+		margin-right: 0;
+		background: none;
+		padding-left: 0;
+	}
 
 
 //Full width layout
@@ -55,3 +308,104 @@ body, body .head-wrapper {
 .nav-main-list .navbar.navbar-default, .widget.nav-footer, .widget.nav-breadcrumb {
 	width:100%;
 }
+
+
+//StickNav
+.head-wrapper+.nav-main-list.stickyNav{
+	position: fixed;
+	top:0;
+	z-index: 10;
+	.box-shadow (0px 4px 7px rgba(0, 0, 0, 0.15));
+
+	@media @bs-max-xs{
+		position: relative;
+	}
+}
+
+@media @bs-max-xs {
+	//XS nav
+	.nav-main-list .navbar .navbar-brand {
+		color: @brand-primary;
+		text-shadow: 1px 1px 1px #979797;
+		background-color: @_mishup_darkgrey;
+	}
+	.navbar-default .navbar-toggle {
+		border-color: @brand-primary;
+	}
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		border-color: #2C2C2C;
+		background-color: @_mishup_darkgrey;
+	}
+	.navbar-default .navbar-toggle .icon-bar {
+		background-color: #EABA46;
+	}
+}
+
+
+//full-width video wrapper normal
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%;
+	/* padding-top: 25px; */
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+//full-width video wrapper cut off to remove black bars
+/* .videoWrapper {
+	position: relative;
+	//padding-bottom: 42.45%;
+	padding-bottom: 44.7%;
+	padding-top: 0;
+	height: 0;
+	overflow: hidden;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100.3%;
+	//height: 139%;
+	height: 141.6%;	
+	margin-top: -10.3%;
+} */
+
+#vidPlayButton{
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	left: 47%;
+	z-index: 99;
+	display: none;
+	@media @bs-min-md{
+		display: block;
+	}
+}
+
+
+//START - Homepage
+.startFundraiserBtnWrapper{
+	//margin-top: 45px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: #FFFFFF;
+
+	.startFundraiserBtn{
+		.border-radius(0);
+		padding: 20px 40px;
+		font-size: 25px;
+		white-space: normal;
+	}
+}
+
+
+
+
+
+
+//END - Homepage
