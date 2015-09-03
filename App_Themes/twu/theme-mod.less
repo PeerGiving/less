@@ -1,0 +1,321 @@
+/* twu\theme.less */
+
+
+// Global Styles
+	h2 {
+		line-height: 54px;
+
+		&.pull-top {
+			line-height: 54px;
+		}
+	}
+	h3 {
+		line-height: 36px;
+
+		&.pull-top {
+			line-height: 36px;
+		}
+	}
+
+
+// Template Styles
+	header {
+		h1 {
+			float: left;
+			margin-top: 0;
+			margin-right: @gridGutterWidth;
+			margin-bottom: 0;
+		}
+		.headerZone2 {
+			p {
+				padding-top: @line-height-computed * 2.5;
+				font-size:18px;
+				font-style:italic;
+				font-weight:normal;
+				letter-spacing:normal;
+				line-height:1.4em;
+				text-transform:none;
+				width: 800px;		// IE9 gets wierd with header { position: absolute; }, so this needs to be set
+			}
+		}
+	}
+	.nav-main-list {
+
+		// Phone
+		a.navbar-brand {
+			font-size: 14px;
+			font-weight: bold;
+		}
+		& .navbar-collapse  > .nav > li > a[href*="donate.aspx?asset=1"]	{
+			background-color: #b80000;
+			color: #ffffff;
+
+			&:hover	{
+				background-color: darken(#b80000,5);
+			}
+		}
+	}
+	
+
+// Component Styles
+	// Posts
+	.post-view .well h3 {
+		background-color: #fed630;
+		margin-left: -19px;		// Gerb/July/2012: See twitter-bootstrap\less\wells.less
+		padding-left: 19px;
+
+		a {
+			color: @black;
+		}
+	}
+
+
+
+// Custom Pages/Zones
+	.login-signup .login .well {
+		background:#feda74;
+	}
+	.home {
+		.headerZone1 {
+			.addThisLike {
+				// Hide Facebook Like Comment Flyout
+				height: 20px;
+				overflow: hidden;
+			}
+		}
+		.home-zone {
+			margin: @line-height-computed 0 0;
+			
+			.twu-home-circle {
+				position: relative;
+				text-align: center;
+				color: black;
+				display: inline-block;
+				
+				.img-responsive {
+					max-width: 140px;
+				}
+				img.yellow {
+					position: absolute;
+					top: 0;
+					left: 0;
+					display: none;
+				}
+				&:hover,
+				&:active {
+					text-decoration: none;
+
+					img.yellow {
+						display: block;
+					}
+				}
+				h3 {
+					position: absolute;
+					top: 30%;
+					left: 0;
+					margin: 0;
+					width: 100%;
+					line-height: 28px;
+
+					@media (max-width: @screen-sm-max) {
+						padding: 0 23px;
+					}
+				}
+			}
+		}
+		.fundraising-tile-list {
+			@media (min-width: @screen-md-min) {
+				margin-top: -171px;
+			}
+		}
+	}
+	.custom-page {
+		.about-page {
+			h2, h3, p {
+				font-family: Helvetica, Arial, sans-serif;
+				font-weight: normal;
+			}
+			h2 {
+				font-size: 36px;
+			}
+			h3 {
+				font-size: 24px;
+			}
+			p {
+				font-size: 18px;
+				margin-bottom: 18px;
+				line-height: 1.2;
+			}
+		}
+		.who-we-are {
+			@media (min-width: @screen-sm-min) {
+				.our-mission {
+					background: url("images/Who We Are/mission_bg.jpg") no-repeat;
+
+			
+					.text {
+						margin-left: 60px;
+						box-sizing: border-box;
+						color: white;
+						width: 500px;
+						height: 462px;
+						padding-top: 100px;
+						text-align: center;
+				
+						p {
+							line-height: 30px;
+						}
+					}
+				}
+				p {
+					margin-bottom: 24px;
+				}
+			}
+			
+		}
+		.get-involved {
+			ul li {
+				list-style: none;
+				font-size: 24px;
+				font-weight: bold;
+				padding-top: 9px;
+				margin-bottom: 20px;
+
+				&:before {
+					content: "\002022";
+					color: #ededed;
+					font-size: 64px;
+					vertical-align: -5%;
+					padding-right: 10px;
+					display: inline-block;
+					line-height: 16px;
+				}
+				&:hover:before {
+					color: #fed630;
+				}
+				a {
+					color: black;
+					text-decoration:none;
+					vertical-align: super;
+				}
+			}
+			.share,
+			.donate,
+			.fundraise,
+			.start-a-project {
+				position: relative;
+
+				@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+					.heels-double();
+				}
+
+				& > div {
+					position: initial;
+				}
+				.circle {
+					background: url("images/How To Get Involved/circleYellow.png") no-repeat;
+					padding-top: 75px;
+					width: 193px;
+					height: 193px;
+					text-align: center;
+					color: white;
+					line-height: 36px;
+					margin-left: auto;
+					margin-right: auto;
+
+					@media (min-width: @screen-sm-min) {
+						margin: 0;
+						z-index: 1;
+						position: absolute;
+					}
+					@media (min-width: @screen-md-min) {
+						left: 390px;
+					}
+
+					& + p {
+						position: relative;
+						z-index: 2;
+
+						@media (min-width: @screen-sm-min) {
+							margin-top: 140px;
+						}
+					}
+				}
+				.btn {
+					font-size: 18px;
+				}
+			}
+			
+			@circle-offset: 25px;
+			@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+				.share,
+				.fundraise {
+					.circle {
+						left: 275px + @circle-offset;
+					}
+				}
+				.donate,
+				.start-a-project {
+					.circle {
+						left: 275px - @circle-offset;
+					}
+				}
+			}
+
+			.share {
+				.addthis_toolbox {
+					display: inline-block;
+					vertical-align: -85%;
+				}
+				.share-this-page {
+					display: inline-block;
+					background: url("images/How To Get Involved/text_shareThisPage.png") no-repeat;
+					width: 156px;
+					height: 32px;
+				}
+				.arrow {
+					display: inline-block;
+					background: url("images/How To Get Involved/arrowShare.png") no-repeat;
+					width: 95px;
+					height: 27px;
+				}
+			}
+			.start-a-project {
+				.circle {
+					padding-top: 60px;
+
+					@media (min-width: @screen-sm-min) {
+						& + p {
+							margin-top: 155px;
+						}
+					}
+				}
+			}
+		}
+		.contact-us {
+			.row {
+				min-height: 491px;
+			}
+			h3 {
+				font-weight: bold;
+			}
+			.addthis_toolbox a:hover {
+				text-decoration: none;
+			}
+			.tessa {
+				background: url("images/Contact Us/tessa_profilePic_small.jpg") no-repeat;
+				min-height: 65px;
+				padding-left: 75px;
+
+				p {
+					padding-top: 20px;
+				}
+			}
+
+			@media (max-width: @screen-xs-max) {
+				img.two-girls {
+					display: none;
+				}
+			}
+		}
+	}

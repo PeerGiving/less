@@ -7,24 +7,29 @@
 //  3. New variables intended for use by a specific theme should have names beginning with a theme-initialism bounded by underscores (example: @_pn_green)
 //	This file can be copied, and used as a starting point for new themes
 
-@_mishup_darkgrey: #3D3D3D;
+@_missionUp_green: #DADA55;
+@_missionUp_grey: #808285;
+
+
+@brand-primary: @_missionUp_green; // specify primary button background color here
+@brand-secondary: @_missionUp_grey; // specify primary button background color here
 
 // Variable Global Style options
 	// Closed Layout options
 		//@isClosedLayout: true;
-		//@bodyBackgroundColor:  @_mishup_darkgrey;
-		@bodyBackgroundColor:  #fff;
+		//@bodyBackgroundColor:  @_missionUp_green;
+		//@bodyBackgroundColor:  #fff;
 		//@bodyBackgroundImage:	
 		//@bodyBackgroundRepeat:
 		//@bodyBackgroundPosition:
 	// Header options
-		@headBackgroundColor:  @_mishup_darkgrey;
+		//@headBackgroundColor:  @_missionUp_green;
 		//@headBackgroundImage: 
 		//@headBackgroundRepeat: 
 		//@headBackgroundPosition: 
-		@headLogoImage: url('/App_Themes/missionupreach/uploads/GiveHope_logo_01_178x140.png');
-		@headLogoWidth: 178px;
-		@headLogoHeight: 140px;
+		@headLogoImage: url('/App_Themes/missionupreach/uploads/Mission-Honduras-Logo_01.png');
+		@headLogoWidth: 100px;
+		@headLogoHeight: 74px;
 		//@headTitleFontFamily: 
 		//@headTitleFontSize: 
 	// Typography options
@@ -32,35 +37,34 @@
 		@font-family-base: Montserrat, Helvetica, Arial, sans-serif;
 		@font-size-base: 14px;
 		@line-height-base: 1.375; // unitless
-		//@text-color: #fff;
+		@text-color: #808285;
 		//@headings-font-family: 
 		//@headings-font-weight:
-		@headings-color: @brand-primary;
+		@headings-color: @_missionUp_grey;
 		//@font-family-system:
 		//@font-size-system-base:
 
 		@font-size-h2: @font-size-base*2.6;
-		//@font-color-h2:  @brand-primary;
+		//@font-color-h2:  @_missionUp_green;
 		@font-weight-h2: 700;
 
 		@font-size-h3: @font-size-base*2.15;
-		//@font-color-h3:  @brand-primary;
+		//@font-color-h3:  @_missionUp_green;
 		@font-weight-h3: 400;
 
 		@font-size-h4: @font-size-base*1.17;
-		//@font-color-h4:  @brand-primary;
+		//@font-color-h4:  @_missionUp_green;
 		@font-weight-h4: 400;
 
 		@font-size-h5: @font-size-base*1.0;
-		//@font-color-h5:  @brand-primary;
+		//@font-color-h5:  @_missionUp_green;
 		@font-weight-h5: 400;
 
 	// Link and Button options
-		@brand-primary: #EABA46; // specify primary button background color here
-		@link-color: #428bca;
+		@link-color: @_missionUp_green;
 		//@link-hover-color: 
-		@btn-default-color: #ffffff;
-		@btn-default-bg:  @_mishup_darkgrey;
+		@btn-default-color: @_missionUp_green;
+		@btn-default-bg:  #fff;
 		//@btn-default-border:
 	// Hued Grays (for backgrounds, etc) options
 		//@huedGrayDarkest:											//	4% - 3% lum
@@ -77,26 +81,26 @@
 // Component Styles	
 	// Main Navbar (nav-main-list)
 		//@navbar-default-bg: #f8f8f8;
-		@navbar-default-bg:  @_mishup_darkgrey;
-		@navbar-default-color: #fff;
-		@navbar-default-link-color: #fff;
-		@navbar-default-link-hover-color: #fff;
-		@navbar-default-link-hover-bg: @_mishup_darkgrey;
-		@navbar-default-link-active-color: #fff;
-		@navbar-default-link-active-bg: @brand-primary;
+		@navbar-default-bg:  @_missionUp_green;
+		@navbar-default-color: @_missionUp_grey;
+		@navbar-default-link-color: @_missionUp_grey;
+		@navbar-default-link-hover-color: @_missionUp_grey;
+		@navbar-default-link-hover-bg: #f6f6f6;
+		@navbar-default-link-active-color: @_missionUp_grey;
+		@navbar-default-link-active-bg: #E8E8E8;
 
 
 	// Account Nav
 		@nav-account-bg: #f8f8f8;
 		@nav-account-link-color: #ffffff;
-		@nav-account-link-hover-color:  @_mishup_darkgrey;
+		@nav-account-link-hover-color:  @_missionUp_grey;
 		@nav-account-link-hover-bg: #e7e7e7;
 		@nav-account-link-active-bg: #555555;
 	// Breadcrumb Nav
 		//@breadcrumb-color:
 		@breadcrumb-link-color: #999;
 		@breadcrumb-link-hover-color: #999;
-		@breadcrumb-active-color: @_mishup_darkgrey;
+		@breadcrumb-active-color: @_missionUp_green;
 	// Home page carousel	
 		//@homePageCarouselHeight:	
 

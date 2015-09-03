@@ -1,0 +1,74 @@
+/* dfn\theme-variables.less */
+
+//	1. Comment out variable definitions to inherit defaults
+//		* defaults iherited from \pgs\css\theme-variables.less
+//	2. New variables intended for use by all themes should be defined in \pgs\css\theme-variables.less 
+//  3. New variables intended for use by a specific theme should have names beginning with a theme-initialism bounded by underscores (example: @_pn_green)
+//	This file can be copied, and used as a starting point for new themes
+
+// Variable Global Style options
+	// Closed Layout options
+		@isClosedLayout: true;
+		//@bodyBackgroundColor: none;
+		@bodyBackgroundImage: url("images/skin_nored.png");
+		@bodyBackgroundRepeat: repeat;
+		//@bodyBackgroundPosition:
+	// Header options
+		//@headBackgroundColor: 
+		//@headBackgroundImage: 
+		//@headBackgroundRepeat: 
+		//@headBackgroundPosition: 0 0;
+		@headLogoImage: url("images/logo.png");
+		@headLogoWidth: 360px;
+		@headLogoHeight: 216px;
+		//@headTitleFontFamily: 
+		//@headTitleFontSize: 
+	// Typography options
+		//@font-family-base:
+		//@headings-font-family:
+		//@font-size-base:
+		//@line-height-base: 
+	// Link and Button options
+		@link-color: @_dfn_red;
+		//@link-hover-color: @link-color;
+		@brand-primary: @_dfn_red;
+	// Hued Grays (for backgrounds, etc)
+		//@huedGrayDarkest:											//	4% lum
+		//@huedGrayDarker:											//	13% lum
+		//@huedGrayDark:											//	20% lum
+		@huedGray: darken(saturate(#80633c,-10),2);					//	33% lum
+		//@huedGrayLight:											//	60% lum
+		//@huedGrayLighter:											//	93% lum
+		//@huedGrayLightest:										//	96% lum
+	// Other Colors
+		@_dfn_red: #9d2c26;
+		@_dfn_gray: #333333;
+		@_dfn_blue: #3A3759;
+	// Other Fonts
+		@_dfn_helveticaneuecondensedbold: "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", NimbusSanNovCon-Bol;
+
+// Component Styles	
+	// Main Navbar (nav-main-list)
+		//@navbar-default-bg: 
+		//@navbar-default-color:
+		//@navbar-default-link-color:
+		//@navbar-default-link-hover-color:
+		//@navbar-default-link-hover-bg:
+		@navbar-default-link-active-color: white;
+		@navbar-default-link-active-bg: @_dfn_red;
+	// Account Nav
+		//@nav-account-bg:
+		//@nav-account-link-color:
+		//@nav-account-link-hover-color:
+		//@nav-account-link-hover-bg:
+		@nav-account-link-active-bg: lighten(@_dfn_red,5);
+	// Action Nav
+		//@actionBackgroundColorDefault:
+		//@manageBackgroundColor:
+		//@donateBackgroundColor:
+		//@inviteBackgroundColor:
+		//@subscribeBackgroundColor:
+	// Badge
+		//@badgeBackgroundColor:
+	// Home page carousel	
+		//@homePageCarouselHeight:

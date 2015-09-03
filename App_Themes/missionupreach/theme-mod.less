@@ -194,7 +194,7 @@ h5 {
 // Template Styles 
 // styles for template components (header, navbar, footer...)
 html body, html body .head-wrapper {
-	background-color: @bodyBackgroundColor;
+	//background-color: @bodyBackgroundColor;
 }
 //HIDE THE HEADER
 body>form .head-wrapper>.container {
@@ -211,7 +211,7 @@ body .head-wrapper header h1 a{
 }
 
 .nav-account {
-  border-top: 3px solid #EABA46;
+  border-top: 3px solid #fff;
   .nav-account-inner>li {
 	  border-top: 0;
 	  	a{
@@ -220,18 +220,20 @@ body .head-wrapper header h1 a{
 	}
 }
 .nav-main-list .navbar-default {
-	border:none;
-	border-bottom: 3px solid @brand-primary;
+	border: none;
+	//border-bottom: 3px solid @_missionUp_grey;
+	background-color:  #fff;	
+
 }
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus,
-.nav-main-list .navbar-nav>.open>a, .nav-main-list .navbar-nav>.open>a:hover, .nav-main-list .navbar-nav>.open>a:focus,
-.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
-	color: #FFF;
-	background: @brand-primary;
-	border-bottom: 0;
-}
+// .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus,
+// .nav-main-list .navbar-nav>.open>a, .nav-main-list .navbar-nav>.open>a:hover, .nav-main-list .navbar-nav>.open>a:focus,
+// .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+// 	color: @_missionUp_grey;
+// 	background: #fff;
+// 	border-bottom: 0;
+// }
 #updatePanelAccountNav{
-	background-color:  @_mishup_darkgrey;	
+	//background-color:  @_missionUp_green;	
 }
 
 .nav-breadcrumb {
@@ -240,8 +242,8 @@ body .head-wrapper header h1 a{
 	margin-top: 15px;
 }
 .nav-footer .nav-footer-inner {
-	border-top: 1px solid #6F6F6F;
-	background-color:  @_mishup_darkgrey;
+	border-top: 1px solid @_missionUp_grey;
+	background-color:  #fff;
 }
 
 .nav-footer .nav-footer-inner .row.top .col-md-12, .nav-footer .nav-footer-inner .row.bottom .col-md-12{
@@ -254,10 +256,11 @@ body .head-wrapper header h1 a{
 }
 .nav-footer .nav-footer-inner .row.bottom .col-md-12{
 	border:0;
-	border-top: 1px solid #6F6F6F;
+	border-top: 1px solid @_missionUp_grey;
 }
 #ucFooter_defaultFooter h3{
 	font-size: 26px;
+	color: @_missionUp_green;
 }
 // Shared Styles 
 // styles used all over the site
@@ -268,15 +271,15 @@ body .head-wrapper header h1 a{
 	//Logo in nav
 	#divNavCollapse_xs .navbar-nav{
 		height: 80px;
-		margin: 0 0 30px 0;
-		background: url('/App_Themes/missionupreach/uploads/givehope-01_orange_102x80.png') no-repeat left top;
+		margin: 0;
+		background: url('/App_Themes/missionupreach/uploads/Mission-Honduras-Logo_01.png') no-repeat left top;
 		padding-left: 120px;
-		padding-top: 15px;
+		padding-top: 12px;
 
 		.transition (all 0.5s ease);
 		
 		.stickyNav & {
-			margin: 10px 0;
+			margin: 5px 0 0 0;
 		}
 
 		@media @bs-max-xs {
@@ -325,19 +328,21 @@ body, body .head-wrapper {
 @media @bs-max-xs {
 	//XS nav
 	.nav-main-list .navbar .navbar-brand {
-		color: @brand-primary;
-		text-shadow: 1px 1px 1px #979797;
-		background-color: @_mishup_darkgrey;
+		color: @_missionUp_grey;
 	}
-	.navbar-default .navbar-toggle {
-		border-color: @brand-primary;
+	.nav-main-list .navbar-default .navbar-toggle {
+		border-color: @_missionUp_grey;
+		
+		&:hover, &:focus{
+			background-color: #f6f6f6;
+		};
 	}
 	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
 		border-color: #2C2C2C;
-		background-color: @_mishup_darkgrey;
+		background-color: #fff;
 	}
 	.navbar-default .navbar-toggle .icon-bar {
-		background-color: #EABA46;
+		background-color: @_missionUp_grey;
 	}
 }
 

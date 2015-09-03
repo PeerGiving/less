@@ -2,14 +2,16 @@
 
 
 // Headings
-	h2 {
+	h2,
+	.h2 {
 		margin-top: 1.5 * @line-height-h2;
 		margin-bottom: @line-height-h2 / 2;
 		color: @font-color-h2; 
 		font-weight: @font-weight-h2; 
 		line-height: @line-height-h2;
 	}
-	h3 {
+	h3,
+	.h3 {
 		color: @font-color-h3; 
 		font-weight: @font-weight-h3; 
 		line-height: @line-height-h3; 
@@ -26,14 +28,16 @@
 			}
 		}
 	}
-	h4 {
+	h4,
+	.h4 {
 		color: @font-color-h4; 
 		font-weight: @font-weight-h4; 
 		line-height: @line-height-h4; 
 		margin-top: @line-height-h4 / 2;
 		margin-bottom: @line-height-h4 / 2;
 	}
-	h5 {
+	h5,
+	.h5 {
 		color: @font-color-h5;
 		font-weight: @font-weight-h5;
 		line-height: @line-height-h5;
@@ -41,31 +45,22 @@
 		margin-bottom: @line-height-h5 / 2;
 	}
 
+	h2.downsize-heading {	.h3;	}
+	h3.downsize-heading {	.h4;	}
+	h4.downsize-heading {	.h5;	}
+	
 	@media (max-width: @screen-xs-max) {
 		h1 { font-size: @font-size-h1-phone; }
 		h2 { font-size: @font-size-h2-phone; }
 		h3 { font-size: @font-size-h3-phone; }
 		h4 { font-size: @font-size-h4-phone; }
 		h5 { font-size: @font-size-h5-phone; }
-	}
-	
-	// Pull top of the text in headings right to the top
-	//  (in addition to removing the top margin, reverse the impact of line-height so that text moves snuggly to the top)
-	/*h2.pull-top-hard {
-		margin-top: -(@line-height-h2 - 1) * @font-size-h2 !important;
-	}
-	h3.pull-top-hard {
-		margin-top: -(@line-height-h3 - 1) * @font-size-h3 !important;
-	}
-	h4.pull-top-hard {
-		margin-top: -(@line-height-h5 - @font-size-h5)/2 - 4;
-		//-(@line-height-h4 - 1) * @font-size-h4 !important;
-	}
-	h5.pull-top-hard {
-		margin-top: -(@line-height-h5 - @font-size-h5)/2 - 1;
-		//-(@line-height-h5 - 1) * @font-size-h5 !important;
-	}*/
 
+		h1.downsize-heading {	font-size: @font-size-h2-phone;		}
+		h2.downsize-heading {	font-size: @font-size-h3-phone;		}
+		h3.downsize-heading {	font-size: @font-size-h4-phone;		}
+		h4.downsize-heading {	font-size: @font-size-h5-phone;		}
+	}
 
 	li {
 	  h1, h2, h3, h4, h5 { 
@@ -285,13 +280,6 @@
 		float: left;
 		margin-left: 15px;
 		width: 295px;
-	}
-
-	// Asset Description Text
-	.project-description,
-	.project-description p {
-		font-size: 16px;
-		line-height: 1.9;
 	}
 
 	// Help Text

@@ -1,8 +1,14 @@
 ﻿.fundraising-info {
+
+	.funds-raised-active .asset-funds-raised,
+	.days-left .symbol,
+	.asset-donations .symbol {
+		font-size: @font-size-h3 - 2;		// Smaller than the page title
+		line-height: normal;
+	}
+
 	.funds-raised-active {
 		.asset-funds-raised {
-			font-size: 24px;
-
 			.raised {
 				.pull-left();
 			}
@@ -16,9 +22,5 @@
 		& + .progress-bar-pgs {
 			margin-top: @line-height-computed/2;
 		}
-	}
-	
-	.asset-fundraisers {
-		font-size: 14px;
 	}
 }

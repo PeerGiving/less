@@ -5,7 +5,10 @@
 .category-list-item {
 	.col-md-4 {
 		margin-bottom: @gridGutterWidth;
-		height: 331px;
+		
+		@media (min-width: @minWidthTablet) {
+			height: 331px;
+		}
 
 		.category-list-item-inner {
 			position: relative;
@@ -19,8 +22,10 @@
 				padding: @category-list-item-padding;
 
 				img {
-					width: 100%;
 					margin-bottom: 20px;
+					max-height: 202px;
+					width: 100%;
+
 				}
 			}
 			.hover-tile {
@@ -28,23 +33,33 @@
 				position:			absolute;
 				z-index:			2;
 				top:				324px;									// starts out-of-view - jquery will pull it in
-				padding:			2 * @category-list-item-padding;
+				padding:			@category-list-item-padding*2 @category-list-item-padding;
 				height:				324px;
 				width:				100%;
 				background-color:	rgba(255,255,255,0.9);					// See ie8.less
 
-				div {
+				.hover-tile-container {
+					.fade-bottom-to-white;
+
 					// height and margin adjusted to match bottom edge 
-					//  with bottom edge of .thumb-tile > img					
+					//  with bottom edge of .thumb-tile > img
 					height: 207px - @gridGutterWidth/2;
 					margin-bottom: @gridGutterWidth/2;
 					overflow: hidden;	// in case the truncation was not soon enough
 
+					& > *:not(ul) {
+						padding-left: @category-list-item-padding;
+					}
 					p {
 						// About variable line-height (themes):
 						// Specify height in here as a function of line-height
 						// See 60mkc > theme.less
+						margin: 0;	// get rid of margin so we can use the line-height
+									//  to calculate max height of text (see category-list.aspx > js)
 					}
+				}
+				.btn-container {
+					padding: 0 @category-list-item-padding;
 				}
 			}
 		}

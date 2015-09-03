@@ -2,13 +2,17 @@
 
 .fundraising-info-inline {
 	
+	.fundsRaised .asset-funds-raised,
+	.days-left .symbol,
+	.asset-donations .symbol {
+		font-size: @font-size-h3;		// Demand attention, smaller than the page title
+		line-height: normal;
+	}
+	
 	.fundsRaised {
 		width: 300px;
 
 		.asset-funds-raised {
-			font-size: 24px;
-			line-height: normal;
-
 			.raised {
 				.pull-left();
 			}

@@ -1,0 +1,49 @@
+/* theme.less */
+
+///
+/// Chimp
+///
+
+
+// General Styles
+// style HTML elements here (h3, p, blockquote, a...)
+
+
+// Template Styles 
+// styles for template components (header, navbar, footer...)
+body .head-wrapper header h1 a {
+	background-size: 85px 77px;
+}
+.nav-footer .nav-footer-inner .row.bottom a.powered-by {
+	display: none;
+}
+
+// Shared Styles 
+// styles used all over the site
+.btn {
+	.button-size(@padding-base-vertical,@padding-base-horizontal,16px,22px,8px);
+	letter-spacing: 0.85px;
+}
+.btn-default {
+	.button-variant(@_chimp_aqua,@btn-default-bg,@_chimp_aqua);
+}
+.btn-primary {
+	.button-variant(#ffffff,@_chimp_aqua,transparent);
+
+}
+
+.nav-main-list .home {
+	a .icon-home-img {
+		background: url("uploads/icon-home.png") no-repeat 0 0;
+	}
+	a:hover .icon-home-img {
+		background: url("uploads/icon-home.png") no-repeat -36px 0;
+	}
+	&.active .icon-home-img,
+	&.active:hover .icon-home-img {
+		background: url("uploads/icon-home.png") no-repeat -18px 0;
+	}
+}
+
+// Page Styles 
+// styles specific to one page only (if used on more, should live in shared styles section)

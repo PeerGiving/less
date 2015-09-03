@@ -4,9 +4,13 @@
 .project-list-item {
 	.asset-fundraising-tile;	// inherit general look
 
+	a {
+		color: @gray;
+	}
 	.tile-top {
-		height: 142.5px;		// =image height (assuming 4:3 aspect ratio and 150px width)
+		height: 133px;		// =image height (assuming 4:3 aspect ratio and 150px width)
 		overflow: hidden;
+		font-size: @font-size-base/2 + 7;
 
 		.center-cropped-img {
 			width: 150px;
@@ -14,6 +18,9 @@
 			background-position: center center;
 			background-repeat: no-repeat;
 			background-size: cover;
+		}
+		h4 {
+			color: @text-color;
 		}
 		ul {	// this in case there is a ul in the content (edge case)
 			margin-left: 185px;
@@ -24,30 +31,28 @@
 			height: 122px;
 			width: 122px;
 		}
-		& > div {
-			padding-bottom: 2px; //prevent cutting off of letters g, y, etc..
+		.tile-top-container {
+			.fade-bottom-to-white;
+
+			height: 113px;
+			overflow: hidden;
+
+			&:after {
+				left: 160px;
+			}
 		}
 	}
 	.tile-bottom {
+		color: @text-color;
+		font-size: @font-size-h4 - 2;	// Just smaller than the tile h4
 
 		.progress-bar-pgs {
 			width: 200px;
 		}
-		.asset-fundraisers {
+		.asset-donations {
 			.symbol,
 			.text {
 				display: inline-block;
-
-				span {
-					color: @black;
-				}
-			}
-			.symbol {
-				span,
-				.icon-user {
-					font-size: 13px;
-					font-weight: bold;
-				}
 			}
 			.text {
 				span {
