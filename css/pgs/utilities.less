@@ -1,6 +1,67 @@
 ﻿/* utilities.less */
 
 
+// Display, Positioning, Layout
+	.block,
+	.display-block {
+		display: block;
+	}
+	.inline-block,
+	.display-inline-block {
+		display: inline-block;
+	}
+	.inline,
+	.display-inline {
+		display: inline;
+	}
+	.display-table,
+	.table {
+		display: table;
+		width: 100%;
+	}
+	.display-table-row,
+	.table-row,
+	.pgsrow {	// Eva: .row is used by TBS
+		display: table-row;
+	}
+	.display-table-cell,
+	.table-cell,
+	.cell {
+		display: table-cell;
+	}
+	.col-table-cell {	// This is for use on elements WITH .col-xs-# classes (use parent "row display-table")
+		display: table-cell;
+		vertical-align: top;
+		float: none;
+	}
+	.col-sm-table-cell {	// This is for use on elements WITH .col-sm-# classes (use parent "row display-table")
+		@media (min-width: @screen-sm-min) {
+			display: table-cell;
+			vertical-align: top;
+			float: none;
+		}
+	}
+	.col-md-table-cell {	// This is for use on elements WITH .col-md-# classes (use parent "row display-table")
+		@media (min-width: @screen-md-min) {
+			display: table-cell;
+			vertical-align: top;
+			float: none;
+		}
+	}
+	.hidden {
+		display: none;
+	}
+	.visibility-hidden {
+		visibility: hidden; 
+	}
+	.position-relative {
+		position: relative;
+	}
+	.position-absolute {
+		position: absolute;
+	}
+
+
 // Behaves like a link
 	.link-like {
 		color: @link-color;
@@ -160,6 +221,9 @@
 	.vertical-align-top {
 		vertical-align: top;
 	}
+	.vertical-align-middle {
+		vertical-align: middle;
+	}
 
 	// Gerb/July/2012: Please use "heels" classes instead of these
 	// The use of the below will quickly throw vertical-spacing 
@@ -231,68 +295,13 @@
 		width: 100%;
 	}
 
+
 // Dividers
 	.barDivider:before {
 		content: "|";
 		display: inline-block;
 		padding-left: 5px;
 		padding-right: 5px;
-	}
-
-
-// Display, Positioning, Layout
-	.block,
-	.display-block {
-		display: block;
-	}
-	.inline-block,
-	.display-inline-block {
-		display: inline-block;
-	}
-	.inline,
-	.display-inline {
-		display: inline;
-	}
-	.display-table,
-	.table {
-		display: table;
-		width: 100%;
-	}
-	.display-table-row,
-	.table-row,
-	.pgsrow {	// Eva: .row is used by TBS
-		display: table-row;
-	}
-	.display-table-cell,
-	.table-cell,
-	.cell {
-		display: table-cell;
-	}
-	.col-sm-table-cell {	// This is for use on elements WITH .col-sm-# classes (use parent "row display-table")
-		@media (min-width: @screen-sm-min) {
-			display: table-cell;
-			vertical-align: top;
-			float: none;
-		}
-	}
-	.col-md-table-cell {	// This is for use on elements WITH .col-md-# classes (use parent "row display-table")
-		@media (min-width: @screen-md-min) {
-			display: table-cell;
-			vertical-align: top;
-			float: none;
-		}
-	}
-	.hidden {
-		display: none;
-	}
-	.visibility-hidden {
-		visibility: hidden; 
-	}
-	.position-relative {
-		position: relative;
-	}
-	.position-absolute {
-		position: absolute;
 	}
 
 

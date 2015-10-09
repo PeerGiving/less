@@ -210,6 +210,8 @@ body .head-wrapper header h1 a{
 	background-position: center;
 }
 
+
+//Nav
 .nav-account {
   border-top: 3px solid #fff;
   .nav-account-inner>li {
@@ -264,6 +266,12 @@ body .head-wrapper header h1 a{
 }
 // Shared Styles 
 // styles used all over the site
+
+//Buttons
+.btn.donate{
+	background: @_missionUp_dark_green;
+	border-color: @_missionUp_dark_green;
+}
 
 
 // Page Styles 
@@ -402,10 +410,20 @@ body, body .head-wrapper {
 
 	.startFundraiserBtn{
 		.border-radius(0);
+		background: #7D7D7D;
+		border-color: #7D7D7D;
 		padding: 20px 40px;
 		font-size: 25px;
 		white-space: normal;
 	}
+}
+//END - Homepage
+
+
+
+//remove 2nd instance of addthis social buttons from projects pages
+#form1[action^="project.aspx?asset="] #cpMain_ucAddthis2_divAddThis{
+	display: none;
 }
 
 
@@ -413,4 +431,6 @@ body, body .head-wrapper {
 
 
 
-//END - Homepage
+
+
+

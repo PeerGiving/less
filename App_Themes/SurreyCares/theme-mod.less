@@ -1,292 +1,293 @@
-// ///
-// /// SurreyCares
-// ///
+///
+/// SurreyCares
+///
 
 
-// // General Styles
-// // style HTML elements here (h3, p, blockquote, a...)
-// 	body {
-// 		font-weight: 300;
-// 	}
-// 	a:hover,
-// 	a:focus {
-// 		//font-style: italic;
-// 	}
+// General Styles
+// style HTML elements here (h3, p, blockquote, a...)
+	body {
+		font-weight: 300;
+	}
+	a:hover,
+	a:focus {
+		//font-style: italic;
+	}
 
 
-// // Template Styles 
-// // styles for template components (header, navbar, footer...)
-// 	.nav-account .nav-account-inner {
-// 		> li > a {
-// 			font-size: 12px;
-// 		}
-// 		> li.profile img {
-// 			height: 20px;
-// 			width: 27px;
-// 		}
-// 	}
-// 	.nav-main-list .navbar-collapse .navbar-nav .home a {
-// 		.btn();
+// Template Styles 
+// styles for template components (header, navbar, footer...)
+	.nav-account .nav-account-inner {
+		> li > a {
+			font-size: 12px;
+		}
+		> li.profile img {
+			height: 20px;
+			width: 27px;
+		}
+	}
+	.nav-main-list .navbar-collapse .navbar-nav .home a {
+		.btn();
 
-// 		&, &:hover {
-// 			padding-top: 4px; 
-// 			padding-bottom: 4px;
-// 			font-size: 12px;
-// 			font-weight: 600;
-// 		}
-// 		&:hover,
-// 		&:focus {
-// 			color: white;
-// 		}
-// 		.icon-home-img {
-// 			display: none;
-// 		}
-// 		&:after {
-// 			content: "Home";
-// 			display: inline;
-// 		}
-// 	}
-// 	.navbar {
-// 		min-height: 0;
-// 	}
-// 	.navbar-default {
-// 		background-color: transparent;
-// 		border: 0px;
+		&, &:hover {
+			padding-top: 4px; 
+			padding-bottom: 4px;
+			font-size: 12px;
+			font-weight: 600;
+		}
+		&:hover,
+		&:focus {
+			color: white;
+		}
+		.icon-home-img {
+			display: none;
+		}
+		&:after {
+			content: "Home";
+			display: inline;
+		}
+	}
+	.navbar {
+		min-height: 0;
+	}
+	.navbar-default {
+		background-color: transparent;
+		border: 0px;
 
-// 		.navbar-nav > li {
-// 			margin-right: 10px;
+		.navbar-nav > li {
+			margin-right: 10px;
 		
-// 			> a {
-// 				.btn();
+			> a {
+				.btn();
 
-// 				padding-top: 4px; 
-// 				padding-bottom: 4px;
-// 				font-size: 12px;
-// 				font-weight: 600;
+				padding-top: 4px; 
+				padding-bottom: 4px;
+				font-size: 12px;
+				font-weight: 600;
 
-// 				&:hover,
-// 				&:focus {
-// 					color: white;
-// 				}
-// 			}
-// 		}
-// 	}
-// 	.nav-account .nav-account-inner > li.open .dropdown-menu > li > a,
-// 	.nav-main-list .navbar-nav > .open .dropdown-menu a {
-// 		font-size: 12px;
-// 		font-weight: 600;
+				&:hover,
+				&:focus {
+					color: white;
+				}
+			}
+		}
+	}
+	.navbar-default .search-box .form-search .input-group .form-control:focus {
+		width: 80px;
+	}
+	.nav-account .nav-account-inner > li.open .dropdown-menu > li > a,
+	.nav-main-list .navbar-nav > .open .dropdown-menu a {
+		font-size: 12px;
+		font-weight: 600;
 
-// 		&:hover {
-// 			background-color: white;
-// 			color: @_surreycares_pink;
-// 		}
-// 	}
-// 	.dropdown-menu > li > a {
-// 		padding: 1px 10px;
-// 	}
-// 	.navbar-form.search {
-// 		margin: 0;
-// 	}
-// 	.search-box .form-search .input-group {
-// 		.btn();
+		&:hover {
+			background-color: white;
+			color: @_surreycares_pink;
+		}
+	}
+	.dropdown-menu > li > a {
+		padding: 1px 10px;
+	}
+	.navbar-form.search {
+		margin: 0;
+	}
+	.search-box .form-search .input-group {
+		.btn();
 	
-// 		display: table;
-// 		padding: 0;
+		display: table;
+		padding: 0;
 
-// 		.input-group-btn,
-// 		.input-group-btn.focus {
-// 			border: 0px;
-// 			background-color: transparent;
+		.input-group-btn,
+		.input-group-btn.focus {
+			border: 0px;
+			background-color: transparent;
 
-// 			.box-shadow(none);
-// 		}
-// 		.form-control {
-// 			border: 0px;
-// 			background-color: transparent;
-// 			height: 25px;
-// 			padding-top: 0;
-// 			padding-bottom: 0;
-// 			font-size: 12px;
+			.box-shadow(none);
+		}
+		.form-control {
+			border: 0px;
+			background-color: transparent;
+			height: 25px;
+			padding-top: 0;
+			padding-bottom: 0;
+			font-size: 12px;
 
-// 			.box-shadow(none);
+			.box-shadow(none);
 
-// 			&:focus {
-// 				width: 135px;
-// 			}
-// 		}
-// 	}
-// 	.nav-footer {
-// 		.nav-footer-inner {
-// 			border-top: 0px;
-// 			background: none;
-// 		}
-// 		.logo-footer-right {
-// 			@media (min-width: @screen-md-min) {
-// 				margin-top: 12px;
-// 			}
-// 		}
-// 		.footer-links {
-// 			font-size: 11px;
+			&:focus {
+				width: 135px;
+			}
+		}
+	}
+	.nav-footer {
+		.nav-footer-inner {
+			border-top: 0px;
+			background: none;
+		}
+		.logo-footer-right {
+			@media (min-width: @screen-md-min) {
+				margin-top: 12px;
+			}
+		}
+		.footer-links {
+			font-size: 11px;
 
-// 			h5 {
-// 				font-size: 11px;
-// 				font-weight: 700;
-// 				text-transform: uppercase;
+			h5 {
+				font-size: 11px;
+				font-weight: 700;
+				text-transform: uppercase;
 
-// 				.collapse-margin-bottom();
-// 			}
-// 			ul {
-// 				list-style-position: inside;
-// 				padding-left: 0px;
-// 			}
-// 		}
-// 	}
+				.collapse-margin-bottom();
+			}
+			ul {
+				list-style-position: inside;
+				padding-left: 0px;
+			}
+		}
+		@media (max-width: @screen-xs-max) {
+			.row.bottom .list-divider-horizontal.heels {
+				display: none;
+			}
+		}
+	}
 
 
-// // Shared Styles 
-// // styles used all over the site
-// 	.btn {
-// 		border-radius: 0;
-// 		border: 0px;
-// 		min-width: 120px;
+// Shared Styles 
+// styles used all over the site
+	.btn {
+		border-radius: 0;
+		border: 0px;
+		min-width: 120px;
 
-// 		.box-shadow(inset 0 0 20px rgba(0,0,0,0.25));
-// 	}
-// 	._sc_btn-pink {
-// 		.button-variant(white; @_surreycares_pink; @btn-default-border);
-// 		.btn-block();
+		.box-shadow(inset 0 0 20px rgba(0,0,0,0.25));
+	}
+	._sc_btn-pink {
+		.button-variant(white; @_surreycares_pink; @btn-default-border);
+		.btn-block();
 
-// 		font-size: 12px;
-// 	}
-// 	._sc_btn-green {
-// 		.button-variant(@btn-default-color; @_surreycares_green; @btn-default-color);
-// 		.btn-block();
+		font-size: 12px;
+	}
+	._sc_btn-green {
+		.button-variant(@btn-default-color; @_surreycares_green; @btn-default-color);
+		.btn-block();
 
-// 		font-size: 12px;
-// 	}
-// 	._sc_btn-look {
-// 		.btn();
+		font-size: 12px;
+	}
+	._sc_btn-look {
+		.btn();
 
-// 		display: block;
-// 		cursor: auto;
+		display: block;
+		cursor: auto;
 
-// 		&:active {
-// 			.box-shadow(inset 0 0 20px rgba(0,0,0,0.25));
-// 		}
-// 		&.text-left {
-// 			text-align: left;
-// 		}
-// 	}
-// 	._sc_btn-look-green {
-// 		._sc_btn-look();
+		&:active {
+			.box-shadow(inset 0 0 20px rgba(0,0,0,0.25));
+		}
+		&.text-left {
+			text-align: left;
+		}
+	}
+	._sc_btn-look-green {
+		._sc_btn-look();
 
-// 		background-color: @_surreycares_green;
-// 	}
-// 	._sc_box {
-// 		border: 1px rgba(0,0,0,0.15) solid;
-// 		border-top: 0px;
-// 		padding: 10px;
-// 		padding-top: 0;
-// 		font-size: 12px;
+		background-color: @_surreycares_green;
+	}
+	._sc_box {
+		border: 1px rgba(0,0,0,0.15) solid;
+		border-top: 0px;
+		padding: 10px;
+		padding-top: 0;
+		font-size: 12px;
 
-// 		._sc_boxgradient {
-// 			margin-left: -10px;
-// 			margin-right: -10px;
+		._sc_boxgradient {
+			margin-left: -10px;
+			margin-right: -10px;
 
-// 			&:first-child {
-// 				.pull-top();
-// 			}
-// 		}
-// 		h4 {
-// 			.pull-top();
-// 			._sc_btn-look();
+			&:first-child {
+				.pull-top();
+			}
+		}
+		h4 {
+			.pull-top();
+			._sc_btn-look();
 	
-// 			margin-left: -10px;
-// 			margin-right: -10px;
-// 		}
-// 	}
-// 	._sc_box-community-hub {
-// 		border: 0;
-// 		padding: 0;
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+	}
+	._sc_box-community-hub {
+		border: 0;
+		padding: 0;
 
-// 		h4 {
-// 			._sc_btn-look-green();
+		h4 {
+			._sc_btn-look-green();
 
-// 			margin: 0;
-// 		}
-// 		._sc_mini-box {
-// 			margin-top: 10px;
-// 			background-color: #E8F5A0;
-// 			padding: 10px;
-// 			padding-top: 0;
-// 			border: 1px rgba(0,0,0,0.15) solid;
+			margin: 0;
+		}
+		._sc_mini-box {
+			margin-top: 10px;
+			background-color: #E8F5A0;
+			padding: 10px;
+			padding-top: 0;
+			border: 1px rgba(0,0,0,0.15) solid;
 
-// 			h5 {
-// 				.pull-top();
-// 				._sc_btn-look-green();
+			h5 {
+				.pull-top();
+				._sc_btn-look-green();
 
-// 				font-size: 12px;
-// 				font-weight: bold;
-// 				margin-left: -10px;
-// 				margin-right: -10px;
-// 				margin-bottom: 10px;
-// 				width: auto;
-// 				padding: 0;
-// 			}
-// 		}
-// 	}
-// 	._sc_box-highlight {
-// 		padding: 10px;
-// 		background-color: @_surreycares_orange-light;
+				font-size: 12px;
+				font-weight: bold;
+				margin-left: -10px;
+				margin-right: -10px;
+				margin-bottom: 10px;
+				width: auto;
+				padding: 0;
+			}
+		}
+	}
+	._sc_box-highlight {
+		padding: 10px;
+		background-color: @_surreycares_orange-light;
 
-// 		.heels-half();
+		.heels-half();
 
-// 		h4 {
-// 			color: black;
-// 			font-weight: 500;
+		h4 {
+			color: black;
+			font-weight: 500;
 
-// 			.pull-top();
-// 		}
-// 		ul {
-// 			padding-left: 0;
-// 		}
-// 	}
-// 	._sc_boxgradient {
-// 		margin-bottom: 10px;
-// 		height: 5px;
-// 		background-image: -webkit-gradient(linear, left top, right top, color-stop(1, @_surreycares_orange), color-stop(0, @_surreycares_purple));
-// 		background-image: -moz-linear-gradient(left top, @_surreycares_orange 100%, @_surreycares_purple 0%);
-// 	}
-// 	._sc_caption-box {
-// 		position: absolute;
-// 		bottom: 0;
-// 		margin: 0;
-// 		padding: 10px;
-// 		width: 100%;
-// 		background-color: @_surreycares_teal;
-// 		color: white;
-// 	}
-// 	._sc_display-table-container {
-// 		margin-left: -10px;
-// 		margin-right: -10px;
+			.pull-top();
+		}
+		ul {
+			padding-left: 0;
+		}
+	}
+	._sc_boxgradient {
+		margin-bottom: 10px;
+		height: 5px;
+		background-image: -webkit-gradient(linear, left top, right top, color-stop(1, @_surreycares_orange), color-stop(0, @_surreycares_purple));
+		background-image: -moz-linear-gradient(left top, @_surreycares_orange 100%, @_surreycares_purple 0%);
+	}
+	._sc_caption-box {
+		position: absolute;
+		bottom: 0;
+		margin: 0;
+		padding: 10px;
+		width: 100%;
+		background-color: @_surreycares_teal;
+		color: white;
+	}
+	._sc_display-table-container {
+		margin-left: -10px;
+		margin-right: -10px;
 
-// 		.display-table {
-// 			border-spacing: 10px 0;
-// 			table-layout: fixed;
+		.display-table {
+			border-spacing: 10px 0;
+			table-layout: fixed;
 
-// 			.img-column {
-// 				padding: 0;
-// 			}
-// 		}
-// 	}
-
-
-// // Page Styles 
-// // styles specific to one page only (if used on more, should live in shared styles section)
+			.img-column {
+				padding: 0;
+			}
+		}
+	}
 
 
-body .head-wrapper header h1 a {
-	height: 72px;
-	width: 264px;
-	background: url("/App_Themes/SurreyCares/uploads/SurreyCCF_4C_264x72.jpg") no-repeat left top;
-}
+// Page Styles 
+// styles specific to one page only (if used on more, should live in shared styles section)

@@ -92,7 +92,11 @@ body .head-wrapper header h1 a{
 .btn.donate{
 	background: @btn-success-bg;
 }
-
+.page#donate {
+	#cpMain_divDonationComment {
+		display: none;
+	}
+}
 
 /*Homepage 3 under slider*/
 .ugmHomepageCTAs{
@@ -110,8 +114,15 @@ body .head-wrapper header h1 a{
 .fundraising h2{
 	margin-top: 0;
 }
-.project #cpMain_divDonateFundraise .col-md-8 {
-	display: none;
+
+// Hide the Donor Comments field and config page
+#content {
+	& > .project #cpMain_divDonateFundraise .col-md-8 {
+		display: none;
+	}
+	& > .orders#divEmails .nav-tabs a[href="#DonorComments"] {
+		display: none;
+	}
 }
 
 /* Category Pages */
