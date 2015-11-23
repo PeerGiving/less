@@ -115,10 +115,13 @@ body .head-wrapper header h1 a{
 	margin-top: 0;
 }
 
-// Hide the Donor Comments field and config page
+// Hide the Start a Fundraiser button(s) and the Donor Comments field
 #content {
-	& > .project #cpMain_divDonateFundraise .col-md-8 {
-		display: none;
+	& > .project {
+		#cpMain_divDonateFundraise .col-md-8,
+		#cpMain_aStartFundraiser_xs {
+			display: none;
+		}
 	}
 	& > .orders#divEmails .nav-tabs a[href="#DonorComments"] {
 		display: none;
