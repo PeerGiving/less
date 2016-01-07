@@ -1,0 +1,804 @@
+	///
+	/// HabitatForHumanityUFV
+	///
+
+
+
+
+
+	// Darkly 3.3.5
+	// Bootswatch
+	// -----------------------------------------------------
+
+	//@web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic";
+	//@web-font-path: "https://fonts.googleapis.com/css?family=Montserrat:400,700";
+	@web-font-path: "https://fonts.googleapis.com/css?family=Arvo:400,700,400italic";
+
+	.web-font(@path) {
+	  @import url("@{path}");
+	}
+	.web-font(@web-font-path);
+
+	// Navbar =====================================================================
+
+	.navbar {
+	  border-width: 0;
+
+	  &-default {
+
+	    .badge {
+	      background-color: #fff;
+	      color: @navbar-default-bg;
+	    }
+	  }
+
+	  &-inverse {
+
+	    .badge {
+	      background-color: #fff;
+	      color: @navbar-inverse-bg;
+	    }
+	  }
+
+	  &-brand {
+	    line-height: 1;
+	  }
+
+	  &-form {
+	    .form-control {
+	      background-color: white;
+
+	      &:focus {
+	        border-color: white;
+	      }
+	    }
+	  }
+	}
+
+	// Buttons ====================================================================
+
+	.btn {
+	  border-width: 2px;
+	}
+
+	.btn:active {
+	  .box-shadow(none);
+	}
+
+	.btn-group.open .dropdown-toggle {
+	  .box-shadow(none);
+	}
+
+	// Typography =================================================================
+
+	.text-primary,
+	.text-primary:hover {
+	  color: lighten(@brand-primary, 10%);
+	}
+
+	.text-success,
+	.text-success:hover {
+	  color: @brand-success;
+	}
+
+	.text-danger,
+	.text-danger:hover {
+	  color: @brand-danger;
+	}
+
+	.text-warning,
+	.text-warning:hover {
+	  color: @brand-warning;
+	}
+
+	.text-info,
+	.text-info:hover {
+	  color: @brand-info;
+	}
+
+	// Tables =====================================================================
+
+	table,
+	.table {
+
+	  a:not(.btn) {
+	    text-decoration: underline;
+	  }
+
+	  .dropdown-menu a {
+	    text-decoration: none;
+	  }
+
+	  .success,
+	  .warning,
+	  .danger,
+	  .info {
+	    color: #fff;
+
+	    > th > a,
+	    > td > a,
+	    > a {
+	      color: #fff;
+	    }
+	  }
+
+	  > thead > tr > th,
+	  > tbody > tr > th,
+	  > tfoot > tr > th,
+	  > thead > tr > td,
+	  > tbody > tr > td,
+	  > tfoot > tr > td {
+	    border: 1px solid @table-border-color;
+	  }
+	// Remove top border from thead by default
+	  > caption + thead,
+	  > colgroup + thead,
+	  > thead:first-child {
+	    > tr:first-child {
+	      > th,
+	      > td {
+		    border-top: 4px solid @table-border-color;
+		    border-bottom: 2px solid @table-border-color;
+	      }
+	    }
+	  }
+	  &-bordered > thead > tr > th,
+	  &-bordered > tbody > tr > th,
+	  &-bordered > tfoot > tr > th,
+	  &-bordered > thead > tr > td,
+	  &-bordered > tbody > tr > td,
+	  &-bordered > tfoot > tr > td {
+	    border: 1px solid @table-border-color;
+	  }
+	}
+
+	// Forms ======================================================================
+
+	input,
+	textarea {
+	  color: @input-color;
+	}
+
+	.form-control,
+	input,
+	textarea {
+	  border: 2px hidden transparent;
+	  .box-shadow(none);
+
+	  &:focus {
+	    .box-shadow(none);
+	  }
+	}
+
+	.has-warning {
+	  .help-block,
+	  .control-label,
+	  .radio,
+	  .checkbox,
+	  .radio-inline,
+	  .checkbox-inline,
+	  &.radio label,
+	  &.checkbox label,
+	  &.radio-inline label,
+	  &.checkbox-inline label,
+	  .form-control-feedback {
+	    color: @brand-warning;
+	  }
+
+	  .form-control,
+	  .form-control:focus {
+	    .box-shadow(none);
+	  }
+
+	  .input-group-addon {
+	    border-color: @brand-warning;
+	  }
+	}
+
+	.has-error {
+	  .help-block,
+	  .control-label,
+	  .radio,
+	  .checkbox,
+	  .radio-inline,
+	  .checkbox-inline,
+	  &.radio label,
+	  &.checkbox label,
+	  &.radio-inline label,
+	  &.checkbox-inline label,
+	  .form-control-feedback {
+	    color: @brand-danger;
+	  }
+
+	  .form-control,
+	  .form-control:focus {
+	    .box-shadow(none);
+	  }
+
+	  .input-group-addon {
+	    border-color: @brand-danger;
+	  }
+	}
+
+	.has-success {
+	  .help-block,
+	  .control-label,
+	  .radio,
+	  .checkbox,
+	  .radio-inline,
+	  .checkbox-inline,
+	  &.radio label,
+	  &.checkbox label,
+	  &.radio-inline label,
+	  &.checkbox-inline label,
+	  .form-control-feedback {
+	    color: @brand-success;
+	  }
+
+	  .form-control,
+	  .form-control:focus {
+	    .box-shadow(none);
+	  }
+
+	  .input-group-addon {
+	    border-color: @brand-success;
+	  }
+	}
+
+	.input-group-addon {
+	  color: @text-color;
+	}
+
+	// Navs =======================================================================
+
+	.nav {
+	  .open > a,
+	  .open > a:hover,
+	  .open > a:focus {
+	    border-color: @nav-tabs-border-color;
+	  }
+	}
+
+	/* .nav-tabs > li > a,
+	.nav-pills > li > a {
+	  color: #fff;
+	} */
+
+	.pager {
+	  a,
+	  a:hover {
+	    color: #fff;
+	  }
+
+	  .disabled {
+	    &>a,
+	    &>a:hover,
+	    &>a:focus,
+	    &>span {
+	      background-color: @pagination-disabled-bg;
+	    }
+	  }
+	}
+
+	.breadcrumb a {
+	  color: #fff;
+	}
+
+	// Indicators =================================================================
+
+	.close {
+	  text-decoration: none;
+	  text-shadow: none;
+	  opacity: 0.4;
+
+	  &:hover,
+	  &:focus {
+	    opacity: 1;
+	  }
+	}
+
+	.alert {
+		h3{
+	    	color: #fff;		
+		}
+	  .alert-link {
+	    color: #fff;
+	    text-decoration: underline;
+	  }
+	}
+
+	// Progress bars ==============================================================
+
+	.progress {
+	  height: 10px;
+	  .box-shadow(none);
+	  .progress-bar {
+	    font-size: 10px;
+	    line-height: 10px;
+	  }
+	}
+
+	// Containers =================================================================
+
+	.well {
+	  .box-shadow(none);
+	}
+
+	a.list-group-item {
+
+	  &.active,
+	  &.active:hover,
+	  &.active:focus {
+	    border-color: @list-group-border;
+	  }
+
+	  &-success {
+	    &.active {
+	      background-color: @state-success-bg;
+	    }
+
+	    &.active:hover,
+	    &.active:focus {
+	      background-color: darken(@state-success-bg, 5%);
+	    }
+	  }
+
+	  &-warning {
+	    &.active {
+	      background-color: @state-warning-bg;
+	    }
+	    
+	    &.active:hover,
+	    &.active:focus {
+	      background-color: darken(@state-warning-bg, 5%);
+	    }
+	  }
+
+	  &-danger {
+	    &.active {
+	      background-color: @state-danger-bg;
+	    }
+	    
+	    &.active:hover,
+	    &.active:focus {
+	      background-color: darken(@state-danger-bg, 5%);
+	    }
+	  }
+	}
+
+	.popover {
+	  color: @text-color;
+	}
+
+
+
+
+
+	// ------------General Styles------------
+	// style HTML elements here (h3, p, blockquote, a...)
+	h1, h2 {
+		color: @brand-primary;
+	}
+
+	// ------------Template Styles------------
+	// styles for template components (header, navbar, footer...)
+
+
+	//panels
+	.panel .panel-title > a{
+		color: @brand-primary;
+		display:block;
+		padding: 10px;
+	}
+
+
+	//admin section
+	#cpMain_pnlMain .table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
+	    background-color: rgba(0, 0, 0, 0);
+	    color:#505050;
+	}
+
+	//secondary nav bar
+	.container #content .nav-secondary, .container #content .nav-secondary + .nav-secondary {
+	    margin-top: 0;
+	}
+
+
+	.head-wrapper.hidden-xs{
+		//display:none;
+	}
+	#divHeaderContainer{
+		display:none;
+	}
+	//Navbar
+	/* .nav.navbar-nav.navbar-right{
+		display:none;
+	} */
+
+	.navbar-default .navbar-nav > li > a{
+		&[href="https://habitatufv.peergiving.com/our-projects.aspx"], &[href="https://habitatufv.peergiving.com/donate/donate.aspx?asset=1&search=true"]{
+			display: none;
+		}
+		&[href="https://habitatufv.peergiving.com/page.aspx?pageId=12"], &[href="https://habitatufv.peergiving.com/page.aspx?pageId=3"]{
+			max-width: 127px;
+			padding-top: 13px;
+			padding-bottom: 7.5px;
+			text-align: center;
+		    line-height: 17px;
+		}
+		&[href="https://habitatufv.peergiving.com/page.aspx?pageId=3"]{
+			max-width: 97px;
+		}	
+	}
+
+
+	.navbar-default {
+	    background-image: url('/App_Themes/habitatufv/uploads/shattered.png');
+	}
+	body > form .nav-main-list > .navbar.navbar-default > .container{
+		padding-left:0;
+	    padding-right: 0;
+	}
+	.widget.nav-main-list{
+		position: fixed;
+		z-index: 100;
+	  top:0;
+	}
+	#ucMainNavList_aBrand {
+	    color: #005596;
+	    background: url('/App_Themes/habitatufv/uploads/Habitat_for_humanity_logo_146x50-white.png') no-repeat;
+	    padding: 0;
+	    width: 146px;
+	    height: 60px;
+	    margin-top: 5px;
+	    margin-left: 5px;
+	    color: rgba(0, 0, 0, 0);
+	}
+	#divNavCollapse_xs{
+		padding-top: 5px;
+		padding-bottom: 5px;
+	    position: relative;
+	}
+	#divNavCollapse_xs .dropdown-menu > li > a {
+	    text-align: right;
+	}
+	.nav-main-list .home a i.icon-home-img {
+		display:none;
+	}
+	.nav-main-list .navbar-collapse .navbar-nav .home a {
+		background: url('/App_Themes/habitatufv/uploads/Habitat_for_humanity_logo_146x50-white.png');
+		padding: 0;
+		width: 146px;
+		height: 50px;
+		margin-top: 3px;
+		margin-right: 20px;
+	}
+	.dropdown-menu {
+		background-color: @brand-success;
+		border: 0;
+		border-radius: 0;
+	}
+	.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	    color: #FFF;
+	    background-color: rgba(255, 255, 255, 0);
+	    border-bottom: 2px solid @brand-success;
+	}
+	.navbar-default .navbar-nav > .active.home > a, .navbar-default .navbar-nav > .active.home > a:hover, .navbar-default .navbar-nav > .active.home > a:focus {
+		border:0;
+	}
+	.nav-main-list .navbar-nav > .open .dropdown-menu a:hover {
+		background-color: @brand-success;
+		color: @brand-primary;
+		text-decoration: underline;
+	}
+
+
+	@media only screen and ( max-width : 767px) {
+		.navbar-default .navbar-nav > li > a{
+			&[href="https://habitatufv.peergiving.com/page.aspx?pageId=12"], &[href="https://habitatufv.peergiving.com/page.aspx?pageId=3"]{
+				max-width: none;
+				padding-top: 10px;
+				text-align: left;
+			}
+		}
+		/* .nav.navbar-nav.navbar-right{
+			display:block;
+		} */
+
+		#divNavCollapse_xs > .navbar-nav > .home{
+			display:none;
+		}
+		/* .nav-main-list .navbar-collapse .navbar-nav.navbar-right:last-child {
+			    margin-right: 0;
+			    position: absolute;
+			    right: 0;
+			} */	
+		.navbar-collapse{
+			max-height: none;
+		}
+		.navbar-nav {
+	    	margin: 0;
+		}
+		.navbar-default .navbar-toggle {
+	    	margin-right: 20px;
+		}
+		body > form .nav-main-list > .navbar.navbar-default > .container {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+	@media only screen and (min-width : 768px) and (max-width : 1199px) {
+		.nav-main-list .home {
+	    	float: none;
+		}
+		.nav-main-list .navbar-collapse .navbar-nav.navbar-right:last-child {
+		    position: absolute;
+		    right: 0;
+		}	
+
+	}
+	@media only screen and (min-width : 768px){
+	}
+
+
+
+	//body
+	body{
+	    background-image: url('/App_Themes/habitatufv/uploads/brickwall.png');
+	    background-repeat: repeat;
+	}
+	body > form > .container {
+	    padding-top: 90px;
+	    background: #FFF;
+		box-shadow: 0px 0px 10px 1px #D3D3D3;
+	}
+	body > form > .nav-breadcrumb + .container {
+	    padding-top: 45px;
+	}
+
+	// ------------Shared Styles------------
+	// styles used all over the site
+
+	//breadcrumbs
+	.nav-breadcrumb {
+	    background: transparent;
+	    border: none;
+	    margin-top: 72px;
+	}
+	.nav-breadcrumb .container .breadcrumb > li > a {
+	    color: #005596;
+	}
+
+
+
+
+	//video wrapper
+	.videowrapper {
+	    float: none;
+	    clear: both;
+	    width: 100%;
+	    position: relative;
+	    //padding-bottom: 56.25%;
+	    padding-bottom: 51.45%;
+	    padding-top: 25px;
+	    height: 0;
+	}
+	.videowrapper iframe {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	}
+
+
+
+
+	//Forms
+	.form-control, input, textarea{
+	    border: 2px solid #CCC;
+	}
+	.form-control:focus, input:focus, textarea:focus {
+		border: 2px solid @brand-success;	
+	}
+	//Search
+	.search-box .form-search .input-group .form-control {
+		border:0;
+	    border-bottom-right-radius: 4px;
+	    border-top-right-radius: 4px;
+	}
+	.search-box .form-search .input-group .input-group-btn {
+	    border-bottom-left-radius: 4px;
+	    border-top-left-radius: 4px;
+	    -webkit-box-shadow: none;
+	    -moz-box-shadow: none;
+	    box-shadow: none;
+	    border: 0;
+	    border-right-width: 0;
+	    width: auto;
+	    background-color: #FFF;
+	    font-size: 15px;
+	}
+
+	.nav-pills > li > a {
+	    background: #DEDEDE;
+	    margin-bottom: 2px;
+	}
+	.nav-jump {
+	    padding-top: 20px;
+	}
+
+
+	//Footer
+	.nav-footer .nav-footer-inner {
+	    border-top: 0;
+	    //background-color: @brand-success;
+	    background-color: #007B63;
+	    background-image: url('/App_Themes/habitatufv/uploads/shattered.png');
+
+		.row.bottom .col-md-12, .row.top .col-md-12{
+		    -webkit-box-shadow: none;
+		    -moz-box-shadow: none;
+		    box-shadow: none;
+		}
+
+	    a, h3 {
+		    color: #FFF;
+		    
+		    &:hover{
+		    	color: #C4C4C4;
+		    }
+	    }
+	}
+	/* .nav-footer .nav-footer-inner .row.bottom .col-md-12, .nav-footer .nav-footer-inner .row.top .col-md-12  {
+	    -webkit-box-shadow: none;
+	    -moz-box-shadow: none;
+	    box-shadow: none;
+	}
+	 */
+	 .nav-footer .nav-footer-inner .row.bottom .custom {
+	    color: #fff;
+	}
+
+	@media only screen and ( max-width : 767px) {
+		.nav-footer .nav-footer-inner .row.bottom, .nav-footer .nav-footer-inner .row.bottom .col-md-12 .list-divider-horizontal {
+			background: none !important;
+		}
+	}
+
+
+	//tables
+	.table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
+	    background-color: #C6C6C6;
+	    color: #fff;
+	}
+	.table-striped > tbody > tr:nth-child(odd) > td a, .table-striped > tbody > tr:nth-child(odd) > th a{
+		color:#1AABFF;
+	}
+
+
+	//input group addons
+	.input-group-addon {
+	    color: #fff;
+	}
+
+	//datepicker
+	.datepicker.dropdown-menu {
+		background-color: #989898;
+	}
+
+
+	// ------------Page Styles------------
+	// styles specific to one page only (if used on more, should live in shared styles section)
+
+	//homepage
+	form[action="default.aspx"]{
+		& > .container{
+			padding-top: 70px;
+			padding-left:0;
+			padding-right:0;
+
+			#content > .home > .row{
+				padding-left:30px;
+				padding-right:30px;			
+			}
+		}
+	}
+	@media only screen and ( max-width : 767px) {
+		form[action="default.aspx"]{
+			& > .container{
+				padding-left:15px;
+				padding-right:15px;
+			}
+		}
+
+	}
+
+	.carousel-caption .btn {
+	    padding: 10px 25px;
+	}
+
+	//Donation page
+	#cpMain_ucDonationTargetAssets_txtAmount{
+		border: 0;	
+	}
+
+
+
+	//Blog posts
+	.post-view .well, #cpMain_ucPostView_ucPostComments_pnlCommentForm{
+		background: transparent;
+		border: 0;
+	}
+
+	//Login
+	.login .well {
+	    border-color: @brand-success;
+	    background-color: @brand-success;
+	    color: #fff;
+
+	    h3{
+	    	color: #fff;
+	    }
+	}
+
+
+	//Login/account menubar
+	#updatePanelAccountNav{
+	    position: fixed;
+	    z-index: 1002;
+	    right: 20px;
+	    top:0;
+	}
+	.nav-account .container {
+	    padding-bottom: 0;
+	}
+
+	.nav-account {
+	    border-top: 0;
+	}
+	#updatePanelAccountNav > .nav-account > .container {
+		position: relative;
+		z-index: 1001;
+	}
+	.nav-account .nav-account-inner {
+	    position: absolute;
+	    right: 0;
+	    top: -33px;
+	    z-index: 101;
+	    transition: all 0.5s ease;
+	    background: transparent;
+	    -webkit-box-shadow: none;
+	    -moz-box-shadow: none;
+	    box-shadow: none;
+	}
+	.nav-account .nav-account-inner > li > a{
+	    background-color: #043C67;
+	}
+	.nav-account .nav-account-inner > li:hover > a, .nav-account .nav-account-inner > li.open > a, .nav-account .nav-account-inner > li:hover > a:hover, .nav-account .nav-account-inner > li.open > a:hover, .nav-account .nav-account-inner > li:hover > a:focus, .nav-account .nav-account-inner > li.open > a:focus{
+		border-left-color: inherit;
+		background-color: #043C67;
+	}
+	#ucAccountNav_liMyAccount, #ucAccountNav_liLogin{
+	    padding-bottom: 27px;
+	    background: url('/App_Themes/habitatufv/uploads/gear-icon01.png') right 2px top 32px no-repeat;
+	}
+	.nav-account-inner:hover{
+		top:0;
+	}
+
+
+
+
+	//no nav bg example
+	/* form[action="page.aspx?pageId=6"]{
+		.navbar-default {
+		    background-image: none;
+		}
+	}
+	form[action="page.aspx?pageId=7"], .nav-footer .nav-footer-inner {
+		.navbar-default {
+		    background-image: none;
+		}
+	}
+	 */

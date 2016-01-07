@@ -3,18 +3,12 @@
 	.funds-raised-active .asset-funds-raised,
 	.days-left .symbol,
 	.asset-donations .symbol {
-		font-size: @font-size-h3 - 2;		// Smaller than the page title
+		font-size: @fundraising-info-font-size;	// Optionally set by theme
 		line-height: normal;
 	}
 
 	.funds-raised-active {
 		.asset-funds-raised {
-			.raised {
-				.pull-left();
-			}
-			.verb:before {
-				content: '\0000a0';
-			}
 			.goal {
 				.pull-right();
 			}
