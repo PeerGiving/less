@@ -271,7 +271,7 @@ ul.action-links{
     ul.action-links li{
         float:left;
         font-size: @baseSmallFontSize;
-        text-transform:uppercase;
+        //text-transform:uppercase;
     }
 
 .table ul.action-links {
@@ -747,21 +747,17 @@ General Sortable Column Styles
 
 /* Asset Manage: Community Page
  ********************************/
-#manage-community{
-    clear:left;
-    margin-top:15px;
-}
-
     #manage-community .filters input[type=submit]{
         display:none;
     }
-    #manage-community th a{
-        padding-right:15px;
-    }
-    #manage-community th.date{
-        width:55px;    
-    }
-
+    .page.asset-mgmt.manage-community {
+		th a {
+			padding-right:15px;
+		}
+		th.date{
+			width:55px;    
+		}
+	}
 
 /* Asset Manage: Images and Video Pages 
  ****************************************/

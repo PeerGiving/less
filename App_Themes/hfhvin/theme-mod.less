@@ -38,13 +38,18 @@
 			width: 100%;
 			margin: 0px;
 
+			.container {
+				background-color: white;
+			}
 			h1 {
+				padding-top: 40px;
 				display: table-cell;
 				vertical-align: middle;
 			}
 			.header-right {
 				width: auto;
 				margin-right: -@gridGutterWidth;
+				margin-top: -125px;
 				float: right;
 				display: table;
 
@@ -67,21 +72,32 @@
 				}
 			}
 			.header-bottom {
-				position: absolute;
-				top: 114px;
-				left: 140px;
+				img {
+					vertical-align: top;
 			}
 		}
+		}
 		.btn-donate {
-			display: block;
+			display: inline-block;
 			height: 42px;
 			width: 140px;
-			background: url("//www.habitatnorthisland.com/App_Themes/hfhvin/uploads/donatebtn_header_sprite.jpg") no-repeat;
+			background: url("//www.habitatnorthisland.com/App_Themes/hfhvin/uploads/donate_header_sprite-01.jpg") no-repeat;
 
 			&:hover {
 				background-position: 0 -42px;
 			}
 		}
+		.headerVolunteerButton{
+			display: block;
+			height: 59px;
+			width: 140px;
+			background: url('/App_Themes/hfhvin/uploads/vol-to-build_header_sprite-05.jpg') no-repeat;
+			
+			&:hover {
+				background-position: 0 -60px;
+			}
+		}
+
 	}	
 	.nav-main-list {	
 		// Phone
@@ -173,6 +189,16 @@
 
 
 // Custom Page/Zone Styles
+	/* Home */
+	.page.home {
+		#cpMain_divSlideshowContainer {
+			padding-bottom: @container-padding-top / 2;
+			
+			@media(min-width: @screen-md-min) {
+				padding-bottom: @container-padding-top;
+			}
+		}
+	}
 	.home {
 		.zone-home-below-slideshow a {
 			@media (max-width: @screen-xs-max) {

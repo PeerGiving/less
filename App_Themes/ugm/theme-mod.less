@@ -66,6 +66,9 @@ h4{
 #divHeaderContainer {
   margin-top: -34px;
 }
+#content > .container.top {
+	height: 30px;
+}
 body>form>.container {
   padding-top:30px;
   padding-bottom: 30px;
@@ -100,6 +103,7 @@ body .head-wrapper header h1 a{
 
 /*Homepage 3 under slider*/
 .ugmHomepageCTAs{
+	margin-top: 20px;
 	text-align: center;
 	img{
 		max-width: 100%;
@@ -119,6 +123,7 @@ body .head-wrapper header h1 a{
 #content {
 	& > .project {
 		#cpMain_divDonateFundraise .col-md-8,
+		#cpMain_aStartFundraiser,
 		#cpMain_aStartFundraiser_xs {
 			display: none;
 		}
@@ -133,6 +138,22 @@ body .head-wrapper header h1 a{
 	display: none;
 }
 
+
+/* Completed Campaigns*/
+//Hide current ribbon:
+.project-list-item .tile-top .ribbon-complete{
+	display:none;
+}
+
+//Add new ribbon:
+.project-list-item .progress-bar-pgs .progress-container .progress-overlay{
+	font-size: 14px;
+	background: url('/App_Themes/ugm/uploads/ribbon_complete_blue-100x100.png') top left no-repeat;
+	background-size: 100px 100px;
+	height: 157px;
+	margin-top: -134px;
+	padding-top: 135px;
+}
 
 
 /*Customized Footer*/

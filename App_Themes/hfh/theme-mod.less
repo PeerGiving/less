@@ -380,6 +380,15 @@
 	}
 
 // Page-specific Styles
+	.page.home {
+		#cpMain_divSlideshowContainer {
+			padding-bottom: @container-padding-top / 2;
+			
+			@media(min-width: @screen-md-min) {
+				padding-bottom: @container-padding-top;
+			}
+		}
+	}
 	.home {
 		.squares {
 			.give,

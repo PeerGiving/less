@@ -7,42 +7,48 @@
 		h1 {
 			float: left;
 		}
-		.headerZone2 {
-			.clearfix();
-			.heels();
+		.header .headerZone2 {
+			.container {
+				margin-top: -120px;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				background-color: white;
+			}
+			.custom-header {
+				float: right;
 			
-			float: right;
-			padding-top: 20px;
-			width: auto;
+				.tagline {
+					display: inline-block;
+					padding-right: 20px;
+					width: 353px;
+					vertical-align: top;
+					text-align: right;
 			
-			.tagline {
-				display: inline-block;
-				padding-right: 20px;
-				width: 353px;
-				vertical-align: top;
-				text-align: right;
-			
-				@media (max-width: @screen-sm-max) {
-					width: 200px;
-					font-size: 11px;
-				}
+					@media (max-width: @screen-sm-max) {
+						width: 200px;
+						font-size: 11px;
+					}
 
-				p {
-					margin-bottom: 2px;
-					color: #666;
+					p {
+						margin-bottom: 2px;
+						color: #666;
 
-					& + p {
-						float: right;
+						& + p {
+							float: right;
+						}
 					}
 				}
+				.newsletter-box {
+					display: inline-block;
+					padding-left: 20px;		
+					border-left: @huedGrayLighter 1px solid;
+					vertical-align: top;
+				}	
 			}
-			.newsletter-box {
-				display: inline-block;
-				padding-left: 20px;		
-				border-left: @huedGrayLighter 1px solid;
-				vertical-align: top;
-			}	
 		}
+	}
+	.nav-account .container {
+		background-color: white;
 	}
 
 // Page/Component Styles

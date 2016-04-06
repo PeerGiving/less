@@ -57,6 +57,9 @@
 					color: darken(@gray-light,12);
 					display:inline-block;
 
+					&:before {
+						display: none;
+					}
 					a {
 						margin-left: @gridGutterWidth/2;
 						color: @gray;
@@ -130,7 +133,7 @@
 								font-size: 14px;
 							}
 							.li-terms:before {
-								display: none;
+								display: block;
 							}
 						}
 						.pull-right {
@@ -146,6 +149,9 @@
 						li:before {
 							content: "";
 							margin: 0 20px 0 0;
+						}
+						li.visible-xs {
+							display: inline !important;
 						}
 					}
 					a.powered-by {

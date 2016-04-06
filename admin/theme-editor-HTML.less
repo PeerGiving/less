@@ -1,57 +1,69 @@
 ﻿/* theme-editor-HTML.less */
 
 .theme-editor-HTML {
-        table th {
-            padding-top: 40px;
-            border-bottom: 0;
-            font-size: 16px;
-            text-align: left;
-            }
-        table tr td:first-child {
-            vertical-align: top;
-            }
-        textarea {
-            width: 100%;
-            }
-        h3.jumper {
-            margin-top: 40px;
-            font-size: 9px;
-            color: #888;
-            }
-        ul.jumper {
-            list-style: none;
-            }
-        ul.jumper a:link,
-        a.jumper:link,
-        ul.jumper a:visited,
-        a.jumper:visited {
-            margin-left: 10px;
-            background: transparent;
-            color: #aaa;
-            padding: 3px;
-            font-size: 9px;
-            }
-        ul.jumper a:hover,
-        a.jumper:hover,
-        ul.jumper a:active,
-        a.jumper:active {
-            text-decoration: none;
-            background: #888;
-            color: #fff;
-            }
-        .required:after {
-            margin-left: 5px;
-            content: '*';
-            color: #ff0000;
-            }
-        .xml:after {
-            vertical-align: top;
-            margin-left: 5px;
-            content: '\2020';
-            color: #8800ff;
-            font-weight: bold;
-            }
-            .formHint {
-                color: #9a9a9a; /* @gray-light */
-            }	
+    table {
+		th {
+			padding-top: 40px;
+			border-bottom: 0;
+			font-size: 16px;
+			text-align: left;
+		}
+		tr td:first-child {
+			vertical-align: top;
+		}
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+    h3.jumper {
+        margin-top: 40px;
+        font-size: 9px;
+        color: #888;
+    }
+    ul.jumper {
+        list-style: none;
+    }
+	.jumper {
+		a:link,
+		&:link,
+		a:visited,
+		&:visited {
+			margin-left: 10px;
+			background: transparent;
+			color: #aaa;
+			padding: 3px;
+			font-size: 9px;
+		}
+		a:hover,
+		&:hover,
+		a:active,
+		&:active {
+			text-decoration: none;
+			background: #888;
+			color: #fff;
+		}
+	}
+
+    .required:after {
+        margin-left: 5px;
+        content: '*';
+        color: #ff0000;
+    }
+	.fa-database {
+		color: lightgray;
+	}
+	.fa-file-code-o {
+		color: burlywood;
+	}
+	.fa-file-word-o {
+		color: turquoise;
+	}
+	.fa-expand {
+		color: coral;
+	}
+    .formHint {
+        color: #9a9a9a; /* @gray-light */
+    }	
 }

@@ -1,4 +1,4 @@
-﻿/* TYNDALE theme-variables.less */
+/* ismc/theme-variables.less */
 
 
 //	1. Comment out variable definitions to inherit defaults
@@ -10,38 +10,43 @@
 
 // Variable Global Style options
 	// Closed Layout options
-		//@isClosedLayout:
-		//@bodyBackgroundColor:
-		//@bodyBackgroundImage:	
-		//@bodyBackgroundRepeat:
-		//@bodyBackgroundPosition:
+		@isClosedLayout: true;
+		@bodyBackgroundColor: #091a34;
+		@bodyBackgroundImage: url("//www.ismc.ca/App_Themes/ismc/uploads/ismc_back_1920_optimized.jpg");
+		@bodyBackgroundRepeat: no-repeat;
+		@bodyBackgroundPosition: center 238px;
 	// Header options
-		//@headBackgroundColor: 
+		@headBackgroundColor: @ismc_blue-dark;
 		//@headBackgroundImage: 
 		//@headBackgroundRepeat: 
 		//@headBackgroundPosition: 
 		//@headModernLogoImage:
 		//@headModernLogoWidth: 160px;	// suggested
 		//@headModernLogoHeight: 40px;	// suggested
-		@headLogoImage: url("images/logo-tyndale.png");
-		@headLogoWidth: 340px;
-		@headLogoHeight: 120px;
+		@headLogoImage: url("//www.ismc.ca/App_Themes/ismc/images/ISMC Logo update-01.png");
+		@headLogoWidth: 301px;
+		@headLogoHeight: 101px;
 		//@headTitleFontFamily: 
 		//@headTitleFontSize: 
 	// Typography options
-		@font-family-base: Georgia, serif;
-		@headings-font-family: calibri, "Century Gothic", verdana, sans-serif;
-		@font-size-base: 18px;
-		@line-height-base: 1.388;	// 18px * 1.388 = 25px
-		@font-size-h2: 45px;
-		@font-color-h2: @_tyndale_red;
-		@font-size-h3: 37px;				// Bootstrap 3.1.1 ~ 24px
-		@font-color-h3: @_tyndale_green;
-		@font-weight-h3: normal;
+		@font-family-base: 'Rosario', sans-serif;
+		@headings-font-family: 'Rosario', sans-serif;
+		@font-size-h2: 36px;					// Bootstrap 3.1.1 ~ 30px
+		@font-color-h2: @ismc_blue-dark;
+		//@font-weight-h2:
+		//@font-size-h3:					// Bootstrap 3.1.1 ~ 24px
+		@font-color-h3: #808285;
+		//@font-weight-h3:
+		//@font-size-h4:					// Bootstrap 3.1.1 ~ 18px
+		//@font-color-h4:
+		//@font-weight-h4:
 	// Link and Button options
-		@link-color: @_tyndale_green;
-		@link-hover-color: @_tyndale_red;
-		@brand-primary: #CC3311;
+		@link-color: #00B9F2;
+		//@link-hover-color: 
+		@btn-default-color: #fff;
+		@btn-default-bg: #D49E2A;
+		@btn-default-border: darken(@btn-default-bg, 5%);
+		@brand-primary: #263d70;
 	// Hued Grays (for backgrounds, etc) options
 		//@huedGrayDarkest:											//	4% - 3% lum
 		//@huedGrayDarker:											//	13% - 3% lum
@@ -51,29 +56,32 @@
 		//@huedGrayLighter:											//	93% - 3% lum
 		//@huedGrayLightest:										//	96% - 3% lum
 	// Other Colors
-		@_tyndale_red: #b22;
-		@_tyndale_green: #779900;
-		@_tyndale_green_darkish: #558800;
-		@_tyndale_green_dark: #557700;
+		@ismc_blue-dark: #263D70;
+		@ismc_blue: #80a3d6;
+		@ismc_blue-light: #9DC0E5;
 
 // Component Styles	
-	// Main Navbar (nav-main-list)
-		@navbar-default-bg: @_tyndale_green_darkish;
-		//@navbar-default-color: 
-		@navbar-default-link-color: white;
-		@navbar-default-link-hover-color: white;
-		@navbar-default-link-hover-bg: @_tyndale_green_dark;
-		//@navbar-default-link-active-color:
-		@navbar-default-link-active-bg: @_tyndale_green_dark;
 	// Account Nav
 		//@nav-account-bg:
 		//@nav-account-link-color:
 		//@nav-account-link-hover-color:
 		//@nav-account-link-hover-bg:
-		//@nav-account-link-active-bg: 
+		//@nav-account-link-active-bg:
+	// Main Navbar (nav-main-list)
+		//@navbar-default-bg: 
+		//@navbar-default-color:
+		//@navbar-default-link-color:
+		@navbar-default-link-hover-color: white;
+		@navbar-default-link-hover-bg: @ismc_blue;
+		//@navbar-default-link-active-color:
+		@navbar-default-link-active-bg: @ismc_blue-dark;
 	// Breadcrumb Nav
-		@breadcrumb-link-hover-color: white;
-		@breadcrumb-active-color: darken(white,10);
+		//@breadcrumb-color: 
+		//@breadcrumb-link-color: 
+		//@breadcrumb-link-hover-color: 
+		//@breadcrumb-active-color: 
+	// Home page carousel	
+		//@homePageCarouselHeight:									
 	// Action Nav
 		//@actionBackgroundColorDefault: 
 		//@manageBackgroundColor: 
@@ -82,15 +90,8 @@
 		//@subscribeBackgroundColor:
 	// Badge
 		//@badgeBackgroundColor: 
-	// Home page carousel	
-		@homePageCarouselHeight: 300px;
-	
 
 // Viewport Styles
-	// Navbar
-		@navbar-phone-bg: @_tyndale_green_darkish;
-		@navbar-phone-color: white;
 	// Footer 
-		@footer-phone-bg: @_tyndale_green;
+		@footer-phone-bg: @ismc_blue-light;
 		@footer-phone-color: white;
-

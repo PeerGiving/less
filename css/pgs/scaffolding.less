@@ -1,39 +1,8 @@
 ﻿/* scaffolding.less */
 
-	body {
-		& > form {
-			.head-wrapper .nav-account > .container,
-			.head-wrapper > .container,
-			.nav-main-list > .navbar > .container,
-			.nav-breadcrumb > .container,
-			& > .container,
-			.sticky-footer-push > .container,
-			.secondary-content .secondary-content-inner > .container,
-			.nav-jump > .container,
-			.nav-footer .nav-footer-inner > .container {
-				padding-left: @grid-gutter-width;
-				padding-right: @grid-gutter-width;
-
-				@media (max-width: @screen-xs-max) {
-					padding-left: 15px;
-					padding-right: 15px;
-				}
-			}
-			& > .container {
-				padding-top: @container-padding-top; 
-				padding-bottom: @line-height-computed*3;
-
-				@media (max-width: @screen-xs-max) {
-					padding-top: @container-padding-top / 2;
-					padding-bottom: @line-height-computed * 1.5;
-				}
-			}
-		}
-	}
-			
 	.head-wrapper {
 		header {
-			margin-bottom: @line-height-computed;
+			//margin-bottom: @line-height-computed;
 
 			h1 a {
 				font-size: @headTitleFontSize;
@@ -55,6 +24,41 @@
 				//position: relative;
 				//z-index: 1;
 			}
+		}
+	}
+	
+	// Fatten up the vertical padding around the main content of the page
+	#content {
+		> .container.top {
+			// Phone & Tablet
+			height: @container-padding-top / 2;
+			
+			@media (min-width: @screen-md-min) {
+				height: @container-padding-top;
+			}
+		}
+		> .container.bottom {
+			// Phone
+			height: @line-height-computed * 1.5;
+
+			@media (min-width: @screen-md-min) {
+				height: @line-height-computed * 3;
+			}
+		}
+	}	
+	body > form > #content .container {
+		background-color: white;
+	}
+
+	// Secondary Nav
+	body > form > #content .nav-secondary,
+	body > form > #content .nav-secondary + .nav-secondary {
+		margin-top: 0;
+		margin-bottom: @container-padding-top / 2;
+
+		@media (min-width: @screen-md-min) {
+			margin-top: -@container-padding-top/2;	// Assume that this will eat into the main .container's top padding of 40px
+			margin-bottom: @container-padding-top;
 		}
 	}
 

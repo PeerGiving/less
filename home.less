@@ -1,12 +1,16 @@
 ﻿// Mobile Style
-div.home {
+.home.page {
 	@media(max-width: @screen-sm-max) {
 		.fundraising-tile-list,
 		.community-updates-brief-list-home {
 			.heels-double;
 		}
 	}
-	@media (max-width: @screen-sm-max) {
-		margin-top: -@container-padding-top / 2;
+
+	// Carousel inside a container should not snap to main nav on tablet or desktop
+	.container > .home-page-carousel {
+		@media (min-width: @screen-sm-min) {
+			margin-top: 0;
+		}
 	}
 }

@@ -16,7 +16,8 @@
 
 @brand-primary:         #005596;
 @brand-success:         #54B948;
-@brand-info:            #9A3416;
+//@brand-info:            #9A3416;
+@brand-info:            #D28873;
 @brand-warning:         #F1AB00;
 @brand-danger:          #DC241F;
 
@@ -43,14 +44,15 @@
 //## Font, line-height, and color for body text, headings, and more.
 
 //@font-family-sans-serif:  "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-sans-serif:  "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-sans-serif:  "Arvo", "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+//@font-family-sans-serif:  "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+//@font-family-sans-serif:  "Arvo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       "Crimson Text", Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
-@font-size-base:          15px;
+@font-size-base:          17px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 
@@ -67,8 +69,8 @@
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
-@headings-font-family:    @font-family-base;
-@headings-font-weight:    400;
+@headings-font-family:    @font-family-serif;
+@headings-font-weight:    700;
 @headings-line-height:    1.1;
 @headings-color:          inherit;
 
@@ -119,25 +121,25 @@
 @caret-width-large:         5px;
 
 
-//== Tables
-//
-//## Customizes the `.table` component with basic values, each used across all table variations.
+// //== Tables
+// //
+// //## Customizes the `.table` component with basic values, each used across all table variations.
 
-//** Padding for `<th>`s and `<td>`s.
-@table-cell-padding:            8px;
-//** Padding for cells in `.table-condensed`.
-@table-condensed-cell-padding:  5px;
+// //** Padding for `<th>`s and `<td>`s.
+// @table-cell-padding:            8px;
+// //** Padding for cells in `.table-condensed`.
+// @table-condensed-cell-padding:  5px;
 
-//** Default background color used for all tables.
-@table-bg:                      transparent;
-//** Background color used for `.table-striped`.
-@table-bg-accent:               lighten(@gray-dark, 5%);
-//** Background color used for `.table-hover`.
-@table-bg-hover:                @gray;
-@table-bg-active:               @table-bg-hover;
+// //** Default background color used for all tables.
+// @table-bg:                      transparent;
+// //** Background color used for `.table-striped`.
+// @table-bg-accent:               lighten(@gray-dark, 5%);
+// //** Background color used for `.table-hover`.
+// @table-bg-hover:                @gray;
+// @table-bg-active:               @table-bg-hover;
 
-//** Border color for table and cell borders.
-@table-border-color:            #ccc;
+// //** Border color for table and cell borders.
+// @table-border-color:            #ccc;
 
 
 //== Buttons
@@ -893,6 +895,9 @@
 		//@headBackgroundImage: 
 		//@headBackgroundRepeat: 
 		//@headBackgroundPosition: 
+		//@headModernLogoImage:
+		//@headModernLogoWidth: 160px;	// suggested
+		//@headModernLogoHeight: 40px;	// suggested
 		//@headLogoImage: 
 		//@headLogoWidth: 
 		//@headLogoHeight: 

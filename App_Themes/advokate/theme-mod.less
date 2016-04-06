@@ -43,14 +43,14 @@
   border:0;
 }
 
+.header.widget > .container {
+	margin-top: 49px;
+	padding: 0;
+}
 #divHeaderContainer{
-	padding:0;
-	margin-top: 10px;
-
-		h1.pull-top, header{
-			margin:0;
-		}
-
+	h1.pull-top, header{
+		margin:0;
+	}
 }
 
 body .head-wrapper header h1 a{
@@ -66,11 +66,23 @@ body .head-wrapper header h1 a{
 }
 
 #fundraise.sectionFundraise {
-  background: #999999 url('/App_Themes/advokate/uploads/fundraisingSectionTick_bw.png') no-repeat 55px 0px;
+  background: #999999 url('//walkforlife.advokate.ca/App_Themes/advokate/uploads/fundraisingSectionTick_bw.png') no-repeat 55px 0px;
 }
 #fundraise .cake {
-  background: #999999 url('/App_Themes/advokate/uploads/cake_bw.jpg') no-repeat 90% bottom;
+  background: #999999 url('//walkforlife.advokate.ca/App_Themes/advokate/uploads/cake_bw.jpg') no-repeat 90% bottom;
 }
 .sectionFundraise ol.ctaList > li:before{
 	color:@_advk_brand-primary-color;
 }
+
+
+	/* Home */
+	.page.home {
+		#cpMain_divSlideshowContainer {
+			margin-bottom: @container-padding-top / 2;
+			
+			@media(min-width: @screen-md-min) {
+				margin-bottom: @container-padding-top;
+			}
+		}
+	}

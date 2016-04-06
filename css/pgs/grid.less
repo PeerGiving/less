@@ -1,0 +1,68 @@
+﻿	
+	
+	/*body {
+		& > form {
+			.head-wrapper .nav-account > .container,
+			.head-wrapper > .container,
+			.nav-main-list > .navbar > .container,
+			.nav-breadcrumb > .container,
+			& > .container,
+			.sticky-footer-push > .container,
+			.secondary-content .secondary-content-inner > .container,
+			.nav-jump > .container,
+			.nav-footer .nav-footer-inner > .container {
+				padding-left: @grid-gutter-width;
+				padding-right: @grid-gutter-width;
+
+				// Less padding on Phones
+				@media (max-width: @screen-xs-max) {
+					padding-left: 15px;
+					padding-right: 15px;
+				}
+			}
+			& > .container {
+				padding-top: @container-padding-top; 
+				padding-bottom: @line-height-computed*3;
+
+				@media (max-width: @screen-xs-max) {
+					padding-top: @container-padding-top / 2;
+					padding-bottom: @line-height-computed * 1.5;
+				}
+			}
+		}
+	}*/
+
+	// Fluid containers should always contain child containers, where the padding is
+	.container-fluid {
+		padding: 0;
+	}
+	.container {
+		// Fatten up the space at the sides
+		padding-left: @grid-gutter-width;
+		padding-right: @grid-gutter-width;
+
+		// Less padding on phones
+		@media (max-width: @screen-xs-max) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		// Containers inside containers don't need L/R padding (use parent's)
+		.container {
+			padding-left: 0;
+			padding-right: 0;
+
+			// Remove padding component from width also (border-box model)
+			@media (min-width: @screen-sm-min) {
+				width: @container-sm - @grid-gutter-width * 2;
+			}
+			@media (min-width: @screen-md-min) {
+				width: @container-md - @grid-gutter-width * 2;
+			}
+			@media (min-width: @screen-lg-min) {
+				width: @container-lg - @grid-gutter-width * 2;
+			}
+
+		}
+	}
+			

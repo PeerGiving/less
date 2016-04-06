@@ -1,0 +1,321 @@
+// Fonts
+@import url(//fonts.googleapis.com/css?family=Rosario:400,700,400italic,700italic);
+
+
+// Global
+
+	// Layout
+	body > form .head-wrapper {
+		.nav-account,
+		.nav-account > .container {
+			background: @ismc_blue;
+		}
+		.nav-account {
+			border-bottom: solid 4px @ismc_blue-light;
+		}
+		& > .container {
+			background: @ismc_blue-dark;
+			padding: 0;
+		}
+	}
+	.head-wrapper header {
+		.clearfix;
+
+		padding: 20px 0;
+		margin: 0;
+
+		h1,
+		.headerZone2 {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		.headerZone2 {
+			text-align: right;
+
+			.anniversary {
+				display: inline-block;
+				background: url("images/anniversary-badge-01.png") no-repeat 0 0;
+				width: 140px;
+				height: 140px;
+			}
+		}
+	}
+	.nav-main-list {
+
+		// Tablet, Desktop
+		@media (min-width: @screen-sm-min) {
+			background: white;
+			border-top: solid 4px @ismc_blue-light;
+			margin-bottom: 30px;
+
+			.navbar-default {
+				background-color: white;
+				border: none;
+			}
+		}
+
+		// Phone
+		a.navbar-brand {
+			font-size: 12px;
+		}
+	}
+	body .nav-footer {
+		width: 100%;
+
+		@media (min-width: @screen-sm-min) {
+			border-top: 30px solid @ismc_blue-light;
+		}
+
+		.nav-footer-inner {
+			background: white;
+
+			a {
+				color: white;
+				text-decoration: underline;
+					
+				&:hover {
+					color: @ismc_blue-dark;
+				}
+			}
+			.row.top .col-md-12 {
+				padding-bottom: 30px;
+			}
+			.row.middle {
+				color: white;
+				font-size: 16px;
+
+				& > div {
+					padding-top: 30px;
+					padding-bottom: 30px;
+				}
+				.contact {
+					& > div {
+						margin-left: 30px;
+						min-width: 25px;
+						min-height: 25px;
+						padding-left: 40px;
+					}
+					.email {
+						background: url("images/footer icons-01.png") no-repeat 0 0;
+					}
+					.phone {
+						background: url("images/footer icons-02.png") no-repeat 0 0;
+					}
+					.fax {
+						background: url("images/footer icons-03.png") no-repeat 0 0;
+					}
+				}
+				.contact,
+				.map {
+					font-size: 24px;
+				}
+			}
+			.row.bottom {
+				.custom,
+				.custom a {
+					color: white;
+				}
+				.powered-by {
+					color: #7a7a7a;
+
+					&:hover {
+						color: #5c5c5c;
+					}
+				}
+			}
+			.row.top,
+			.row.middle,
+			.row.bottom {
+				& > .col-md-12 {
+					box-shadow: none;
+					border: none;
+				}
+			}
+
+			@media (max-width: @screen-xs-max) {
+				.row.bottom .col-md-12 .list-divider-horizontal {
+					background: @ismc_blue-light;
+				}
+			}
+		}
+		.row-1 {
+			.col-sm-table-cell {
+				vertical-align: middle;
+			}
+			a {
+				display: inline-block;
+			}
+			.isi {
+				background: url("images/ISI_logo.jpg") no-repeat 0 0;
+				width: 100px;
+				height: 100px;
+			}
+			.efc {
+				background: url("images/EFC.jpeg") no-repeat 0 0;
+				width: 275px;
+				height: 47px;
+			}
+			.cccc {
+				background: url("images/CCCC certification.jpg") no-repeat 0 0;
+				width: 100px;
+				height: 100px;
+			}
+			.bible {
+				background: url("images/canadian bible society.png") no-repeat 0 0;
+				width: 200px;
+				height: 56px;
+			}
+		}
+		.nav-footer-inner-2 {
+			background: @ismc_blue;
+		}
+	}
+
+	// Components
+	p {
+		margin: 0 0 @line-height-computed;
+	}
+	hr {
+		border-top: dashed @btn-default-bg 1px;
+	}
+
+
+// Pages
+
+.home {
+	.home-page-carousel {
+		margin-top: 0;
+
+		@media (min-width: @screen-sm-min) {
+			margin-top: -(@container-padding-top + 30px);
+
+			.home-page-carousel-inner {
+				margin-bottom: 30px;
+			}
+		}
+	}
+	.about-box {
+		border: 3px @ismc_blue solid;
+		padding: 10px 30px;
+		color: @brand-primary;
+
+		@media (max-width: @screen-xs-max) {
+			margin: 0 0 25px 0;
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+	.overlay-container {
+		position: relative;
+
+		.overlay-left {
+			position: absolute;
+			left: 40px;
+			background: white;
+			width: 310px;
+			z-index: 99999;
+
+			@media (min-width: @screen-sm-min) {
+				top: -454px;
+			}
+			@media (min-width: @screen-md-min) {
+				top: -570px;
+			}
+		}
+	}
+	.mission {
+		h2 {
+			@media (min-width: @screen-md-min) {
+				margin-top: 70px;
+			}
+		}
+		h3 {
+			@media (max-width: @screen-xs-max) {
+				.pull-top();
+			}
+		}
+		.col-sm-4 {
+			padding-left: 15px + 30px;
+		}
+
+		.interactive-map();
+	}
+	.trio {
+		@media (min-width: @screen-sm-min) {
+			margin: 0 -30px;
+		}
+
+		.col-xs-4 {
+			padding: 0;
+		}
+		.image-credit {
+			padding-right: 10px;
+			text-align: right;
+			color: @gray-light;
+			font-size: @font-size-base - 2;
+		}
+	}
+}
+.custom-page {
+
+	// Get Involved, Locations
+	.get-involved,
+	.locations {
+		.interactive-map();
+	}
+
+	// Custom Page Templates
+	.template-1 {
+		// Tablet/Desktop
+		@media (min-width: @screen-sm-min) {
+			.row-1,
+			.row-2,
+			.row-3 {
+				.heels-double();
+			}
+		}
+	}
+	.template-2 {
+		// Tablet/Desktop
+		@media (min-width: @screen-sm-min) {
+			.col-blockquote {
+				min-height: 290px;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	// Custom Page Components
+	h2,
+	h3 {
+		.heels();
+	}
+	blockquote {
+		color: @gray-light;
+		border: none;
+
+		footer {
+			.pull-right;
+		}
+	}
+}
+
+// Components
+.interactive-map {
+	.map-container {
+		position: relative;
+		height: 420px;
+
+		.base {
+			position: absolute;
+			z-index: 1;
+		}
+		.hover {
+			position: absolute;
+			z-index: 2;
+			display: none;
+		}
+	}
+}

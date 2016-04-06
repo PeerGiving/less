@@ -1,4 +1,4 @@
-﻿/* hfhvin\theme-variables.less */
+/* hfh\theme-variables.less */
 
 
 //	1. Comment out variable definitions to inherit defaults
@@ -10,39 +10,34 @@
 
 // Variable Global Style options
 	// Closed Layout options
-		@isClosedLayout: true;
-		@bodyBackgroundColor: #6487c1;
-		@bodyBackgroundImage: url("images/bg_body.jpg");
+		//@isClosedLayout: true;
+		//@bodyBackgroundColor: #6487c1;
+		@bodyBackgroundImage: url("images/skin_wood_texture.jpg");
+		//@bodyBackgroundImage: url("images/bg_body.png");
 		@bodyBackgroundRepeat: repeat;
 		@bodyBackgroundPosition: 0 0;
 	// Header options
-		//@headBackgroundColor: 
+		@headBackgroundColor: #fff;
 		//@headBackgroundImage: 
 		//@headBackgroundRepeat: 
 		//@headBackgroundPosition: 0 0;
 		//@headModernLogoImage:
 		//@headModernLogoWidth: 160px;	// suggested
 		//@headModernLogoHeight: 40px;	// suggested
-		@headLogoImage: url("images/logo.jpg");
-		@headLogoWidth: 550px;
-		@headLogoHeight: 80px;
+		@headLogoImage: url("images/logo.png");
+		@headLogoWidth: 605px;
+		@headLogoHeight: 108px;
 		//@headTitleFontFamily: 
 		//@headTitleFontSize: 
 	// Typography options
-		@font-family-base: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-		@headings-font-family: "Helvetica", Arial, sans-serif;
-		//@font-size-base:
+		@font-family-base: Arial, sans-serif;
+		@headings-font-family: "Gentium Book Basic", serif;
+		@font-size-base: 16px;
 		//@line-height-base: 
-		@headings-font-weight: bold;
-		@font-size-h1: 50px;
-		@font-size-h2: 42px;					// Bootstrap 3.1.1 ~ 30px
-		@font-size-h3: 24px;
-		@font-size-h4: 14px;
-		@font-color-h4: @_hfhvin_green;
 	// Link and Button options
-		@link-color: @_hfhvin_blue;
+		//@link-color:
 		//@link-hover-color:
-		@brand-primary: @_hfhvin_green;
+		//@brand-primary:
 	// Hued Grays (for backgrounds, etc)
 		//@huedGrayDarkest:											//	4% lum
 		//@huedGrayDarker:											//	13% lum
@@ -52,26 +47,27 @@
 		//@huedGrayLighter:											//	93% lum
 		//@huedGrayLightest:										//	96% lum
 	// Other Colors
-		@_hfhvin_green: #51b948;
-		@_hfhvin_blue: #005596;
-	// Other Fonts
+		@_hfh_green: #50b948;
+		@_hfh_blue: #004d7f;
+		@_hfh_gray_dark: #464646;
+		@_hfh_blue_light: #0088cc;
 
 
 // Component Styles	
 	// Main Navbar (nav-main-list)
-		//@navbar-default-bg: 
+		@navbar-default-bg: @_hfh_gray_dark;
 		//@navbar-default-color:
-		//@navbar-default-link-color:
-		//@navbar-default-link-hover-color:
-		//@navbar-default-link-hover-bg:
+		@navbar-default-link-color: #a8a8a8;
+		@navbar-default-link-hover-color: white;
+		@navbar-default-link-hover-bg: #555555;
 		@navbar-default-link-active-color: white;
-		@navbar-default-link-active-bg: @_hfhvin_blue;
+		@navbar-default-link-active-bg: @_hfh_blue_light;
 	// Account Nav
 		//@nav-account-bg:
 		//@nav-account-link-color:
 		//@nav-account-link-hover-color:
 		//@nav-account-link-hover-bg:
-		//@nav-account-link-active-bg: 		
+		//@nav-account-link-active-bg:
 	// Action Nav
 		//@actionBackgroundColorDefault:
 		//@manageBackgroundColor:
@@ -82,3 +78,13 @@
 		//@badgeBackgroundColor:
 	// Home page carousel	
 		//@homePageCarouselHeight:
+
+// Viewport Styles
+	// Navbar
+		@navbar-phone-bg: @_hfh_gray_dark;
+		@navbar-phone-color: white;
+	// Footer 
+		@footer-phone-bg: @_hfh_blue;
+		@footer-phone-color: white;
+		
+		

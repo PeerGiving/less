@@ -44,12 +44,6 @@
 
 // Master Styles
 	.nav-account {
-		background: black;
-		font-family: Calibri, 'Century Gothic', verdana, sans-serif;
-		font-size: 13px;		
-
-		.box-shadow(0 4px 5px rgba(50,50,50,0.5));
-
 		.nav-account-inner {
 			& > li {
 				&:hover {
@@ -69,20 +63,32 @@
 			}
 		}
 	}
-	header {
-		.top-links {
-			margin-top: -32px;
+	.header.widget {
+		.headerZone1 {
+			height: 39px;
+			background: black;
+			font-family: Calibri, 'Century Gothic', verdana, sans-serif;
 			font-size: 13px;
-			font-family: Calibri, "Century Gothic", Verdana, sans-serif;
 
-			li {
-				display: inline;
-				margin-right: 10px;
+			.box-shadow(0 4px 5px rgba(50,50,50,0.5));
+			
+			.top-links {
+				margin-top: 9px;
+				font-size: 13px;
+				font-family: Calibri, "Century Gothic", Verdana, sans-serif;
 
-				a {
-					color: white;
+				li {
+					display: inline;
+					margin-right: 10px;
+
+					a {
+						color: white;
+					}
 				}
 			}
+		}
+		.container {
+			margin-top: 0;
 		}
 		h1 {
 			float: left;
@@ -95,10 +101,8 @@
 			position: relative;
 			
 			a {
-				position: absolute;
-				right: 0px;
-				top: 0px;
-				margin-top: 18px;
+				float: right;
+				margin-top: -130px;
 			}
 		}
 	}

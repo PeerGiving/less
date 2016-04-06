@@ -1,7 +1,11 @@
 ﻿/* home-page-carousel.ascx */
 
 .home-page-carousel {
-	margin-bottom: 20px;
+	// Snap slideshow to main navbar
+	margin-top: -@container-padding-top / 2;
+	@media (min-width: @screen-md-min) {
+		margin-top: -@container-padding-top;
+	}
 
 	.home-page-carousel-inner {
 		.carousel-item {
@@ -24,7 +28,10 @@
 			}
 		}
 	}
-		
+	.container {
+		height: 20px;
+	}
+
 	// Phone
 	@media (max-width: @screen-xs-max) {
 		margin-left: -15px;
@@ -34,12 +41,12 @@
 
 	// Tablet
 	@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-		height: @homePageCarouselHeight * (@screen-sm / @screen-md);
+		//height: @homePageCarouselHeight * (@screen-sm / @screen-md);
 	}
 
 	// Desktop
 	@media (min-width: @screen-md-min) {
-		height: @homePageCarouselHeight;
+		//height: @homePageCarouselHeight;
 	}
 }
 

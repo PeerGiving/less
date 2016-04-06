@@ -10,15 +10,6 @@
 	// Bootswatch
 	// -----------------------------------------------------
 
-	//@web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic";
-	//@web-font-path: "https://fonts.googleapis.com/css?family=Montserrat:400,700";
-	@web-font-path: "https://fonts.googleapis.com/css?family=Arvo:400,700,400italic";
-
-	.web-font(@path) {
-	  @import url("@{path}");
-	}
-	.web-font(@web-font-path);
-
 	// Navbar =====================================================================
 
 	.navbar {
@@ -68,6 +59,12 @@
 	.btn-group.open .dropdown-toggle {
 	  .box-shadow(none);
 	}
+	a.btn[id$='Cancel']{
+		&:hover, &:focus {
+			color: #ccc;
+			text-decoration: underline;
+		}
+	}
 
 	// Typography =================================================================
 
@@ -98,30 +95,30 @@
 
 	// Tables =====================================================================
 
-	table,
+	/* table,
 	.table {
-
+	
 	  a:not(.btn) {
 	    text-decoration: underline;
 	  }
-
+	
 	  .dropdown-menu a {
 	    text-decoration: none;
 	  }
-
+	
 	  .success,
 	  .warning,
 	  .danger,
 	  .info {
 	    color: #fff;
-
+	
 	    > th > a,
 	    > td > a,
 	    > a {
 	      color: #fff;
 	    }
 	  }
-
+	
 	  > thead > tr > th,
 	  > tbody > tr > th,
 	  > tfoot > tr > th,
@@ -150,7 +147,7 @@
 	  &-bordered > tfoot > tr > td {
 	    border: 1px solid @table-border-color;
 	  }
-	}
+	} */
 
 	// Forms ======================================================================
 
@@ -379,9 +376,102 @@
 	h1, h2 {
 		color: @brand-primary;
 	}
-
+	b, strong {
+		font-weight: 400;
+	}
 	// ------------Template Styles------------
 	// styles for template components (header, navbar, footer...)
+
+	//side volunteer and donate buttons
+	a.sideButtonsRO{
+		position: fixed;
+		right: 0;
+		top: 150px;
+		width: 40px;
+		padding: 19px 23px 19px 19px;
+		border: 3px solid #fff;
+		border-right: 0;
+		background: #007b63;
+		text-align: center;
+		color: #fff;
+		font-family: 'Oswald';
+		font-weight: 700;
+		line-height: 18px;
+		text-transform: uppercase;
+		font-variant: small-caps;
+		box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.24);
+		z-index: 999;
+
+		-webkit-transition: all 0.5s ease-out;
+		-moz-transition: all 0.5s ease-out;
+		-ms-transition: all 0.5s ease-out;
+		-o-transition: all 0.5s ease-out;
+		transition: all 0.5s ease-out;
+
+		&.donateRO{
+			background: #00759F;
+			height: 150px;
+		}
+		&.volunteerRO{
+			background: #007b63;
+			top: 300px;
+		}
+
+		&:hover{
+			width:50px;
+			text-decoration: none;
+		}
+		&.donateRO:hover{
+			background: #078EBE;
+		}
+		&.volunteerRO:hover{
+			background: #02A887;
+		}
+	}
+
+	@media only screen and ( max-width : 767px) {
+
+		a.sideButtonsRO{
+			right: auto;
+			left: 0;
+			top: auto;
+			bottom: 0;
+			width: 50%;
+			height: auto;
+			padding:10px;
+
+			-webkit-transition: all 0.5s ease-out;
+			-moz-transition: all 0.5s ease-out;
+			-ms-transition: all 0.5s ease-out;
+			-o-transition: all 0.5s ease-out;
+			transition: all 0.5s ease-out;
+
+			&.donateRO{
+				height: auto;
+				border: 3px solid #fff;
+			}
+			&.volunteerRO{
+				height: auto;
+				right: 0;
+				left:auto;
+				top:auto;
+			}
+
+			&:hover{
+				width: 50%;
+				text-decoration: none;
+			}
+			&.donateRO:hover{
+				background: #078EBE;
+			}
+			&.volunteerRO:hover{
+				background: #02A887;
+			}
+		}
+
+
+		
+	}
 
 
 	//panels
@@ -398,6 +488,11 @@
 	    color:#505050;
 	}
 
+	#cpMain_lbCancel{
+		&:hover{
+			color:#848484;
+		}
+	}
 	//secondary nav bar
 	.container #content .nav-secondary, .container #content .nav-secondary + .nav-secondary {
 	    margin-top: 0;
@@ -415,25 +510,47 @@
 		display:none;
 	} */
 
-	.navbar-default .navbar-nav > li > a{
-		&[href="https://habitatufv.peergiving.com/our-projects.aspx"], &[href="https://habitatufv.peergiving.com/donate/donate.aspx?asset=1&search=true"]{
-			display: none;
+	.navbar.navbar-default {
+		opacity: 0.93;
+			
+		.navbar-nav {
+			font-size: 18px;
+
+			> li > a{
+				
+				// &[href="https://www.habitatufv.ca/our-projects.aspx"], &[href="https://www.habitatufv.ca/donate/donate.aspx?asset=1&search=true"]{
+				// 	display: none;
+				// }
+				
+				// &[href="https://www.habitatufv..ca/page.aspx?pageId=12"], &[href="https://www.habitatufv.ca/page.aspx?pageId=3"]{
+				// 	max-width: 127px;
+				// 	padding-top: 13px;
+				// 	padding-bottom: 7.5px;
+				// 	text-align: center;
+				// 	line-height: 17px;
+				// }
+				
+				// &[href="https://www.habitatufv.ca/page.aspx?pageId=3"]{
+				// 	max-width: 97px;
+				// }
+			}
+
 		}
-		&[href="https://habitatufv.peergiving.com/page.aspx?pageId=12"], &[href="https://habitatufv.peergiving.com/page.aspx?pageId=3"]{
-			max-width: 127px;
-			padding-top: 13px;
-			padding-bottom: 7.5px;
-			text-align: center;
-		    line-height: 17px;
-		}
-		&[href="https://habitatufv.peergiving.com/page.aspx?pageId=3"]{
-			max-width: 97px;
-		}	
 	}
 
+	@media only screen and ( min-width : 768px) {
+		.navbar.navbar-default {
+			.navbar-nav {
+				> li > a{
+					padding-top: 25px;
+					padding-bottom: 25px;
+				}
+			}
+		}
+	}
 
 	.navbar-default {
-	    background-image: url('/App_Themes/habitatufv/uploads/shattered.png');
+	    background-image: url('//www.habitatufv.ca/App_Themes/habitatufv/uploads/shattered.png');
 	}
 	body > form .nav-main-list > .navbar.navbar-default > .container{
 		padding-left:0;
@@ -445,11 +562,10 @@
 	  top:0;
 	}
 	#ucMainNavList_aBrand {
-	    color: #005596;
-	    background: url('/App_Themes/habitatufv/uploads/Habitat_for_humanity_logo_146x50-white.png') no-repeat;
+	    background: url('//www.habitatufv.ca/App_Themes/habitatufv/uploads/Habitat_for_humanity_logo_153x64-white.png') no-repeat;
 	    padding: 0;
-	    width: 146px;
-	    height: 60px;
+	    width: 153px;
+	    height: 74px;
 	    margin-top: 5px;
 	    margin-left: 5px;
 	    color: rgba(0, 0, 0, 0);
@@ -458,6 +574,10 @@
 		padding-top: 5px;
 		padding-bottom: 5px;
 	    position: relative;
+
+	    .navbar-form.search{
+			margin-top: 14px;
+	    }
 	}
 	#divNavCollapse_xs .dropdown-menu > li > a {
 	    text-align: right;
@@ -466,12 +586,18 @@
 		display:none;
 	}
 	.nav-main-list .navbar-collapse .navbar-nav .home a {
-		background: url('/App_Themes/habitatufv/uploads/Habitat_for_humanity_logo_146x50-white.png');
+		background: url('//www.habitatufv.ca/App_Themes/habitatufv/uploads/Habitat_for_humanity_logo_153x64-white.png') no-repeat;
 		padding: 0;
-		width: 146px;
-		height: 50px;
-		margin-top: 3px;
+	    width: 153px;
+	    height: 74px;
+		margin-top: 4px;
 		margin-right: 20px;
+	    color: rgba(0, 0, 0, 0);
+		max-height: 70px;
+
+	    &:hover{	    	
+	    	max-height: 70px;
+	    }
 	}
 	.dropdown-menu {
 		background-color: @brand-success;
@@ -495,7 +621,7 @@
 
 	@media only screen and ( max-width : 767px) {
 		.navbar-default .navbar-nav > li > a{
-			&[href="https://habitatufv.peergiving.com/page.aspx?pageId=12"], &[href="https://habitatufv.peergiving.com/page.aspx?pageId=3"]{
+			&[href="https://www.habitatufv.ca/page.aspx?pageId=12"], &[href="https://www.habitatufv.ca/page.aspx?pageId=3"]{
 				max-width: none;
 				padding-top: 10px;
 				text-align: left;
@@ -521,6 +647,7 @@
 		}
 		.navbar-default .navbar-toggle {
 	    	margin-right: 20px;
+	    	margin-top: 23px;
 		}
 		body > form .nav-main-list > .navbar.navbar-default > .container {
 			padding-left: 15px;
@@ -542,28 +669,52 @@
 
 
 
-	//body
-	body{
-	    background-image: url('/App_Themes/habitatufv/uploads/brickwall.png');
-	    background-repeat: repeat;
-	}
-	body > form > .container {
-	    padding-top: 90px;
-	    background: #FFF;
-		box-shadow: 0px 0px 10px 1px #D3D3D3;
-	}
-	body > form > .nav-breadcrumb + .container {
-	    padding-top: 45px;
-	}
-
 	// ------------Shared Styles------------
 	// styles used all over the site
 
+	//body
+	body {
+	    background-image: url('//www.habitatufv.ca/App_Themes/habitatufv/uploads/brickwall.png');
+	    background-repeat: repeat;
+	    font-weight: 300;
+	}
+
+	/*body > form > .container {
+	    padding-top: 90px;
+	    background: #FFF;
+		box-shadow: 0px 0px 10px 1px #D3D3D3;
+	}*/
+	#content > .container.top {
+		margin-top: 79px;
+		height: 30px;
+
+		@media (min-width: @screen-sm-min) {
+			margin-top: 160px;
+		}
+		@media (min-width: 1200px) {
+			margin-top: 86px;
+		}
+	}
+	/*body > form > .nav-breadcrumb + .container {
+	    padding-top: 45px;
+	}*/
+	.nav-breadcrumb + #content > .container.top {
+		margin-top: 0;
+	}
+
 	//breadcrumbs
+	.nav-main-list + .nav-breadcrumb,
 	.nav-breadcrumb {
 	    background: transparent;
 	    border: none;
-	    margin-top: 72px;
+	    margin-top: 79px;
+		
+		@media (min-width: @screen-sm-min) {
+			margin-top: 160px;
+		}
+		@media (min-width: 1200px) {
+			margin-top: 86px;
+		}
 	}
 	.nav-breadcrumb .container .breadcrumb > li > a {
 	    color: #005596;
@@ -634,7 +785,7 @@
 	    border-top: 0;
 	    //background-color: @brand-success;
 	    background-color: #007B63;
-	    background-image: url('/App_Themes/habitatufv/uploads/shattered.png');
+	    background-image: url('//www.habitatufv.ca/App_Themes/habitatufv/uploads/shattered.png');
 
 		.row.bottom .col-md-12, .row.top .col-md-12{
 		    -webkit-box-shadow: none;
@@ -694,13 +845,13 @@
 	//homepage
 	form[action="default.aspx"]{
 		& > .container{
-			padding-top: 70px;
+			padding-top: 83px;
 			padding-left:0;
 			padding-right:0;
 
 			#content > .home > .row{
 				padding-left:30px;
-				padding-right:30px;			
+				padding-right:30px;
 			}
 		}
 	}
@@ -709,6 +860,15 @@
 			& > .container{
 				padding-left:15px;
 				padding-right:15px;
+				padding-top: 100px;
+			}
+		}
+
+	}
+	@media only screen and ( min-width : 768px ) and ( max-width : 991px) {
+		form[action="default.aspx"]{
+			& > .container{
+				padding-top: 181px;
 			}
 		}
 
@@ -716,6 +876,20 @@
 
 	.carousel-caption .btn {
 	    padding: 10px 25px;
+	}
+	.sponsorListContainer{
+
+		.slick-prev:before, .slick-next:before {
+			color: #4C7CA2;
+			font-size: 40px;
+		}
+
+		.slick-prev {
+			left: -35px;
+		}
+		.slick-next {
+		    right: -15px;
+		}		
 	}
 
 	//Donation page
@@ -756,6 +930,7 @@
 
 	.nav-account {
 	    border-top: 0;
+	    position: relative;
 	}
 	#updatePanelAccountNav > .nav-account > .container {
 		position: relative;
@@ -772,24 +947,88 @@
 	    -moz-box-shadow: none;
 	    box-shadow: none;
 	}
-	.nav-account .nav-account-inner > li > a{
+	.nav-account .nav-account-inner > li > a {
 	    background-color: #043C67;
 	}
-	.nav-account .nav-account-inner > li:hover > a, .nav-account .nav-account-inner > li.open > a, .nav-account .nav-account-inner > li:hover > a:hover, .nav-account .nav-account-inner > li.open > a:hover, .nav-account .nav-account-inner > li:hover > a:focus, .nav-account .nav-account-inner > li.open > a:focus{
+	.nav-account .nav-account-inner > li:hover > a, 
+	.nav-account .nav-account-inner > li.open > a, 
+	.nav-account .nav-account-inner > li:hover > a:hover, 
+	.nav-account .nav-account-inner > li.open > a:hover, 
+	.nav-account .nav-account-inner > li:hover > a:focus, 
+	.nav-account .nav-account-inner > li.open > a:focus {
 		border-left-color: inherit;
 		background-color: #043C67;
 	}
-	#ucAccountNav_liMyAccount, #ucAccountNav_liLogin{
+	#ucAccountNav_liMyAccount, 
+	#ucAccountNav_liLogin {
 	    padding-bottom: 27px;
-	    background: url('/App_Themes/habitatufv/uploads/gear-icon01.png') right 2px top 32px no-repeat;
+	    background: url('//www.habitatufv.ca/App_Themes/habitatufv/uploads/gear-icon01.png') right 2px top 32px no-repeat;
 	}
-	.nav-account-inner:hover{
+	.nav-account-inner:hover {
 		top:0;
 	}
 
 
+	//Sponsors Listing Page
 
+	.sponsorListWrapper{
+		padding-top: 15px;
 
+		.sponsorContainer{
+
+			a {
+				color:#333;
+			}
+			.sponsorWrapper{
+				box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);		
+				min-height: 200px;
+			}
+			.sponsorInner{
+				min-height: 200px;
+				background: #FFF;
+				position: relative;
+				margin: 15px;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				
+				.sponsorLogoWrapper{
+
+					img.sponsorLogo{
+						max-width: 100%;
+						max-height:110px;
+						display: block;
+						margin: 0 auto;
+					}
+				}	
+				.sponsorName{
+					position:absolute;
+					bottom:30px;
+					text-align: center;
+					width:100%;
+					font-size: 18px;
+				}
+			}
+		}
+
+	}
+
+#cpMain_ucPostManage_ucPostsEditor_rptMediaProviders_ctlMediaProvider_0_ucUpload_0{
+	height: 49px !important;
+	width: 86% !important;
+}
+
+@media only screen and ( max-width : 989px) {
+	#cpMain_ucPostManage_ucPostsEditor_rptMediaProviders_ctlMediaProvider_0_ucUpload_0{
+		height: 100px !important;
+		width: 86% !important;
+	}
+}
+#cpMain_ucEmailEditor_divVariables{
+	background-color: #F1F1F1;
+	border-color: #C7C7C7;
+	color: #484848;
+	margin-top: 15px;
+}
 	//no nav bg example
 	/* form[action="page.aspx?pageId=6"]{
 		.navbar-default {
